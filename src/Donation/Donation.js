@@ -1,4 +1,5 @@
 import React from 'react'
+import './donation.css'
 
 function Donation() {
     return(

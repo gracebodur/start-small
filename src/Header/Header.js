@@ -6,7 +6,7 @@ function Header() {
     <div>
     <header className="App-header">
         <h1>START small</h1>
-        <h3>A learning platform that aims to helps improve every child's education </h3>
+        <h3>A charitable platform that aims to improve every child's education.</h3>
     </header>
     </div>
     )

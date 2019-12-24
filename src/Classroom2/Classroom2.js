@@ -1,4 +1,5 @@
 import React from 'react'
+import "./classroom2.css"
 
 function Classroom2() {
     return(
