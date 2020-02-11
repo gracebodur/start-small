@@ -1,32 +1,43 @@
-import React from 'react';
-import Header from "./Header/Header"
-import SearchForm from './Search/SearchForm'
-import Classroom1 from './Classroom1/Classroom1'
-import Classroom2 from './Classroom2/Classroom2'
-import Scholarship from './Scholarship/Scholarship'
-import Donation from './Donation/Donation'
-import SignUpForm from './SignUp/SignUpForm';
-import Footer from './Footer/Footer'
+import React, { Component } from 'react';
+// import { Switch, Link } from 'react-router-dom'
+import Particles from 'react-particles-js'
+import Logo from './components/Logo/Logo'
+import Navigation from './components/Navigation/Navigation'
+import Header from './components/Header/Header'
+import Footer from './components/Footer/Footer'
 
 import './App.css';
 
+const particlesOptions = {
+  particles: {
+    number: {
+      value: 10,
+      density: {
+        enable: true,
+        value_area: 800,
+      color: {
+        value: '#FFA500'
 
-function App() {
-  return (
-    <div className="App">
-       <style>
-          @import url('https://fonts.googleapis.com/css?family=Lilita+One|Rosario&display=swap');
-        </style>
-        <Header />
-        <SearchForm />
-        <Classroom1 />
-        <Classroom2 />
-        <Scholarship />
-        <Donation />
-        <SignUpForm />
-        <Footer />
-   </div>
-  );
+      }
+      }
+    }
+  }
 }
 
-export default App;
+
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <Particles params={particlesOptions} className='Particles'/>
+        <Navigation />
+        <Logo />
+        <Header />
+        <Footer />
+      </div>
+    )
+  }
+}
+
+
+export default App

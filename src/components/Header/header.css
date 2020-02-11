@@ -1,0 +1,13 @@
+.App-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    letter-spacing: 3px;
+  }
+  
+  h3 {
+    font-size: 30px;
+    color: white;
+  }

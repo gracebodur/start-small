@@ -5,8 +5,7 @@ function Header() {
     return (
     <div>
     <header className="App-header">
-        <h1>START small</h1>
-        <h3>A charity app that searches multiple IRS registered nonprofits</h3>
+        <h1>Start small</h1>
     </header>
     </div>
     )
