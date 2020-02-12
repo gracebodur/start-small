@@ -1,0 +1,21 @@
+.Btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: .5em 2.5em;
+    background: var(--clr-light);
+    color: var(--clr-purple);
+    text-decoration: none;
+    cursor: pointer;
+    font-size: .8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: var(--fw-bold);
+    transition: transform 200ms ease-in-out;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+  }

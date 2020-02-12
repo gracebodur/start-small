@@ -1,10 +1,69 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+	--ff-primary: 'Lora', serif;
+	--ff-secondary: 'Roboto Slab', serif;
+
+	--fw-reg: 400;
+	--fw-bold: 700;
+	
+	--clr-light: #fff;
+    --clr-dark: #303030;
+    --clr-accent: #16e0bd;
+    --clr-fun: #E28149;
+    --clr-purple: #362245;
+    
+	--fs-h1: 3rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
+
+    --spacing-none: 0;
+    --spacing-extra-small: .25rem;
+    --spacing-small: .5rem;
+    --spacing-medium: 1rem;
+    --spacing-large: 2rem;
+    --spacing-extra-large: 4rem;
+    --spacing-extra-extra-large: 8rem;
+    --spacing-extra-extra-extra-large: 16rem;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
-  background: #D38312;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #A83279, #D38312);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #A83279, #D38312); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  font-family: var(--ff-primary);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+  background: #D38312;
+  background: -webkit-linear-gradient(to right, #A83279, #D38312); 
+  background: linear-gradient(to right, #A83279, #D38312);
 }
+
+h1,
+h2,
+h3 {
+    line-height: 1;
+    margin: 0;
+}
+
+h1 { font-size: var(--fs-h1) }
+h2 { font-size: var(--fs-h2) }
+h3 { font-size: var(--fs-h3) }
+
 
 button {
   cursor: pointer;

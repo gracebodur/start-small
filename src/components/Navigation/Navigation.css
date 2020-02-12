@@ -1,4 +1,37 @@
 nav {
     display: flex;
     justify-content: flex-end;
+    font-family: var(--ff-secondary);
+    color: var(--clr-purple);
+}
+
+.Register-link,
+.Login-link,
+.Logout-link {
+    padding: 2rem;
+    font-size: 1.25rem;
+}
+
+.dim {
+    opacity: 1;
+    transition: opacity .15s ease-in;
+}
+
+.dim:hover,
+.dim:focus {
+    opacity: .5;
+    transition: opacity .15s ease-in;
+}
+
+.dim:active {
+  opacity: .8; transition: opacity .15s ease-out;
+}
+
+.underline-hover:hover,
+.underline-hover:focus {
+    text-decoration: underline;
+}
+
+button {
+  cursor: pointer;
 }

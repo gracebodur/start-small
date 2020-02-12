@@ -6,8 +6,12 @@
     font-size: 40px;
     letter-spacing: 3px;
   }
+
+  h1 {
+    color: var(--clr-purple);
+  }
   
   h3 {
     font-size: 30px;
-    color: white;
+    color: var(--clr-purple);
   }

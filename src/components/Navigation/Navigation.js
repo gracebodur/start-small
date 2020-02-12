@@ -1,16 +1,22 @@
-import React, { Component } from 'react'
+import React from 'react'
 import './Navigation.css'
 
-class Navigation extends Component {
-    render() {
-        return (
+function Navigation({onRouteChange, isLoggedIn}) {
+    if (isLoggedIn) {
+        return(
             <nav>
-                <p className='f3 link dim black underline pa3 pointer'>Register</p>
-                <p className='f3 link dim black underline pa3 pointer'>Log in</p>
+                <p onClick={() => onRouteChange('logout')} className='Logout-link dim underline-hover' id='logout'>Log out</p>
             </nav>
+            )
+        } else {
+            return (
+                <nav>
+                    <p onClick={() => onRouteChange('register')} className='Register-link dim underline-hover' id='register'>Register</p>
+                    <p onClick={() => onRouteChange('login')} className='Login-link dim underline-hover' id='login'>Log in</p>
+                </nav>
+                )
+            }
+        }
 
-        )
-    }
-}
 
 export default Navigation
