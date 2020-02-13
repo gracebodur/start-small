@@ -32,6 +32,15 @@
     --spacing-extra-extra-extra-large: 16rem;
 }
 
+@media (min-width: 800px) {
+  :root {
+      --fs-h1: 4.5rem;
+      --fs-h2: 3.75rem;
+      --fs-h3: 1.5rem;
+      --fs-body: 1.125rem;
+  }
+}
+
 .center {
   display: flex;
   justify-content: center;
@@ -63,7 +72,6 @@ h3 {
 h1 { font-size: var(--fs-h1) }
 h2 { font-size: var(--fs-h2) }
 h3 { font-size: var(--fs-h3) }
-
 
 button {
   cursor: pointer;

@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
+import { Switch, Route } from 'react-router-dom'
 import Particles from 'react-particles-js'
-import Logo from './components/Logo/Logo'
-import SearchButton from './components/SearchButton/SearchButton'
-import Navigation from './components/Navigation/Navigation'
-import Login from './components/Login/Login'
-import Register from './components/Register/Register'
+
 import Header from './components/Header/Header'
-import Intro from './components/Intro/Intro'
-import Footer from './components/Footer/Footer'
+import SearchButton from './components/SearchButton/SearchButton'
+import LoginForm from './components/Login/LoginForm'
+import RegistrationForm from './components/Registration/RegistrationForm'
+
+import LandingPage from './routes/LandingPage/LandingPage'
+import SearchPage from './routes/SearchPage/SearchPage'
+import UsersPage from './routes/UsersPage/UsersPage'
 
 import './App.css';
 
@@ -20,7 +22,6 @@ const particlesOptions = {
         value_area: 800,
       color: {
         value: '#FFA500'
-
       }
       }
     }
@@ -36,35 +37,35 @@ class App extends Component {
     }
   }
 
-  onRouteChange = (route) => {
-    if(route === 'logout') {
-      this.setState({isLoggedIn: false})
-    } else if (route === 'landing') {
-      this.setState({isLoggedIn: true})
-    }
-    this.setState({route: route})
-  }
-
   render() {
     return (
-      <div className="App">
+      <>
         <Particles params={particlesOptions} className='Particles'/>
-        <Navigation onRouteChange={this.onRouteChange}/>
-        { this.state.route === 'landing' ? <div>
-            <Logo />
-            <SearchButton />
-            <Header />
-            <Intro />
-            <Footer /> 
-         </div>
-         : (
-           this.state.route === 'login' 
-           ? <Login onRouteChange={this.onRouteChange}/>
-          : <Register onRouteChange={this.onRouteChange}/>
-         )
+        <Header />
+        <SearchButton />
         
-        }
-      </div>
+        <Switch>
+          <Route exact path='/'>
+            <LandingPage />
+          </Route>
+
+          <Route path='/login'>
+            <LoginForm />
+          </Route>
+
+          <Route path='/register'>
+            <RegistrationForm />
+          </Route>
+
+          <Route path='/search/:projectId'>
+            <SearchPage />
+          </Route>
+
+          <Route path='/users-page'>
+            <UsersPage />
+          </Route>
+        </Switch>
+      </>
     )
   }
 }

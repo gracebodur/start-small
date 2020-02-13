@@ -1,8 +1,10 @@
 import React from 'react'
-import './Register.css'
+import { Link } from 'react-router-dom'
+import './RegistrationForm.css'
 
-function Register({onRouteChange}) {
+function RegistrationForm() {
         return(
+            <>
 			<main className='Register-main center'>
             <form className= 'Register-form center'>
                 <fieldset className='Register-fieldset'>
@@ -20,7 +22,7 @@ function Register({onRouteChange}) {
                         id="register-fullname" 
                         className="Fullname-input" 
                         type="text" 
-                        name="Register-fullname"
+                        name="fullname"
                         placeholder="Enter full name" />
                     </div>
 					<div className="Register-new_user_name">
@@ -33,7 +35,7 @@ function Register({onRouteChange}) {
                         id="register-new_user_name" 
                         className="New-user_name-input" 
                         type="text" 
-                        name="Register-new_user_name"
+                        name="user_name"
                         placeholder="Enter user name" />
                     </div>
                     <div className="Register-password">
@@ -50,22 +52,22 @@ function Register({onRouteChange}) {
                         placeholder="Enter Password" />
                     </div>
                     <div className="Register-button center">
-                    <input
-                        onClick={() => onRouteChange('users-page')}
+                    <Link to='/users-page'><input
                         className="Register-button-input" 
                         type="submit" 
-                        value="Register"/>
+                        value="Register"/></Link>
                     </div>
                     <div className="Cancel-button center">
-                    <input 
+                    <Link to='/search-page'><input 
                         className="Register-cancel-button-input" 
                         type="submit" 
-                        value="Cancel"/>
+                        value="Cancel"/></Link>
                     </div>
               </fieldset>
             </form>
         </main>
+        </>
         )
     }
 
-export default Register
+export default RegistrationForm

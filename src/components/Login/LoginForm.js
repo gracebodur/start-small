@@ -1,7 +1,8 @@
 import React from 'react'
-import './Login.css'
+import { Link } from 'react-router-dom'
+import './LoginForm.css'
 
-function Login({ onRouteChange}) {
+function LoginForm({ onRouteChange}) {
     return (
         <main className='Login-main center'>
             <form className= 'Login-form center'>
@@ -20,7 +21,7 @@ function Login({ onRouteChange}) {
                         id="login-username" 
                         className="Username-input" 
                         type="text" 
-                        name="login-username"
+                        name="user_name"
                         placeholder="Enter Username" />
                     </div>
                     <div className="Login-password">
@@ -37,23 +38,21 @@ function Login({ onRouteChange}) {
                         placeholder="Enter Password" />
                     </div>
                     <div className="Login-button center">
-                    <input
-                        onClick={() => onRouteChange('users-page')}
+                   <Link to='/users-page'><input
                         className="Login-button-input" 
                         type="submit" 
-                        value="Log in"/>
+                        value="Log in"/></Link>
                     </div>
                     <div className="Cancel-button center">
-                    <input 
+                    <Link to='/search-page'><input 
                         className="Login-cancel-button-input" 
                         type="submit" 
-                        value="Cancel"/>
+                        value="Cancel"/></Link>
                     </div>
                     <div className="Register-link center">
-                    <p 
-                        onClick={() => onRouteChange('register')}
-                        className="Login-register-link">
-                        Register</p>
+                    <Link to='/users-page'
+                        className="Login-register-link" >
+                        Register</Link>
                     </div>
               </fieldset>
             </form>
@@ -61,4 +60,4 @@ function Login({ onRouteChange}) {
     )
 }
 
-export default Login
+export default LoginForm

@@ -1,15 +1,14 @@
-nav {
+.Nav {
     display: flex;
     justify-content: flex-end;
-    font-family: var(--ff-secondary);
+    font-family: var(--ff-seconday);
     color: var(--clr-purple);
+    padding: 1rem;
+    font-size: 1.25rem;
 }
 
-.Register-link,
-.Login-link,
-.Logout-link {
-    padding: 2rem;
-    font-size: 1.25rem;
+p {
+    padding-right: 30px;
 }
 
 .dim {
@@ -24,13 +23,13 @@ nav {
 }
 
 .dim:active {
-  opacity: .8; transition: opacity .15s ease-out;
+  opacity: .7; transition: opacity .15s ease-out;
 }
 
-.underline-hover:hover,
+/* .underline-hover:hover,
 .underline-hover:focus {
     text-decoration: underline;
-}
+} */
 
 button {
   cursor: pointer;

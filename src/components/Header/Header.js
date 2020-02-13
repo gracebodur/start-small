@@ -1,14 +1,14 @@
 import React from 'react'
+import Navigation from '../Navigation/Navigation'
+import Logo from '../Logo/Logo'
 import './header.css'
 
-function Header() {
+function Header({onRouteChange}) {
     return (
-    <div>
-    <header className="App-header">
-        <h1>Start small</h1>
-        <h3>Make a big difference!</h3>
-    </header>
-    </div>
+        <div>
+            <Navigation onRouteChange={onRouteChange}/>
+            <Logo />
+        </div>
     )
 }
 
