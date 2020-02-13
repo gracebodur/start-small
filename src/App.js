@@ -49,7 +49,7 @@ class App extends Component {
             <LandingPage />
           </Route>
 
-          <Route path='/login'>
+          <Route path='/login'> 
             <LoginForm />
           </Route>
 

@@ -1,12 +1,40 @@
-import React from 'react'
+import React, {Component} from 'react'
 import { Link } from 'react-router-dom'
 import './RegistrationForm.css'
 
-function RegistrationForm() {
+class RegistrationForm extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            full_name: '',
+            user_name: '',
+            password: ''
+        }
+    }
+
+    handleInputChange = (e) => {
+        this.setState({
+            full_name: e.target.value,
+            user_name: e.target.value,
+            password: e.target.value
+        });
+      }
+
+    handleSubmit = (e) => {
+        e.preventDefault()
+        // alert('Successfully logged in')
+    }
+
+    handleClick = () => {
+
+    }
+
+    render() {
         return(
-            <>
-			<main className='Register-main center'>
-            <form className= 'Register-form center'>
+            <main className='Register-main center'>
+            <form 
+                onSubmit={this.handleSubmit}
+                className= 'Register-form center'>
                 <fieldset className='Register-fieldset'>
                     <legend 
                         className='Register-legend center'>
@@ -21,11 +49,13 @@ function RegistrationForm() {
                     <input
                         id="register-fullname" 
                         className="Fullname-input" 
-                        type="text" 
-                        name="fullname"
+                        type="text"
+                        value={this.state.full_name}
+                        onChange={this.handleInputChange} 
+                        name="full_name"
                         placeholder="Enter full name" />
                     </div>
-					<div className="Register-new_user_name">
+                    <div className="Register-new_user_name">
                     <label 
                         className="New-user_name-label" 
                         htmlFor="register-new_user_name">
@@ -36,6 +66,8 @@ function RegistrationForm() {
                         className="New-user_name-input" 
                         type="text" 
                         name="user_name"
+                        value={this.state.user_name}
+                        onChange={this.handleInputChange} 
                         placeholder="Enter user name" />
                     </div>
                     <div className="Register-password">
@@ -44,30 +76,35 @@ function RegistrationForm() {
                         htmlFor="Register-password">
                         Password
                     </label>
-                    <input 
+                    <input
+                        id="register-password"
                         className='Password-input' 
                         type="password" 
                         name="password" 
-                        id="register-password" 
+                        value={this.state.password}
+                        onChange={this.handleInputChange} 
                         placeholder="Enter Password" />
                     </div>
                     <div className="Register-button center">
-                    <Link to='/users-page'><input
+                    {/* <Link to='/users-page'> */}
+                        <button
                         className="Register-button-input" 
-                        type="submit" 
-                        value="Register"/></Link>
+                        type="submit">Register</button>
+                    {/* </Link> */}
                     </div>
                     <div className="Cancel-button center">
-                    <Link to='/search-page'><input 
+                    <Link to='/search-page'>
+                        <button
                         className="Register-cancel-button-input" 
-                        type="submit" 
-                        value="Cancel"/></Link>
+                        type="submit">Cancel</button>
+                    </Link>
                     </div>
               </fieldset>
             </form>
-        </main>
-        </>
+            </main>
         )
     }
+}
+       
 
 export default RegistrationForm
