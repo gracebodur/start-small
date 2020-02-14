@@ -1,10 +1,11 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import './SearchButton.css'
 
 function SearchButton() {
     return(
-        <div>
-            <button className='Btn center'>Find a classroom to support</button>
+        <div >
+            <Link to='/search-page'><button className='Btn center'>Find a classroom to support</button></Link>
         </div>
     )
 }

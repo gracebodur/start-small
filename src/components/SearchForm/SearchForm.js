@@ -2,19 +2,51 @@ import React, {Component} from 'react'
 import './SearchForm.css'
 
 class SearchForm extends Component {
+	constructor(props){
+		super(props)
+		this.state = {
+			searchTerms: '',
+			city: '',
+			state: ''
+		}
+	}
+
+	handleSearchChange = (e) => {
+		this.setState({
+			[e.target.name]: e.target.value
+		})
+
+	}
+
+	handleSubmit = (e) => {
+		e.preventDefault()
+		// const {searchTerms, city, state} = e.target
+	}
+
+
     render() {
         return (
             <section className='Search-field'>
-	            <form className="Search" action="">
+	            <form className="Search" onSubmit={this.handleSubmit}>
 		        <div>
 		        <input 
-			        type="Search"
-			        placeholder="Search for a school project" 
-			        name="project"/>
+			        type="search"
+			        placeholder="Name of school" 
+			        name="searchTerms"
+					value={this.state.searchTerms}
+					onChange={this.handleSearchChange}/>
 		        <input 
 			        type="search"
-			        placeholder="city or state" 
-			        name="location"/>
+			        placeholder="city" 
+			        name="city"
+					value={this.state.city}
+					onChange={this.handleSearchChange}/>
+				<input 
+			        type="search"
+			        placeholder="state" 
+			        name="state"
+					value={this.state.state}
+					onChange={this.handleSearchChange}/>
 		        <button 
 			        type="submit">
 			        Search

@@ -1,6 +1,6 @@
 form.Search input[type=search] {
     float: left;
-    width: 60vh;
+    width: 50vh;
     margin: 5px;
     padding: .5em 2.5em;
     background: var(--clr-light);

@@ -4,7 +4,10 @@ import SearchForm from '../../components/SearchForm/SearchForm'
 class SearchPage extends Component {
     render() {
         return (
-           <SearchForm />
+            <div>
+                  <SearchForm />
+            </div>
+         
         )
     }
 }

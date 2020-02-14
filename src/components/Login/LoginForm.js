@@ -3,6 +3,10 @@ import { Link } from 'react-router-dom'
 import './LoginForm.css'
 
 class LoginForm extends Component {
+    static defaultProps = {
+        onLoginSuccess: () => {}
+    }
+
     constructor(props) {
         super(props)
         this.state = {
@@ -11,27 +15,34 @@ class LoginForm extends Component {
         }
     }
 
-    handleNameChange = (e) => {
+    handleChange = (e) => {
         this.setState({
-            user_name: e.target.value,
+        [e.target.name]: e.target.value,
         });
       }
 
-    handlePasswordChange = (e) => {
-        this.setState({
-            password: e.target.value
-        });
-    }
-
     handleSubmit = (e) => {
         e.preventDefault()
-        // alert('Successfully logged in')
+        const {user_name, password} = e.target
+
+        // console.log('Logged in successfully')
+        // console.log(user_name.value, password.value)
+
+        user_name.value = ''
+        password.value = ''
+        this.props.onLoginSuccess()
     }
 
-    handleClick = () => {
-
-    }
-
+    // onLoginSuccess(method, response) {
+    //     console.log("logged successfully with " + method);
+    // }
+     
+    // onLoginFail(method, response) {
+    //     console.log("logging failed with " + method);
+    //     this.setState({
+    //       error: response
+    //     });
+    // }
 
     render() {
         return (
@@ -55,7 +66,7 @@ class LoginForm extends Component {
                             className="Username-input" 
                             type="text"
                             value={this.state.user_name}
-                            onChange={this.handleNameChange} 
+                            onChange={this.handleChange} 
                             name="user_name"
                             placeholder="Enter Username" />
                         </div>
@@ -70,20 +81,25 @@ class LoginForm extends Component {
                             type="password" 
                             name="password"
                             value={this.state.password}
-                            onChange={this.handlePasswordChange}   
+                            onChange={this.handleChange}   
                             id="login-password" 
                             placeholder="Enter Password" />
                         </div> 
                         <div className="Login-button center">
                         <button
                             className="Login-button-input" 
-                            type="submit"
-                            onClick={this.handleClick}>Log in</button>
+                            type="submit">
+                            Log in
+                            </button>
                         </div>
                         <div className="Cancel-button center">
-                        <Link to='/search-page'><button 
+                        <Link to='/search-page'>
+                            <button 
                             className="Login-cancel-button-input" 
-                            type="submit">Cancel</button></Link>
+                            type="submit">
+                            Cancel
+                            </button>
+                        </Link>
                         </div>
                   </fieldset>
                 </form>

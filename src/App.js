@@ -4,10 +4,11 @@ import Particles from 'react-particles-js'
 
 import Header from './components/Header/Header'
 import SearchButton from './components/SearchButton/SearchButton'
-import LoginForm from './components/Login/LoginForm'
-import RegistrationForm from './components/Registration/RegistrationForm'
+
 
 import LandingPage from './routes/LandingPage/LandingPage'
+import LoginPage from './routes/LoginPage/LoginPage'
+import RegistrationPage from './components/Registration/RegistrationPage'
 import SearchPage from './routes/SearchPage/SearchPage'
 import UsersPage from './routes/UsersPage/UsersPage'
 
@@ -31,10 +32,7 @@ const particlesOptions = {
 class App extends Component {
   constructor() {
     super()
-    this.state = {
-      route: 'login',
-      isLoggedIn: false
-    }
+    this.state = {}
   }
 
   render() {
@@ -50,14 +48,14 @@ class App extends Component {
           </Route>
 
           <Route path='/login'> 
-            <LoginForm />
+            <LoginPage />
           </Route>
 
           <Route path='/register'>
-            <RegistrationForm />
+            <RegistrationPage />
           </Route>
 
-          <Route path='/search/:projectId'>
+          <Route path='/search-page'>
             <SearchPage />
           </Route>
 

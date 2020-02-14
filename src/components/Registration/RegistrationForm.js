@@ -3,6 +3,10 @@ import { Link } from 'react-router-dom'
 import './RegistrationForm.css'
 
 class RegistrationForm extends Component {
+    static defaultProps = {
+        onRegistrationSuccess: () => {}
+    }
+
     constructor(props) {
         super(props)
         this.state = {
@@ -12,22 +16,25 @@ class RegistrationForm extends Component {
         }
     }
 
-    handleInputChange = (e) => {
+    handleChange = (e) => {
         this.setState({
-            full_name: e.target.value,
-            user_name: e.target.value,
-            password: e.target.value
+            [e.target.name]: e.target.value,
         });
       }
 
     handleSubmit = (e) => {
         e.preventDefault()
-        // alert('Successfully logged in')
+        const {full_name, user_name, password} = e.target
+
+        // console.log('Registeres successfully')
+        // console.log(full_name.value, user_name.value, password.value)
+        
+        full_name.value = ''
+        user_name.value = ''
+        password.value = ''
+        this.props.onRegistrationSuccess()
     }
 
-    handleClick = () => {
-
-    }
 
     render() {
         return(
@@ -51,7 +58,7 @@ class RegistrationForm extends Component {
                         className="Fullname-input" 
                         type="text"
                         value={this.state.full_name}
-                        onChange={this.handleInputChange} 
+                        onChange={this.handleChange} 
                         name="full_name"
                         placeholder="Enter full name" />
                     </div>
@@ -67,7 +74,7 @@ class RegistrationForm extends Component {
                         type="text" 
                         name="user_name"
                         value={this.state.user_name}
-                        onChange={this.handleInputChange} 
+                        onChange={this.handleChange} 
                         placeholder="Enter user name" />
                     </div>
                     <div className="Register-password">
@@ -82,22 +89,22 @@ class RegistrationForm extends Component {
                         type="password" 
                         name="password" 
                         value={this.state.password}
-                        onChange={this.handleInputChange} 
-                        placeholder="Enter Password" />
+                        onChange={this.handleChange} 
+                        placeholder="Enter password" />
                     </div>
                     <div className="Register-button center">
-                    {/* <Link to='/users-page'> */}
-                        <button
+                    <button
                         className="Register-button-input" 
-                        type="submit">Register</button>
-                    {/* </Link> */}
+                        type="submit">
+                        Register
+                    </button>
                     </div>
                     <div className="Cancel-button center">
-                    <Link to='/search-page'>
-                        <button
-                        className="Register-cancel-button-input" 
-                        type="submit">Cancel</button>
-                    </Link>
+                        <Link to='/search-page'>
+                            <button
+                            className="Register-cancel-button-input" 
+                            type="submit">Cancel</button>
+                        </Link>
                     </div>
               </fieldset>
             </form>

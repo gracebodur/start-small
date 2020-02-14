@@ -23,13 +23,13 @@ class UsersPage extends Component {
             <div>
             {isLoggedOut ? (
                  <nav className='Nav dim underline-hover'>
-                 <Link to='/'>
-                     <p onClick={this.handleLogoutClick} className='logout-link' id='logout'>Log out</p>
-                 </Link>
-             </nav> ) : (
+                    <Link to='/'>
+                        <p onClick={this.handleLogoutClick} className='logout-link' id='logout'>Log out</p>
+                    </Link>
+                </nav> ) : (
                 <section>
-                 <SearchForm />
-                 <ProjectList />
+                    <SearchForm />
+                    <ProjectList />
                 </section>
              )}
             </div>
