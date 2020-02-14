@@ -8,7 +8,7 @@ import SearchButton from './components/SearchButton/SearchButton'
 
 import LandingPage from './routes/LandingPage/LandingPage'
 import LoginPage from './routes/LoginPage/LoginPage'
-import RegistrationPage from './components/Registration/RegistrationPage'
+import RegistrationPage from './routes/RegistrationPage/RegistrationPage'
 import SearchPage from './routes/SearchPage/SearchPage'
 import UsersPage from './routes/UsersPage/UsersPage'
 

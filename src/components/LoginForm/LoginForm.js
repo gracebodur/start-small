@@ -25,8 +25,8 @@ class LoginForm extends Component {
         e.preventDefault()
         const {user_name, password} = e.target
 
-        // console.log('Logged in successfully')
-        // console.log(user_name.value, password.value)
+        console.log('Logged in successfully')
+        console.log(user_name.value, password.value)
 
         user_name.value = ''
         password.value = ''

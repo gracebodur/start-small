@@ -1,11 +1,11 @@
 import React, {Component} from 'react'
-import SearchForm from '../../components/SearchForm/SearchForm'
+import SearchField from '../../components/SearchField/SearchField'
 
 class SearchPage extends Component {
     render() {
         return (
             <div>
-                  <SearchForm />
+                  <SearchField />
             </div>
          
         )

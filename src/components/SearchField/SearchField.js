@@ -1,10 +1,11 @@
 import React, {Component} from 'react'
-import './SearchForm.css'
+import './SearchField.css'
 
-class SearchForm extends Component {
+class SearchField extends Component {
 	constructor(props){
 		super(props)
 		this.state = {
+			projects: [],
 			searchTerms: '',
 			city: '',
 			state: ''
@@ -58,4 +59,4 @@ class SearchForm extends Component {
     }
 }
 
-export default SearchForm
+export default SearchField

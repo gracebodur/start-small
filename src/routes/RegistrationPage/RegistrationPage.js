@@ -17,8 +17,8 @@ export default class RegistrationPage extends Component {
     return (
       <section className='RegistrationPage'>
         <RegistrationForm
-          onRegistrationSuccess={this.handleRegistrationSuccess}
-        />
+          onRegistrationSuccess={this.handleRegistrationSuccess}/>
       </section>
     )
   }
+}

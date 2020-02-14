@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import { Link } from 'react-router-dom'
-import SearchForm from '../../components/SearchForm/SearchForm'
+import SearchField from '../../components/SearchField/SearchField'
 import ProjectList from '../../components/ProjectList/ProjectList'
 
 class UsersPage extends Component {
@@ -28,7 +28,7 @@ class UsersPage extends Component {
                     </Link>
                 </nav> ) : (
                 <section>
-                    <SearchForm />
+                    <SearchField />
                     <ProjectList />
                 </section>
              )}
