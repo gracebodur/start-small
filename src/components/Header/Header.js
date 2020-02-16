@@ -1,15 +1,27 @@
 import React from 'react'
-import Navigation from '../Navigation/Navigation'
+import {Link } from 'react-router-dom'
 import Logo from '../Logo/Logo'
-import './header.css'
+import './Header.css'
 
-function Header({onRouteChange}) {
+function Header() {
     return (
         <div>
-            <Navigation onRouteChange={onRouteChange}/>
-            <Logo />
+            <nav className='Nav dim underline-hover'>
+                <Link to='/register'>
+                    <p className='register-link' id='register'>Register</p>
+                </Link>
+
+                <Link to='/login'>
+                    <p className='login-link' id='login'>Log in</p>
+                </Link>
+            </nav>
+            <div>
+                <Logo />
+            </div>
         </div>
     )
 }
 
+
 export default Header
+    

@@ -5,7 +5,7 @@ import './SearchButton.css'
 function SearchButton() {
     return(
         <div >
-            <Link to='/search-page'><button className='Btn center'>Find a classroom to support</button></Link>
+            <Link to='/search'><button className='Btn center'>Find a classroom to support</button></Link>
         </div>
     )
 }

@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import { Link } from 'react-router-dom'
+import { Link} from 'react-router-dom'
 import './RegistrationForm.css'
 
 class RegistrationForm extends Component {
@@ -35,8 +35,40 @@ class RegistrationForm extends Component {
         this.props.onRegistrationSuccess()
     }
 
+    validateFullName() {
+        const fullName = this.state.full_name.value.trim();
+        if (fullName.length === 0) {
+          return "Full name is required";
+        } else if (fullName.length < 3) {
+          return "Name must be at least 3 characters long";
+        }
+      }
+
+      validateUserName() {
+        const userName = this.state.user_name.value.trim();
+        if (userName.length === 0) {
+          return "Full name is required";
+        } else if (userName.length < 3) {
+          return "User name must be at least 3 characters long";
+        }
+      }
+    
+      validatePassword() {
+        const password = this.state.password.value.trim();
+        if (password.length === 0) {
+          return "Password is required";
+        } else if (password.length < 6 || password.length > 72) {
+          return "Password must be between 6 and 72 characters long";
+        } else if (!password.match(/[0-9]/)) {
+          return "Password must contain at least one number";
+        }
+      }
+
 
     render() {
+        // const fullNameError = this.validateFullName();
+        // const userNameError = this.validateUserName();
+        // const passwordError = this.validatePassword();
         return(
             <main className='Register-main center'>
             <form 
@@ -100,7 +132,7 @@ class RegistrationForm extends Component {
                     </button>
                     </div>
                     <div className="Cancel-button center">
-                        <Link to='/search-page'>
+                        <Link to='/search'>
                             <button
                             className="Register-cancel-button-input" 
                             type="submit">Cancel</button>

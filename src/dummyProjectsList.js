@@ -2,7 +2,7 @@
 const projectsData = [
     {
         id: 1,
-        schoolName: 'Music Preschool', 
+        schoolName: 'Music preschool', 
         city: 'Washington', 
         state: 'DC',
         fulfillmentTrailer: '\"Help me give my students class set of music instruments for there music class\" ',
@@ -14,7 +14,7 @@ const projectsData = [
     },
     {
         id: 2,
-        schoolName: 'Science High School', 
+        schoolName: 'Science high school', 
         city: 'Raleigh', 
         state: 'NC',
         fulfillmentTrailer: '\"Help me give my students class set of protective eye goggles for there science lab\" ',
@@ -27,8 +27,8 @@ const projectsData = [
     {
         id: 3,
         schoolName: 'IT Elementary School', 
-        city: 'Raleigh', 
-        state: 'NC',
+        city: 'Houston', 
+        state: 'TX',
         fulfillmentTrailer: '\"Help me give my students computer mouse for their IT class\"',
         fundingStatus: 'needs funding',
         teacherId: 2,

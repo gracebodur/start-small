@@ -17,37 +17,29 @@ class LoginForm extends Component {
 
     handleChange = (e) => {
         this.setState({
-        [e.target.name]: e.target.value,
+        [e.target.name]: e.target.value
         });
       }
+
 
     handleSubmit = (e) => {
         e.preventDefault()
         const {user_name, password} = e.target
 
-        console.log('Logged in successfully')
-        console.log(user_name.value, password.value)
+        // console.log('Submitting...')
+        // console.log(user_name.value, password.value)
 
         user_name.value = ''
         password.value = ''
         this.props.onLoginSuccess()
     }
 
-    // onLoginSuccess(method, response) {
-    //     console.log("logged successfully with " + method);
-    // }
-     
-    // onLoginFail(method, response) {
-    //     console.log("logging failed with " + method);
-    //     this.setState({
-    //       error: response
-    //     });
-    // }
 
     render() {
         return (
             <main className='Login-main center'>
                 <form
+                    // method='GET'
                     onSubmit={this.handleSubmit} 
                     className= 'Login-form center'>
                     <fieldset className='Login-fieldset'>
@@ -93,7 +85,7 @@ class LoginForm extends Component {
                             </button>
                         </div>
                         <div className="Cancel-button center">
-                        <Link to='/search-page'>
+                        <Link to='/search'>
                             <button 
                             className="Login-cancel-button-input" 
                             type="submit">

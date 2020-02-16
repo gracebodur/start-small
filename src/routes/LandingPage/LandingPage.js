@@ -1,4 +1,5 @@
 import React from 'react'
+import SearchButton from '../../components/SearchButton/SearchButton'
 import FeatureProject from '../../components/FeatureProject/FeatureProject'
 import './LandingPage.css'
 
@@ -16,7 +17,10 @@ function LandingPage() {
 			    <li>See your impact!</li>
             </ul>
         </section>
-        <FeatureProject />
+            <FeatureProject />
+        <div>
+            <SearchButton />
+        </div>
         </div>
     )
 }

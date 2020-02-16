@@ -1,12 +1,12 @@
 /* eslint-disable */
-import React, {Component} from 'react'
+import React from 'react'
 import ProjectItems from '../ProjectItems/ProjectItems'
-import projectsData from '../../dummyProjectsList'
 import './ProjectList.css'
 
-function ProjectList() {
-	const projectResults = projectsData.map(project => 
-			<ProjectItems 
+function ProjectList({results}) {
+	console.log('list-results', results)
+	const projectResults = results.map(project =>
+		<ProjectItems 
 				key = {project.id} 
 				schoolName = {project.schoolName}
 				city = {project.city}

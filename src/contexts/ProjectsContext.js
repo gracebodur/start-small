@@ -4,8 +4,9 @@ const ProjectsContext = React.createContext({
     projects: [],
     addProjects: () => {},
     deleteProjects: () => {},
-    updateProjects: () => {}
+    updateProjects: () => {},
+    results: [],
+    
 })
-
 
 export default ProjectsContext

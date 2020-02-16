@@ -1,9 +1,9 @@
 import React, {Component} from 'react'
 import { Link } from 'react-router-dom'
-import SearchField from '../../components/SearchField/SearchField'
-import ProjectList from '../../components/ProjectList/ProjectList'
+import ProjectItems from '../../components/ProjectItems/ProjectItems'
+import './UserPage.css'
 
-class UsersPage extends Component {
+class UserPage extends Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -28,8 +28,7 @@ class UsersPage extends Component {
                     </Link>
                 </nav> ) : (
                 <section>
-                    <SearchField />
-                    <ProjectList />
+                    <ProjectItems />
                 </section>
              )}
             </div>
@@ -37,4 +36,4 @@ class UsersPage extends Component {
         }
     }
 
-export default UsersPage
+export default UserPage
