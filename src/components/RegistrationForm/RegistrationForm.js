@@ -26,8 +26,8 @@ class RegistrationForm extends Component {
         e.preventDefault()
         const {full_name, user_name, password} = e.target
 
-        // console.log('Registeres successfully')
-        // console.log(full_name.value, user_name.value, password.value)
+        console.log('Registered successfully')
+        console.log(full_name.value, user_name.value, password.value)
         
         full_name.value = ''
         user_name.value = ''

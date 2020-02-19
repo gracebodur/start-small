@@ -1,3 +1,7 @@
+.App-header {
+    margin-top: 50px;
+}
+
 section {
     min-height: 200px;
     font-family: var(--ff-secondary);

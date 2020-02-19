@@ -1,12 +1,16 @@
 /* eslint-disable */
 import React from 'react'
-import ProjectItems from '../ProjectItems/ProjectItems'
+import ProjectDetails from '../ProjectDetails/ProjectDetails'
 import './ProjectList.css'
 
-function ProjectList({results}) {
+function ProjectList({results, addProject, deleteProject}) {
 	console.log('list-results', results)
+	console.log('addIcon', addProject)
+	// const addIcon = addProject
+	// const deleteIcon = deleteProject
+	
 	const projectResults = results.map(project =>
-		<ProjectItems 
+		<ProjectDetails 
 				key = {project.id} 
 				schoolName = {project.schoolName}
 				city = {project.city}
@@ -16,7 +20,6 @@ function ProjectList({results}) {
 				teacherName= {project.teacherName}
 				imageURL = {project.imageURL}
 				fundURL = {project.fundURL}/>)
-
         return (
 		    <div className='feature'>
 				{projectResults}
@@ -26,3 +29,5 @@ function ProjectList({results}) {
 
 
 export default ProjectList
+
+

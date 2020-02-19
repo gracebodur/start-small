@@ -1,8 +1,15 @@
 /* eslint-disable */
+
 import React from 'react'
 
-function ProjectItems(props) {
+
+function ProjectDetails({...props}) {
     return(
+        <>
+        <div>
+            <img>{props.addIcon}</img>
+            <img>{props.deleteIcon}</img>
+        </div>
         <div className='feature'>
             <section className='Feature01'>
                 <h2 className='center'>{props.schoolName}</h2>
@@ -21,13 +28,15 @@ function ProjectItems(props) {
                 <a 
                     href={props.fundURL}
                     target='_blank'
-                    rel='noreferer'
+                    rel="noopener noreferrer"
                     className='center'>
                     Funding page link
                 </a>
             </div>
         </div>
+        </>
     )
 }
 
-export default ProjectItems
+export default ProjectDetails
+

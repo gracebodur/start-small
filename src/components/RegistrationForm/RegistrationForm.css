@@ -2,9 +2,9 @@
     border-radius: .25rem;
     border-style: solid;
     border-width: 1px;
-    color: #333;
+    color:  var( --clr-purple);
     border-color: rgba(0, 0, 0, .1);
-    margin-top: 2rem;
+    margin-top: 1rem;
     margin-bottom: 2rem;
     max-width: 16rem;
     padding: 2rem;
@@ -60,27 +60,27 @@
 }
 
 .Fullname-input:hover {
-    background-color: #000;
+    background-color: var( --clr-purple);
 }
 
 .Fullname-input:focus {
-    color: #fff;
+    color: var( --clr-fun);
 }
 
 .Password-input:hover {
-    background-color: #000;
+    background-color: var( --clr-purple);
 }
 
 .Password-input:focus {
-    color: #fff;
+    color: var( --clr-fun);
 }
 
 .New-user_name-input:hover {
-    background-color: #000;
+    background-color: var( --clr-purple);
 }
 
 .New-user_name-input:focus {
-    color: #fff;
+    color: var( --clr-fun);
 }
 
 .Register-button,

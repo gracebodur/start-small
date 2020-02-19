@@ -2,7 +2,7 @@
     border-radius: .25rem;
     border-style: solid;
     border-width: 1px;
-    color: #333;
+    color: var( --clr-purple);
     border-color: rgba(0, 0, 0, .1);
     margin-top: 2rem;
     margin-bottom: 2rem;
@@ -58,19 +58,19 @@
 }
 
 .Username-input:hover {
-    background-color: #000;
+    background-color: var( --clr-purple);
 }
 
 .Username-input:focus {
-    color: #fff;
+    color: var( --clr-fun);
 }
 
 .Password-input:hover {
-    background-color: #000;
+    background-color: var( --clr-purple);
 }
 
 .Password-input:focus {
-    color: #fff;
+    color: var( --clr-fun);
 }
 
 .Login-button,

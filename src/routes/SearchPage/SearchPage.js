@@ -7,9 +7,9 @@ class SearchPage extends Component {
 		super(props)
 		this.state = {
             searchTerms: '',
-            touched: false,
             city: '',
-            state: ''
+            state: '',
+            touched: false
 		}
     }
 
@@ -54,7 +54,7 @@ class SearchPage extends Component {
 
     render() {
         // console.log('search page', this.state.resultData)
-
+        // const searchResults = this.props.results
         return (
             <div>
                 <section className='Search-field'>
@@ -68,7 +68,7 @@ class SearchPage extends Component {
                                 value={this.state.searchTerms}
                                 onChange={(e)=> this.updateSearchTerm(e.target.value)}
                                 />
-                            <input
+                            <input 
                                 id="city"
                                 type="text"
                                 placeholder="city" 
@@ -76,7 +76,7 @@ class SearchPage extends Component {
                                 value={this.state.city}
                                 onChange={(e)=> this.updateCity(e.target.value)}
                                 />
-                            <input
+                            <input 
                                 id="state" 
                                 type="text"
                                 placeholder="state" 
@@ -91,7 +91,10 @@ class SearchPage extends Component {
                             </div>
                         </form>
                         <div>
-                            <ProjectList results={this.props.results} />
+                            <ProjectList 
+                                results={this.props.results} 
+                                addProject={this.props.addProject} 
+                                deleteProject={this.props.deleteProject}/>
                         </div>
                     </section>
                     

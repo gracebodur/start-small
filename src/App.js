@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom'
-import Particles from 'react-particles-js'
 
+import Particles from 'react-particles-js'
 import Header from './components/Header/Header'
-// import ProjectItems from './components/ProjectItems/ProjectItems'
 
 import LandingPage from './routes/LandingPage/LandingPage'
 import LoginPage from './routes/LoginPage/LoginPage'
@@ -13,22 +12,28 @@ import UserPage from './routes/UserPage/UserPage'
 
 import projectsData from './dummyProjectsList'
 
+import ProjectList from './components/ProjectList/ProjectList'
+
 import './App.css';
+
 
 const particlesOptions = {
   particles: {
     number: {
-      value: 10,
+      value: 20,
       density: {
         enable: true,
         value_area: 800,
       color: {
-        value: '#FFA500'
+        value: '#362245',
       }
       }
     }
   }
 }
+
+const isFavorite = <img src='./img/heart-fill.png' className="ri-heart-line favorite" alt='heart'></img>
+const isDeleted = <img src='./img/delete-bin-line.png' className="ri-heart-line favorite" alt='delete'></img>
 
 
 class App extends Component {
@@ -36,29 +41,50 @@ class App extends Component {
     super(props)
     this.state = {
       projects: projectsData,
-      results: []
+      results: [],
+      addProject: isFavorite,
+      deleteProject: isDeleted,
+      isLoggedIn: false,
+      isLoggedOut: false
     }
   }
 
-  handleSearchSubmit = (searchTerms, city) => {
+  handleSearchSubmit = (searchTerms, city,state) => {
     console.log('projects arr', this.state.projects)
-    let resultsData = this.state.projects.filter(res => res.schoolName === searchTerms && res.city === city);
+    let resultsData = this.state.projects.filter(
+      res => res.schoolName === searchTerms || res.city === city ||  res.state === state)
       console.log('results', resultsData)
       this.setState({
         results: resultsData
       })
   }
 
+  handleLoginClick() {
+    this.setState({isLoggedIn: true});
+  }
+
+  handleLogoutClick() {
+    this.setState({isLoggedOut: true});
+  }
+
   render() {
     console.log('results', this.state.results)
     return (
       <>
-        <Particles params={particlesOptions} className='Particles'/>
-        <Header />
+        <Particles 
+          params={particlesOptions} 
+          className='Particles'/>
+
+        <Header 
+          onClick={this.handleLoginClick} 
+          isLoggedIn={this.state.isLoggedIn}
+          isLoggedOut={this.state.isLoggedOut}/>
         
         <Switch>
+
           <Route exact path='/'>
-            <LandingPage />
+            <LandingPage  projectsData={this.state.projects}/>
+           
           </Route>
 
           <Route path='/login'> 
@@ -70,18 +96,24 @@ class App extends Component {
           </Route>
 
           <Route path='/search'>
-            <SearchPage handleSearchSubmit={this.handleSearchSubmit} results={this.state.results}/>
+            <SearchPage
+              handleSearchSubmit={this.handleSearchSubmit} 
+              results={this.state.results}
+              addProject={this.state.addProject}
+              deleteProject={this.state.deleteProject}/>
           </Route>
 
-          {/* <Route path='/project/:projectId'>
           <Route path='/project'>
-             <ProjectList  results={this.results}/>
-            <ProjectItems />
-          </Route> */}
+            <ProjectList results={this.state.results} />
+          </Route>
 
           <Route path='/account'>
-            <UserPage />
+            <UserPage 
+              onClick={this.handleLogoutClick} 
+              isLoggedOut={this.state.isLoggedOut}
+              isLoggedIn={this.state.isLoggedIn}/>
           </Route>
+
         </Switch>
       </>
     )
@@ -90,3 +122,10 @@ class App extends Component {
 
 
 export default App
+
+
+// {/* <Route path='/project/:projectId'>
+//           <Route path='/project'>
+//              <ProjectList  results={this.results}/>
+//             <ProjectItems />
+//           </Route>  */}
