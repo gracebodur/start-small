@@ -8,9 +8,7 @@ import LandingPage from './routes/LandingPage/LandingPage'
 import LoginPage from './routes/LoginPage/LoginPage'
 import RegistrationPage from './routes/RegistrationPage/RegistrationPage'
 import SearchPage from './routes/SearchPage/SearchPage'
-import UserPage from './routes/UserPage/UserPage'
-
-import projectsData from './dummyProjectsList'
+import AccountPage from './routes/AccountPage/AccountPage'
 
 import './App.css';
 
@@ -34,17 +32,29 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      projects: projectsData,
+      projectsData: [],
       results: [],
       isLoggedIn: false,
       isLoggedOut: false,
-      checked: false
     }
   }
 
+  componentDidMount() {
+    fetch('./data.json')
+      .then(res => res.json())
+      .then(result => {
+      const projects = result.map(item => {
+        return item
+      })
+      this.setState({
+        projectsData: projects
+    })
+  })
+}
+
   handleSearchSubmit = (searchTerms, city,state) => {
     console.log('projects arr', this.state.projects)
-    let resultsData = this.state.projects.filter(
+    let resultsData = this.state.projectsData.filter(
       res => res.schoolName === searchTerms || res.city === city ||  res.state === state)
       console.log('results', resultsData)
       this.setState({
@@ -60,13 +70,8 @@ class App extends Component {
     this.setState({isLoggedOut: true});
   }
 
-  onClick = (e, props) => {
-    this.setState({ checked: !this.state.checked });
-  }
-
   render() {
     console.log('results', this.state.results)
-    const { checked } = this.state;
     return (
       <>
         <Particles 
@@ -81,7 +86,7 @@ class App extends Component {
         <Switch>
 
           <Route exact path='/'>
-            <LandingPage  projectsData={this.state.projects}/>
+            <LandingPage  projectsData={this.state.projectsData}/>
            
           </Route>
 
@@ -100,12 +105,8 @@ class App extends Component {
             />
           </Route>
 
-          {/* <Route path='/project'>
-           
-          </Route> */}
-
           <Route path='/account'>
-            <UserPage 
+            <AccountPage 
               onClick={this.handleLogoutClick} 
               isLoggedOut={this.state.isLoggedOut}
               isLoggedIn={this.state.isLoggedIn}/>
@@ -119,10 +120,3 @@ class App extends Component {
 
 
 export default App
-
-
-// {/* <Route path='/project/:projectId'>
-//           <Route path='/project'>
-//              <ProjectList  results={this.results}/>
-//             <ProjectItems />
-//           </Route>  */}

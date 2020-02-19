@@ -1,8 +1,8 @@
 import React, {Component} from 'react'
 import { Link } from 'react-router-dom'
-import './UserPage.css'
+import './AccountPage.css'
 
-class UserPage extends Component {
+class AccountPage extends Component {
     constructor(props) {
             super(props)
             this.state = {
@@ -33,7 +33,7 @@ class UserPage extends Component {
    
 
 
-export default UserPage
+export default AccountPage
 
 // class UserPage extends Component {
 //     constructor(props) {
