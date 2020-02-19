@@ -57,9 +57,9 @@ body {
   font-family: var(--ff-primary);
   font-size: var(--fs-body);
   line-height: 1.6;
-  /* background: #D38312;
+  background: #D38312;
   background: -webkit-linear-gradient(to right, #A83279, #D38312); 
-  background: linear-gradient(to right, #A83279, #D38312); */
+  background: linear-gradient(to right, #A83279, #D38312);
 }
 
 h1,

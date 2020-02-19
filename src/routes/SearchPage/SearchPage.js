@@ -91,10 +91,7 @@ class SearchPage extends Component {
                             </div>
                         </form>
                         <div>
-                            <ProjectList 
-                                results={this.props.results} 
-                                addProject={this.props.addProject} 
-                                deleteProject={this.props.deleteProject}/>
+                            <ProjectList results={this.props.results} />
                         </div>
                     </section>
                     

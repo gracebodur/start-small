@@ -1,16 +1,12 @@
 import React, {Component} from 'react'
 import SearchButton from '../../components/SearchButton/SearchButton'
-
 import './LandingPage.css'
 
 class LandingPage extends Component {
     render() {
-        // const listProjects = this.props.projectsData.map(item => (
-        //     <div>{item.schoolName}</div>
-        // ))
         return(
             <>
-            <div>
+            <div >
                 <header className="App-header">
                     <h1>Start small</h1>
                     <h3>Make a big difference!</h3>
@@ -23,19 +19,18 @@ class LandingPage extends Component {
                     </ul>
                 </section>
             </div>
-                <div className='feature'>
+                <div>
                     {this.props.projectsData.map(item => (
-                        <div>
-                        <section className='Feature01 tc grow bg-light-green br3 pa3 ma2 dib bw2 shadow-5'>
-                            <h2 className='center'>{item.schoolName}</h2>
-                            <h3 className='center'>{item.city}</h3>
-                            <h3 className='center'>{item.state}</h3>
-                            <p className='center'>&#42;{item.fundingStatus}</p>
-                            <p className='center'>{item.fulfillmentTrailer}</p>
+                        <div key={item.id} className='card'>
+                        <section>
+                            <h3>{item.schoolName}</h3>
+                            <h3>{item.city}</h3>
+                            <h3>{item.state}</h3>
+                            <p >&#42;{item.fundingStatus}</p>
+                            <p >{item.fulfillmentTrailer}</p>
                             <p>&#8212;{item.teacherName}</p>
                         <div>
                             <img 
-                                className='center'
                                 src={item.imageURL}
                                 alt='feature classroom'>
                             </img>
@@ -46,14 +41,12 @@ class LandingPage extends Component {
                             <a 
                                 href={item.fundURL}
                                 target='_blank'
-                                rel="noopener noreferrer"
-                                className='center'>
+                                rel="noopener noreferrer">
                                 Funding page link
                             </a>
                         </div>
                     </div>
                     ))}
-                    
                     <div>
                         <SearchButton />
                     </div>
@@ -67,3 +60,13 @@ class LandingPage extends Component {
 
 export default LandingPage
 
+// {/* <ProjectDetails 
+// 				key = {project.id} 
+// 				schoolName = {project.schoolName}
+// 				city = {project.city}
+// 				state = {project.state}
+// 				fundingStatus = {project.fundingStatus}
+// 				fulfillmentTrailer = {project.fulfillmentTrailer}
+// 				teacherName= {project.teacherName}
+// 				imageURL = {project.imageURL}
+// 				fundURL = {project.fundURL}/>) */}

@@ -12,10 +12,7 @@ import UserPage from './routes/UserPage/UserPage'
 
 import projectsData from './dummyProjectsList'
 
-import ProjectList from './components/ProjectList/ProjectList'
-
 import './App.css';
-
 
 const particlesOptions = {
   particles: {
@@ -32,9 +29,6 @@ const particlesOptions = {
   }
 }
 
-const isFavorite = <img src='./img/heart-fill.png' className="ri-heart-line favorite" alt='heart'></img>
-const isDeleted = <img src='./img/delete-bin-line.png' className="ri-heart-line favorite" alt='delete'></img>
-
 
 class App extends Component {
   constructor(props) {
@@ -42,10 +36,9 @@ class App extends Component {
     this.state = {
       projects: projectsData,
       results: [],
-      addProject: isFavorite,
-      deleteProject: isDeleted,
       isLoggedIn: false,
-      isLoggedOut: false
+      isLoggedOut: false,
+      checked: false
     }
   }
 
@@ -67,8 +60,13 @@ class App extends Component {
     this.setState({isLoggedOut: true});
   }
 
+  onClick = (e, props) => {
+    this.setState({ checked: !this.state.checked });
+  }
+
   render() {
     console.log('results', this.state.results)
+    const { checked } = this.state;
     return (
       <>
         <Particles 
@@ -99,13 +97,12 @@ class App extends Component {
             <SearchPage
               handleSearchSubmit={this.handleSearchSubmit} 
               results={this.state.results}
-              addProject={this.state.addProject}
-              deleteProject={this.state.deleteProject}/>
+            />
           </Route>
 
-          <Route path='/project'>
-            <ProjectList results={this.state.results} />
-          </Route>
+          {/* <Route path='/project'>
+           
+          </Route> */}
 
           <Route path='/account'>
             <UserPage 
