@@ -29,4 +29,8 @@ ul {
     margin-top: -1rem;
     box-shadow: 10px 5px 40px 20px darken(#341cac, 5%);
     transition: .25s;
-}  
+} 
+
+.landing-link{
+    text-decoration: underline;
+}

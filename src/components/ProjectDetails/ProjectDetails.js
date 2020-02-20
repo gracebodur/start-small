@@ -1,46 +1,37 @@
 /* eslint-disable */
 import React, {Component} from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import HeartCheckbox from 'react-heart-checkbox';
-
+import { Link } from 'react-router-dom' 
 import './ProjectDetails.css'
-
 
 class ProjectDetails extends Component {
     constructor(props) {
         super(props)
         this.state = {
         checked: false,
-        deleted: false
         }
     }
 
-    onHeartClick = (e, props) => {
+    onHeartClick = () => {
         this.setState({ 
             checked: !this.state.checked,
         });
       }
-    
-    onDeleteClick = (e, props) => {
-        this.setState({
-            deleted: !this.state.deleted
-        })
-    }
 
     render() {
         const { checked } = this.state;
-        console.log('checked', this.state.checked)
-        const { deleted } = this.state;
-        console.log('deleted', this.state.deleted)
         return(
-            <>
+        <>
             <div>
+                <Link to='/account'>
             <div>
-                <HeartCheckbox className='heart' checked={checked} onClick={this.onHeartClick}/>
+            <input 
+                id="heart" 
+                type="checkbox"
+                checked={checked} 
+                onClick={this.onHeartClick} />
+            <label for="heart">❤</label>
             </div>
-            <div>
-                <FontAwesomeIcon className='delete' deleted={deleted} onDeleteClick={this.onDeleteClick} className='delete' icon='trash-alt'/>
-            </div>
+                </Link>
             </div>
             <div className='feature'>
                 <section className='Feature01'>
@@ -82,45 +73,9 @@ class ProjectDetails extends Component {
                     </div>
                 </div>
             </div>
-            </>
+        </>
         )
     }
-   
 }
 
 export default ProjectDetails
-
-// function ProjectDetails({...props}) {
-//     return(
-//         <>
-//         <div className='icons'>
-//         {/* <HeartCheckbox checked={this.props.checked} onClick={this.props.onClick}/> */}
-//         <FontAwesomeIcon className='add' icon='plus'/>
-//         </div>
-//         <div className='feature'>
-//             <section className='Feature01'>
-//                 <h2 className='center'>{props.schoolName}</h2>
-//                 <h3 className='center'>{props.city}</h3>
-//                 <h3 className='center'>{props.state}</h3>
-//                 <p className='center'>&#42;{props.fundingStatus}</p>
-//                 <p className='center'>{props.fulfillmentTrailer}</p>
-//                 <p>&#8212;{props.teacherName}</p>
-//                 <img 
-//                     className='center'
-//                     src={props.imageURL}
-//                     alt='feature classroom'>
-//                 </img>
-//             </section>
-//         <div>
-//                 <a 
-//                     href={props.fundURL}
-//                     target='_blank'
-//                     rel="noopener noreferrer"
-//                     className='center'>
-//                     Funding page link
-//                 </a>
-//             </div>
-//         </div>
-//         </>
-//     )
-// }

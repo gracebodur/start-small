@@ -104,15 +104,20 @@
     border-width: 1px;
     border-color: #000;
     background-color: transparent;
-    -moz-osx-font-smoothing: grayscale;
-    backface-visibility: hidden;
-    transform: translateZ(0);
-    transition: transform .25s ease-out;
+    /* -moz-osx-font-smoothing: grayscale;
+    backface-visibility: hidden; */
+    /* transform: translateZ(0); */
+    /* transition: transform .25s ease-out; */
 }
 
 .Register-button-input:hover,
 .Register-cancel-button-input:hover {
     cursor: pointer;
+}
+
+.R-error {
+    color: red;
+    font-size: 12px;
 }
 
 

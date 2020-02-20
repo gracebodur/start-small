@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import {Link } from 'react-router-dom'
 import Logo from '../Logo/Logo'
+import SearchButton from '../SearchButton/SearchButton'
 import './Header.css'
 
 class Header extends Component {
@@ -11,6 +12,20 @@ class Header extends Component {
             isLoggedOut: false
         }
     }
+
+    componentDidMount() {
+        this.setState({isLoggedIn: true})
+    }
+
+
+    handleLoginClick() {
+        this.setState({isLoggedIn: true});
+    }
+    
+    handleLogoutClick() {
+        this.setState({isLoggedOut: true});
+    }
+    
 
     render() {
         const isLoggedOut = this.props.isLoggedOut
@@ -34,22 +49,43 @@ class Header extends Component {
         } else {
             link = 
                     <nav className='Nav dim underline-hover'>
-                        <Link to='/register'>
-                            <p className='register-link' id='register'>Register</p>
-                        </Link>
+                        {!this.state.isLoggedIn && (
+                            <>
+                            <Link to='/register'>
+                                <p className='register-link' id='register'>Register</p>
+                            </Link>
 
-                        <Link to='/login'>
-                            <p onClick={this.props.handleLoginClick} className='login-link' id='login'>Log in</p>
-                        </Link>
+                            <Link to='/login'>
+                                <p onClick={this.props.handleLoginClick} className='login-link' id='login'>Log in</p>
+                            </Link> 
+                            </>
+                            )
+                        }
+                        {this.state.isLoggedIn && (
+                            <Link to='/login'>
+                                <p onClick={this.props.handleLogoutClick} className='login-link' id='login'>Log Out</p>
+                            </Link> 
+                            )
+                        }
                     </nav> }
         return(
              <div>
+                 <SearchButton />
                  <Logo />
                  {link}
              </div>
+             
         )
     }
 }
 
 export default Header
     
+
+// {/* <Link to='/register'>
+//                             <p className='register-link' id='register'>Register</p>
+//                         </Link>
+
+//                         <Link to='/login'>
+//                             <p onClick={this.props.handleLoginClick} className='login-link' id='login'>Log in</p>
+//                         </Link> */}

@@ -7,6 +7,7 @@ import Header from './components/Header/Header'
 import LandingPage from './routes/LandingPage/LandingPage'
 import LoginPage from './routes/LoginPage/LoginPage'
 import RegistrationPage from './routes/RegistrationPage/RegistrationPage'
+import ProjectListPage from './routes/ProjectListPage/ProjectListPage'
 import SearchPage from './routes/SearchPage/SearchPage'
 import AccountPage from './routes/AccountPage/AccountPage'
 
@@ -29,65 +30,17 @@ const particlesOptions = {
 
 
 class App extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      projectsData: [],
-      results: [],
-      isLoggedIn: false,
-      isLoggedOut: false,
-    }
-  }
-
-  componentDidMount() {
-    fetch('./data.json')
-      .then(res => res.json())
-      .then(result => {
-      const projects = result.map(item => {
-        return item
-      })
-      this.setState({
-        projectsData: projects
-    })
-  })
-}
-
-  handleSearchSubmit = (searchTerms, city,state) => {
-    console.log('projects arr', this.state.projects)
-    let resultsData = this.state.projectsData.filter(
-      res => res.schoolName === searchTerms || res.city === city ||  res.state === state)
-      console.log('results', resultsData)
-      this.setState({
-        results: resultsData
-      })
-  }
-
-  handleLoginClick() {
-    this.setState({isLoggedIn: true});
-  }
-
-  handleLogoutClick() {
-    this.setState({isLoggedOut: true});
-  }
-
   render() {
-    console.log('results', this.state.results)
     return (
       <>
         <Particles 
           params={particlesOptions} 
           className='Particles'/>
-
-        <Header 
-          onClick={this.handleLoginClick} 
-          isLoggedIn={this.state.isLoggedIn}
-          isLoggedOut={this.state.isLoggedOut}/>
+        <Header />
         
         <Switch>
-
           <Route exact path='/'>
-            <LandingPage  projectsData={this.state.projectsData}/>
-           
+            <LandingPage/>
           </Route>
 
           <Route path='/login'> 
@@ -99,17 +52,15 @@ class App extends Component {
           </Route>
 
           <Route path='/search'>
-            <SearchPage
-              handleSearchSubmit={this.handleSearchSubmit} 
-              results={this.state.results}
-            />
+            <SearchPage/>
+          </Route>
+
+          <Route path='/project'>
+            <ProjectListPage />
           </Route>
 
           <Route path='/account'>
-            <AccountPage 
-              onClick={this.handleLogoutClick} 
-              isLoggedOut={this.state.isLoggedOut}
-              isLoggedIn={this.state.isLoggedIn}/>
+            <AccountPage />
           </Route>
 
         </Switch>

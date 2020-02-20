@@ -52,3 +52,10 @@ p {
 button {
   cursor: pointer;
 }
+
+.top-search {
+  margin-top: 20px;
+  position: relative;
+  top:50%;
+  right: 0;
+}

@@ -12,67 +12,79 @@ class RegistrationForm extends Component {
         this.state = {
             full_name: '',
             user_name: '',
-            password: ''
+            password: '',
+            errors: []
         }
     }
 
-    handleChange = (e) => {
-        this.setState({
-            [e.target.name]: e.target.value,
-        });
-      }
-
-    handleSubmit = (e) => {
-        e.preventDefault()
-        const {full_name, user_name, password} = e.target
-
-        console.log('Registered successfully')
-        console.log(full_name.value, user_name.value, password.value)
-        
-        full_name.value = ''
-        user_name.value = ''
-        password.value = ''
-        this.props.onRegistrationSuccess()
+    onFullNameChange = (e) => {
+      this.setState({
+        full_name: e.target.value
+      })
+      this.clearValidationErr('full_name')
     }
 
-    validateFullName() {
-        const fullName = this.state.full_name.value.trim();
-        if (fullName.length === 0) {
-          return "Full name is required";
-        } else if (fullName.length < 3) {
-          return "Name must be at least 3 characters long";
-        }
-      }
+    onUserNameChange =(e) => {
+      this.setState({
+        user_name:e.target.value
+      })
+      this.clearValidationErr('user_name')
+    }
 
-      validateUserName() {
-        const userName = this.state.user_name.value.trim();
-        if (userName.length === 0) {
-          return "Full name is required";
-        } else if (userName.length < 3) {
-          return "User name must be at least 3 characters long";
+    onPasswordChange = (e) => {
+      this.setState({
+        password:e.target.value
+      })
+      this.clearValidationErr('password')
+    }
+
+    showValidationErr = (elm, msg) => {
+      this.setState((prevState, ) => ({ errors: [...prevState.errors, { elm,msg }] } ))
+    }
+
+    clearValidationErr = (elm) => {
+      this.setState((prevState)=> {
+        let newArr = [];
+        for(let err of prevState.errors) {
+          if(elm !== err.elm) {
+            newArr.push(err)
+          }
         }
+        return {errors: newArr}
+      })
+    }
+
+    submitRegister = (e) => {
+      console.log(this.state)
+
+      if (this.state.full_name === "") {
+        this.showValidationErr('full_name', "Please type in your full name");
+      } 
+      if (this.state.user_name === "") {
+        return this.showValidationErr('user_name', "Please type in your user name");
       }
+      if(this.state.password === "") {
+        return this.showValidationErr('password', "Password Can not be empty");
+      }
+    }
     
-      validatePassword() {
-        const password = this.state.password.value.trim();
-        if (password.length === 0) {
-          return "Password is required";
-        } else if (password.length < 6 || password.length > 72) {
-          return "Password must be between 6 and 72 characters long";
-        } else if (!password.match(/[0-9]/)) {
-          return "Password must contain at least one number";
+    render() {
+        let fullNameError = null, userNameError = null, passwordError = null;
+
+        for(let err of this.state.errors) {
+          if(err.elm === 'full_name') {
+          fullNameError = err.msg;
+        } if(err.elm === 'user_name') {
+          userNameError = err.msg;
+        } if(err.elm === 'password') {
+          passwordError = err.msg;
         }
       }
-
-
-    render() {
-        // const fullNameError = this.validateFullName();
-        // const userNameError = this.validateUserName();
-        // const passwordError = this.validatePassword();
+      
         return(
             <main className='Register-main center'>
             <form 
-                onSubmit={this.handleSubmit}
+                onSubmit={this.submitRegister}
                 className= 'Register-form center'>
                 <fieldset className='Register-fieldset'>
                     <legend 
@@ -90,9 +102,11 @@ class RegistrationForm extends Component {
                         className="Fullname-input" 
                         type="text"
                         value={this.state.full_name}
-                        onChange={this.handleChange} 
+                        onChange={this.onFullNameChange} 
                         name="full_name"
-                        placeholder="Enter full name" />
+                        placeholder="Enter full name" 
+                      />
+                      <small className='R-error'>{fullNameError ? fullNameError : ''}</small>
                     </div>
                     <div className="Register-new_user_name">
                     <label 
@@ -106,8 +120,10 @@ class RegistrationForm extends Component {
                         type="text" 
                         name="user_name"
                         value={this.state.user_name}
-                        onChange={this.handleChange} 
-                        placeholder="Enter user name" />
+                        onChange={this.onUserNameChange} 
+                        placeholder="Enter user name" 
+                      />
+                      <small className='R-error'>{userNameError ? userNameError : ''}</small>
                     </div>
                     <div className="Register-password">
                     <label 
@@ -121,8 +137,10 @@ class RegistrationForm extends Component {
                         type="password" 
                         name="password" 
                         value={this.state.password}
-                        onChange={this.handleChange} 
-                        placeholder="Enter password" />
+                        onChange={this.onPasswordChange} 
+                        placeholder="Enter password"
+                    />
+                    <small className='R-error'>{passwordError ? passwordError : ''}</small>
                     </div>
                     <div className="Register-button center">
                     <button
@@ -147,3 +165,4 @@ class RegistrationForm extends Component {
        
 
 export default RegistrationForm
+

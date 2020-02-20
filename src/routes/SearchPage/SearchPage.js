@@ -6,6 +6,8 @@ class SearchPage extends Component {
     constructor(props){
 		super(props)
 		this.state = {
+            results: [],
+            projectsData: [],
             searchTerms: '',
             city: '',
             state: '',
@@ -13,6 +15,46 @@ class SearchPage extends Component {
 		}
     }
 
+    componentDidMount() {
+        fetch('./data.json')
+          .then(res => res.json())
+          .then(result => {
+          const projects = result.map(item => {
+            return item
+          })
+          this.setState({
+            projectsData: projects
+        })
+      })
+    }
+
+
+    handleSearchSubmit = (searchTerms, city,state) => {
+        let resultsData = this.state.projectsData.filter(
+        res => res.schoolName === searchTerms || res.city === city ||  res.state === state)
+        this.setState({
+            results: resultsData
+        })
+    }
+
+    handleSubmit = (e) => {
+        e.preventDefault()
+
+        const { searchTerms, city, state } = this.state
+
+        this.handleSearchSubmit(searchTerms, city);
+       
+        this.setState({
+            searchTerms: searchTerms,
+            city: city,
+            state: state
+        })
+
+        e.target.searchTerms ='';
+        e.target.city ='';
+        e.target.state ='';
+    }
+    
     updateSearchTerm = (term) => {
         this.setState({
           searchTerms: term,
@@ -34,27 +76,7 @@ class SearchPage extends Component {
         })
     }
 
-	handleSubmit = (e) => {
-        e.preventDefault()
-
-        const { searchTerms, city, state } = this.state
-
-        this.props.handleSearchSubmit(searchTerms, city);
-       
-        this.setState({
-            searchTerms: searchTerms,
-            city: city,
-            state: state
-        })
-
-        e.target.searchTerms ='';
-        e.target.city ='';
-        e.target.state ='';
-    }
-
     render() {
-        // console.log('search page', this.state.resultData)
-        // const searchResults = this.props.results
         return (
             <div>
                 <section className='Search-field'>
@@ -91,7 +113,7 @@ class SearchPage extends Component {
                             </div>
                         </form>
                         <div>
-                            <ProjectList results={this.props.results} />
+                            <ProjectList results={this.state.results} />
                         </div>
                     </section>
                     

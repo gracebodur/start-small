@@ -5,7 +5,6 @@ class SearchField extends Component {
 	constructor(props){
 		super(props)
 		this.state = {
-			projects: [],
 			searchTerms: '',
 			city: '',
 			state: ''
