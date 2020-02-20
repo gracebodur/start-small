@@ -3,9 +3,31 @@ import SearchButton from '../../components/SearchButton/SearchButton'
 import './LandingPage.css'
 
 class LandingPage extends Component {
+constructor(props) {
+    super(props)
+    this.state = {
+      projectsData: [],
+      results: [],
+      isLoggedIn: false,
+      isLoggedOut: false,
+    }
+  }
+
+  componentDidMount() {
+    fetch('./data.json')
+      .then(res => res.json())
+      .then(result => {
+      const projects = result.map(item => {
+        return item
+      })
+      this.setState({
+        projectsData: projects
+    })
+  })
+}
     render() {
         return(
-            <>
+            <> 
             <div >
                 <header className="App-header">
                     <h1>Start small</h1>
@@ -20,7 +42,7 @@ class LandingPage extends Component {
                 </section>
             </div>
                 <div>
-                    {this.props.projectsData.map(item => (
+                    {this.state.projectsData.map(item => (
                         <div key={item.id} className='card'>
                         <section>
                             <h3>{item.schoolName}</h3>
@@ -59,14 +81,3 @@ class LandingPage extends Component {
 }
 
 export default LandingPage
-
-// {/* <ProjectDetails 
-// 				key = {project.id} 
-// 				schoolName = {project.schoolName}
-// 				city = {project.city}
-// 				state = {project.state}
-// 				fundingStatus = {project.fundingStatus}
-// 				fulfillmentTrailer = {project.fulfillmentTrailer}
-// 				teacherName= {project.teacherName}
-// 				imageURL = {project.imageURL}
-// 				fundURL = {project.fundURL}/>) */}

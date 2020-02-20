@@ -12,7 +12,15 @@ class SearchPage extends Component {
             touched: false
 		}
     }
-
+  handleSearchSubmit = (searchTerms, city,state) => {
+    console.log('projects arr', this.state.projects)
+    let resultsData = this.state.projectsData.filter(
+      res => res.schoolName === searchTerms || res.city === city ||  res.state === state)
+      console.log('results', resultsData)
+      this.setState({
+        results: resultsData
+      })
+  }
     updateSearchTerm = (term) => {
         this.setState({
           searchTerms: term,

@@ -12,6 +12,18 @@ class Header extends Component {
         }
     }
 
+    componentDidMount() {
+        // determine if logged in
+        this.setState({isLoggedIn: true})
+    }
+    handleLoginClick() {
+    this.setState({isLoggedIn: true});
+  }
+
+  handleLogoutClick() {
+    this.setState({isLoggedOut: true});
+  }
+
     render() {
         const isLoggedOut = this.props.isLoggedOut
         let link;
@@ -34,13 +46,24 @@ class Header extends Component {
         } else {
             link = 
                     <nav className='Nav dim underline-hover'>
-                        <Link to='/register'>
-                            <p className='register-link' id='register'>Register</p>
-                        </Link>
+                        {!this.state.isLoggedIn && (
+                            <>
+                            <Link to='/register'>
+                                <p className='register-link' id='register'>Register</p>
+                            </Link>
 
-                        <Link to='/login'>
-                            <p onClick={this.props.handleLoginClick} className='login-link' id='login'>Log in</p>
-                        </Link>
+                            <Link to='/login'>
+                                <p onClick={this.props.handleLoginClick} className='login-link' id='login'>Log in</p>
+                            </Link> 
+                            </>
+                            )
+                        }
+                        {this.state.isLoggedIn && (
+                            <Link to='/login'>
+                                <p onClick={this.props.handleLogoutClick} className='login-link' id='login'>Log Out</p>
+                            </Link> 
+                            )
+                        }
                     </nav> }
         return(
              <div>

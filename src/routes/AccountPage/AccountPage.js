@@ -6,8 +6,16 @@ class AccountPage extends Component {
     constructor(props) {
             super(props)
             this.state = {
-                isLoggedIn: true
+              userData: {}
         }
+    }
+
+    componentDidMount() {
+        fetch('api/me')
+        .then(resp => resp.json())
+        .then(data => {
+            this.setState({userData: data})
+        })
     }
 
     render() {
@@ -22,6 +30,8 @@ class AccountPage extends Component {
                         Log out
                         </p>
                     </Link>
+                    {/* Reuse ProjectList? */}
+                    <ProjectList projects={favoritedProjects}/>
                 </nav>
             </div>
         )
