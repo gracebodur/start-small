@@ -1,4 +1,6 @@
 import React, {Component} from 'react'
+import TokenService from '../services/token-service'
+import AuthApiService from '../services/auth-api-services'
 import { Link } from 'react-router-dom'
 import './LoginForm.css'
 
@@ -11,37 +13,55 @@ class LoginForm extends Component {
         super(props)
         this.state = {
             user_name: '',
-            password: ''
+            password: '',
+            error: null
         }
     }
 
-    handleChange = (e) => {
-        this.setState({
-        [e.target.name]: e.target.value
-        });
-      }
-
-
-    handleSubmit = (e) => {
-        e.preventDefault()
-        const {user_name, password} = e.target
-
-        console.log('Submitting...')
-        console.log(user_name.value, password.value)
-
+    handleSubmitBasicAuth = ev => {
+        ev.preventDefault()
+        this.setState({ error: null })
+        const { user_name, password } = ev.target
+    
+      TokenService.saveAuthToken(
+        TokenService.makeBasicAuthToken(user_name.value, password.value)
+      )
+    
         user_name.value = ''
         password.value = ''
         this.props.onLoginSuccess()
-    }
+      }
 
+      handleSubmitJwtAuth = ev => {
+         ev.preventDefault()
+         this.setState({ error: null })
+         const { user_name, password } = ev.target
+        
+         AuthApiService.postLogin({
+           user_name: user_name.value,
+           password: password.value,
+         })
+           .then(res => {
+             user_name.value = ''
+             password.value = ''
+             TokenService.saveAuthToken(res.authToken)
+             this.props.onLoginSuccess()
+           })
+           .catch(res => {
+             this.setState({ error: res.error })
+           })
+       }
 
     render() {
+        const { error }  = this.state
         return (
             <main className='Login-main center'>
                 <form
-                    // method='GET'
-                    onSubmit={this.handleSubmit} 
+                    onSubmit={this.handleSubmitJwtAuth}
                     className= 'Login-form center'>
+                <div role='alert'>
+                    {error && <p className='red'>{error}</p>}
+                </div>
                     <fieldset className='Login-fieldset'>
                         <legend 
                             className='Login-legend center'>
@@ -57,8 +77,6 @@ class LoginForm extends Component {
                             id="login-username" 
                             className="Username-input" 
                             type="text"
-                            value={this.state.user_name}
-                            onChange={this.handleChange} 
                             name="user_name"
                             placeholder="Enter Username" />
                         </div>
@@ -71,9 +89,7 @@ class LoginForm extends Component {
                         <input 
                             className='Password-input' 
                             type="password" 
-                            name="password"
-                            value={this.state.password}
-                            onChange={this.handleChange}   
+                            name="password" 
                             id="login-password" 
                             placeholder="Enter Password" />
                         </div> 
@@ -85,7 +101,7 @@ class LoginForm extends Component {
                             </button>
                         </div>
                         <div className="Cancel-button center">
-                        <Link to='/search'>
+                        <Link to='/'>
                             <button 
                             className="Login-cancel-button-input" 
                             type="submit">

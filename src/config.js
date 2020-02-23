@@ -1,4 +1,4 @@
-// export default {
-//     API_ENDPOINT: 'http://localhost:8000/api',
-//     TOKEN_KEY: 'start-small-client-auth-token',
-//   }
+export default {
+    API_ENDPOINT: 'http://localhost:3000',
+    TOKEN_KEY: 'start-small-client-auth-token',
+  }

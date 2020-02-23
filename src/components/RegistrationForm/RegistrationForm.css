@@ -115,11 +115,9 @@
     cursor: pointer;
 }
 
-.R-error {
+.red {
     color: red;
-    font-size: 12px;
 }
-
 
 .center {
     margin-right: auto;

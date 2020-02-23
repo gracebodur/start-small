@@ -1,91 +1,55 @@
 import React, {Component} from 'react'
+import TokenService from '../services/token-service'
 import {Link } from 'react-router-dom'
 import Logo from '../Logo/Logo'
-import SearchButton from '../SearchButton/SearchButton'
 import './Header.css'
 
 class Header extends Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            isLoggedIn: false,
-            isLoggedOut: false
-        }
+    handleLogOutClick = () => {
     }
 
-    componentDidMount() {
-        this.setState({isLoggedIn: true})
+    renderLogoutLink() {
+        return(
+            <div>
+                 <nav className='Nav dim underline-hover'>
+                    <Link 
+                        onClick={this.handleLogoutClick} 
+                        className='logout-link'
+                        to='/'>
+                        <p>
+                        Log out
+                        </p>
+                    </Link>
+                 </nav>
+             </div>
+        )
     }
 
+    renderLoginLink() {
+        return(
+            <nav className='Nav dim underline-hover'>
+                <Link to='/register'>
+                    <p className='register-link' id='register'>Register</p>
+                </Link>
+                <Link to='/login'>
+                    <p className='login-link' id='login'>Log in</p>
+                </Link>  
+            </nav>
 
-    handleLoginClick() {
-        this.setState({isLoggedIn: true});
+        )
     }
-    
-    handleLogoutClick() {
-        this.setState({isLoggedOut: true});
-    }
-    
 
     render() {
-        const isLoggedOut = this.props.isLoggedOut
-        let link;
-
-        if(isLoggedOut) {
-            link =  
-                <div>
-                    <nav className='Nav dim underline-hover'>
-                        <Link to='/'>
-                            <p 
-                            onClick={this.props.handleLogoutClick} 
-                            isLoggedIn={this.props.isLoggedIn} 
-                            className='logout-link' 
-                            id='logout'>
-                            Log out
-                            </p>
-                        </Link>
-                    </nav>
-                </div>
-        } else {
-            link = 
-                    <nav className='Nav dim underline-hover'>
-                        {!this.state.isLoggedIn && (
-                            <>
-                            <Link to='/register'>
-                                <p className='register-link' id='register'>Register</p>
-                            </Link>
-
-                            <Link to='/login'>
-                                <p onClick={this.props.handleLoginClick} className='login-link' id='login'>Log in</p>
-                            </Link> 
-                            </>
-                            )
-                        }
-                        {this.state.isLoggedIn && (
-                            <Link to='/login'>
-                                <p onClick={this.props.handleLogoutClick} className='login-link' id='login'>Log Out</p>
-                            </Link> 
-                            )
-                        }
-                    </nav> }
-        return(
-             <div>
-                 <SearchButton />
-                 <Logo />
-                 {link}
+        return (
+            <div>
+                <Logo />
+            { TokenService.hasAuthToken()
+                ? this.renderLogoutLink()
+                : this.renderLoginLink() }
              </div>
-             
         )
     }
 }
 
+
 export default Header
-    
-
-// {/* <Link to='/register'>
-//                             <p className='register-link' id='register'>Register</p>
-//                         </Link>
-
-//                         <Link to='/login'>
-//                             <p onClick={this.props.handleLoginClick} className='login-link' id='login'>Log in</p>
-//                         </Link> */}
