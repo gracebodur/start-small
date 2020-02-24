@@ -1,0 +1,22 @@
+.App-header {
+    margin-top: 50px;
+}
+
+section {
+    min-height: 200px;
+    font-family: var(--ff-secondary);
+    color: var(--clr-purple);
+}
+
+section > p {
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+* + ul {
+    margin-top: 2rem;
+}

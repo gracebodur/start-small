@@ -11,7 +11,7 @@ class SearchPage extends Component {
             searchTerms: '',
             city: '',
             state: '',
-            touched: false
+            touched: false 
 		}
     }
 

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Intro from '../../components/Intro/Intro'
 import SearchButton from '../../components/SearchButton/SearchButton'
 import './LandingPage.css'
 
@@ -6,21 +7,26 @@ class LandingPage extends Component {
     constructor(props) {
         super(props)
         this.state = {
-          projectsData: [],
-          isLoggedIn: false,
-          isLoggedOut: false,
+            projects: [],
+            isLoggedIn: false,
+            isLoggedOut: false,
         }
       }
     
       componentDidMount() {
-        fetch('./data.json')
+        fetch(`http://localhost:8000/api/projects`, {
+            method: "GET",
+            headers: {
+                "content-type": "application/json"
+            }
+        })
           .then(res => res.json())
           .then(result => {
           const projects = result.map(item => {
             return item
           })
           this.setState({
-            projectsData: projects
+            projects: projects
         })
       })
     }
@@ -29,50 +35,41 @@ class LandingPage extends Component {
         return(
             <>
              <div>
-                 <header className="App-header">
-                     <h1>Start small</h1>
-                     <h3>Make a big difference!</h3>
-                 </header>
-                 <section>
-                     <ul>
-                         <li>Pick a classroom project for your friends to support.</li>
-                         <li>Add a personal message.</li>
-                         <li>See your impact!</li>
-                     </ul>
-                 </section>
+                <Intro />
+                <SearchButton />
              </div>
              <div>
-                 <div className='card landing-projects'>
-                     {this.state.projectsData.map(item => (
-                         <div key={item.id}>
-                         <section>
-                             <h3 className='landing-link'>{item.schoolName}</h3>
-                             <h3>{item.city}</h3>
-                             <h3>{item.state}</h3>
-                            <div>
-                                <img 
-                                    src={item.imageURL}
-                                    alt='feature classroom'>
-                                </img>
-                            </div>
-                             <p >{item.fulfillmentTrailer}</p>
-                             <p>&#8212;{item.teacherName}</p>
-                        
-                         </section>                     
-                         <div>
-                                <a 
-                                 href={item.fundURL}
-                                 target='_blank'
-                                 rel="noopener noreferrer">
-                                 Funding page link
-                                </a>
-                         </div>
-                     </div>
-                     ))}
-                     </div>
-                    <div>
-                        <SearchButton />
+                <div className='row '>
+                    <div className='column'>
+                        <div className='card'>
+                            {this.state.projects.map(item => (
+                                <div key={item.project_id}>
+                                    <section>
+                                        <h3 className='landing-link'>{item.schoolname}</h3>
+                                        <h3>{item.city}</h3>
+                                        <h3>{item.state}</h3>
+                                    <div>
+                                        <img 
+                                            src={item.imageurl}
+                                            alt='feature classroom'>
+                                        </img>
+                                    </div>
+                                        <p >{item.fulfillmenttrailer}</p>
+                                        <p>&#8212;{item.teachername}</p>
+                                    </section>                     
+                                    <div>
+                                        <a 
+                                         href={item.fundurl}
+                                         target='_blank'
+                                         rel="noopener noreferrer">
+                                         Funding page link
+                                        </a>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
                     </div>
+                </div>
                 </div>
             </>
         )
@@ -82,51 +79,3 @@ class LandingPage extends Component {
 }
 
 export default LandingPage
-
-
-
-//    {/* <div>
-//                 <header className="App-header">
-//                     <h1>Start small</h1>
-//                     <h3>Make a big difference!</h3>
-//                 </header>
-//                 <section>
-//                     <ul>
-//                         <li>Pick a classroom project for your friends to support.</li>
-//                         <li>Add a personal message.</li>
-//                         <li>See your impact!</li>
-//                     </ul>
-//                 </section>
-//             </div>
-//             <div>
-//             <Link to='/project'>
-//                 <div className='center'>
-//                     {this.state.projectsData.map(item => (
-//                         <div key={item.id}>
-//                         <section>
-//                             <h3>{item.schoolName}</h3>
-//                             <h3>{item.city}</h3>
-//                             <h3>{item.state}</h3>
-//                             <p >&#42;{item.fundingStatus}</p>
-//                             <p >{item.fulfillmentTrailer}</p>
-//                             <p>&#8212;{item.teacherName}</p>
-//                         <div>
-//                             <img 
-//                                 src={item.imageURL}
-//                                 alt='feature classroom'>
-//                             </img>
-//                         </div>
-//                         </section>
-                       
-//                         <div>
-//                             <a 
-//                                 href={item.fundURL}
-//                                 target='_blank'
-//                                 rel="noopener noreferrer">
-//                                 Funding page link
-//                             </a>
-//                         </div>
-//                     </div>
-//                     ))}
-//                     </div>
-//                     </Link> */}

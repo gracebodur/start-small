@@ -14,7 +14,7 @@
     font-weight: var(--fw-bold);
     font-family: var(--ff-primary);
     transition: transform 200ms ease-in-out;
-    margin-top: 20px;
+    margin-top: 5px;
     margin-bottom: 20px;
 }
 
