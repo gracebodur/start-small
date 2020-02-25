@@ -1,0 +1,14 @@
+{
+    "version": 2,
+    "alias": "grace-startsmall-app",
+    "name": "startsmall",
+    "routes": [
+        {
+            "handle": "filesystem"
+        },
+        {
+            "src": ".*",
+            "dest": "/index.html"
+        }
+    ]
+}
