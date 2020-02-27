@@ -1,8 +1,9 @@
 import React from 'react'
+import './NotFoundPage.css'
 
 function NotFoundPage() {
     return (
-        <section>
+        <section className='Not-found'>
             <h2>404-Page not found</h2>
             <p>You may want to start over</p>
         </section>

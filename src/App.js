@@ -3,13 +3,12 @@ import { Switch, Route } from 'react-router-dom'
 import Particles from 'react-particles-js'
 import Header from './components/Header/Header'
 import PrivateRoute from '../src/components/Utils/PrivateRoute'
-
+import PublicOnlyRoute from '../src/components/Utils/PublicOnlyRoute'
 import LandingPage from './routes/LandingPage/LandingPage'
 import LoginPage from './routes/LoginPage/LoginPage'
 import RegistrationPage from './routes/RegistrationPage/RegistrationPage'
-// import ProjectPage from './routes/ProjectPage/ProjectPage'
 import SearchPage from './routes/SearchPage/SearchPage'
-import AccountPage from './routes/AccountPage/AccountPage'
+import UserPage from './routes/UserPage/UserPage'
 import NotFoundPage from './routes/NotFoundPage/NotFoundPage'
 
 import './App.css';
@@ -37,33 +36,28 @@ class App extends Component {
         <Particles 
           params={particlesOptions} 
           className='Particles'/>
-        <header>
-          <Header />
-        </header>
+        <Header />
+        
         <main>
         <Switch>
           <Route exact path='/'>
             <LandingPage/>
           </Route>
 
-          <Route path='/login'> 
+          <PublicOnlyRoute path='/login'> 
             <LoginPage />
-          </Route>
+          </PublicOnlyRoute>
 
-          <Route path='/register'>
+          <PublicOnlyRoute path='/register'>
             <RegistrationPage />
-          </Route>
+          </PublicOnlyRoute>
 
-          <Route path='/:project_id'>
+          <PrivateRoute path='/projects/:projects_id'>
             <SearchPage/>
-          </Route>
+          </PrivateRoute>
 
-          {/* <Route path='/:project_id'>
-            <ProjectPage />
-          </Route> */}
-
-          <PrivateRoute path='/account/'>
-            <AccountPage />
+          <PrivateRoute path='/users'>
+            <UserPage />
           </PrivateRoute>
 
           <Route>

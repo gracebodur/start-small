@@ -1,5 +1,7 @@
 import React, {Component} from 'react'
+import {Redirect} from 'react-router-dom'
 import LoginForm from '../../components/LoginForm/LoginForm'
+import TokenService from '../../services/token-service'
 
 class LoginPage extends Component {
     static defaultProps = {
@@ -9,19 +11,28 @@ class LoginPage extends Component {
         },
     }
 
-    handleLoginSuccess = () => {
-        const { location, history } = this.props
-        const destination = (location.state || {}).from || '/account'
-        console.log('login', destination)
-        history.push(destination)
+    constructor() {
+      super()
+      this.state = {
+        loggedIn: TokenService.hasAuthToken()
+        ? true : false
+      }
+    }
+
+    setLoggedIn = () => {
+      this.setState({
+        loggedIn: TokenService.hasAuthToken()
+            ? true
+            : false
+      })
     }
 
     render() {
+       
         return (
           <section className='LoginPage'>
-            <LoginForm
-              onLoginSuccess={this.handleLoginSuccess}
-            />
+            {this.state.loggedIn ? <Redirect to="/users" /> :  <LoginForm
+              onLoginSuccess={this.setLoggedIn} />}
           </section>
         )
       }

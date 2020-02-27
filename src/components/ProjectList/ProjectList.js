@@ -7,15 +7,14 @@ function ProjectList({results}) {
 	console.log('list-results', results)
 	const projectResults = results.map(project =>
 		<ProjectDetails 
-				key = {project.id} 
-				schoolName = {project.schoolName}
+				key = {project.project_id} 
+				schoolName = {project.schoolname}
 				city = {project.city}
 				state = {project.state}
-				fundingStatus = {project.fundingStatus}
-				fulfillmentTrailer = {project.fulfillmentTrailer}
-				teacherName= {project.teacherName}
-				imageURL = {project.imageURL}
-				fundURL = {project.fundURL}
+				fulfillmentTrailer = {project.fulfillmenttrailer}
+				teacherName= {project.teachername}
+				imageURL = {project.imageurl}
+				fundURL = {project.fundurl}
 				/>)
         return (
 		    <div className='feature'>

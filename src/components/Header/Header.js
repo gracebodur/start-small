@@ -1,11 +1,12 @@
 import React, {Component} from 'react'
-import TokenService from '../services/token-service'
+import TokenService from '../../services/token-service'
 import {Link } from 'react-router-dom'
 import Logo from '../Logo/Logo'
 import './Header.css'
 
 class Header extends Component {
     handleLogOutClick = () => {
+        TokenService.clearAuthToken()
     }
 
     renderLogoutLink() {
@@ -28,12 +29,12 @@ class Header extends Component {
     renderLoginLink() {
         return(
             <nav className='Nav dim underline-hover'>
-                <Link to='/register'>
-                    <p className='register-link' id='register'>Register</p>
-                </Link>
                 <Link to='/login'>
                     <p className='login-link' id='login'>Log in</p>
-                </Link>  
+                </Link>
+                <Link to='/register'>
+                    <p className='register-link' id='register'>Register</p>
+                </Link> 
             </nav>
 
         )
@@ -42,10 +43,12 @@ class Header extends Component {
     render() {
         return (
             <div>
+                 <nav>
                 <Logo />
-            { TokenService.hasAuthToken()
+                { TokenService.hasAuthToken()
                 ? this.renderLogoutLink()
                 : this.renderLoginLink() }
+                </nav>
              </div>
         )
     }

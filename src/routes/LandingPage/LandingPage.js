@@ -4,32 +4,32 @@ import SearchButton from '../../components/SearchButton/SearchButton'
 import './LandingPage.css'
 
 class LandingPage extends Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            projects: [],
-            isLoggedIn: false,
-            isLoggedOut: false,
-        }
-      }
+    // constructor(props) {
+    //     super(props)
+    //     this.state = {
+    //         projects: [],
+    //         // isLoggedIn: false,
+    //         // isLoggedOut: false,
+    //     }
+    //   }
     
-      componentDidMount() {
-        fetch(`http://localhost:8000/api/projects`, {
-            method: "GET",
-            headers: {
-                "content-type": "application/json"
-            }
-        })
-          .then(res => res.json())
-          .then(result => {
-          const projects = result.map(item => {
-            return item
-          })
-          this.setState({
-            projects: projects
-        })
-      })
-    }
+    //   componentDidMount() {
+    //     fetch(`http://localhost:8000/api/projects`, {
+    //         method: "GET",
+    //         headers: {
+    //             "content-type": "application/json"
+    //         }
+    //     })
+    //       .then(res => res.json())
+    //       .then(result => {
+    //       const projects = result.map(item => {
+    //         return item
+    //       })
+    //       this.setState({
+    //         projects: projects
+    //     })
+    //   })
+    // }
 
     render() {
         return(
@@ -38,7 +38,7 @@ class LandingPage extends Component {
                 <Intro />
                 <SearchButton />
              </div>
-             <div>
+             {/* <div>
                 <div className='row '>
                     <div className='column'>
                         <div className='card'>
@@ -70,8 +70,8 @@ class LandingPage extends Component {
                         </div>
                     </div>
                 </div>
-                </div>
-            </>
+                </div> */}
+                </>
         )
 
     }

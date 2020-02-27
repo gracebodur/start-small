@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import { Link } from 'react-router-dom'
-import AuthApiService from '../services/auth-api-services'
+import AuthApiService from '../../services/auth-api-service'
 import './RegistrationForm.css'
 
 class RegistrationForm extends Component {
@@ -39,12 +39,8 @@ class RegistrationForm extends Component {
       .catch(res => {
         this.setState({ error: res.error })
       })
+  }
 
-      full_name.value = ''
-      user_name.value = ''
-      password.value = ''
-      this.props.onRegistrationSuccess()
-    }
  
   render() {
     const { error }  = this.state
@@ -127,4 +123,5 @@ class RegistrationForm extends Component {
        
 
 export default RegistrationForm
+
 

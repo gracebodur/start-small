@@ -16,7 +16,12 @@ class SearchPage extends Component {
     }
 
     componentDidMount() {
-        fetch('./data.json')
+        fetch(`http://localhost:8000/api/projects`, {
+            method: "GET",
+            headers: {
+                "content-type": "application/json"
+            }
+        })
           .then(res => res.json())
           .then(result => {
           const projects = result.map(item => {
@@ -116,7 +121,6 @@ class SearchPage extends Component {
                             <ProjectList results={this.state.results} />
                         </div>
                     </section>
-                    
             </div>
         )
     }
