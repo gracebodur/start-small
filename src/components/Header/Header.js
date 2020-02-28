@@ -5,16 +5,26 @@ import Logo from '../Logo/Logo'
 import './Header.css'
 
 class Header extends Component {
+
+    state = {isLoggedIn: false}
+
+    // componentDidMount() {
+    //     this.setState({
+    //         isLoggedIn:  TokenService.hasAuthToken()
+    //     })
+    // }
+
     handleLogOutClick = () => {
         TokenService.clearAuthToken()
     }
+
 
     renderLogoutLink() {
         return(
             <div>
                  <nav className='Nav dim underline-hover'>
                     <Link 
-                        onClick={this.handleLogoutClick} 
+                        onClick={this.handleLogOutClick} 
                         className='logout-link'
                         to='/'>
                         <p>
@@ -43,12 +53,13 @@ class Header extends Component {
     render() {
         return (
             <div>
-                 <nav>
-                <Logo />
-                { TokenService.hasAuthToken()
-                ? this.renderLogoutLink()
-                : this.renderLoginLink() }
-                </nav>
+                 <div>
+                    <Logo />
+            
+                        { TokenService.hasAuthToken()
+                        ? this.renderLogoutLink()
+                        : this.renderLoginLink() }
+                </div>
              </div>
         )
     }

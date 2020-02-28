@@ -1,20 +1,29 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from "react-router-dom";
-import './index.css';
-
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { fab } from '@fortawesome/free-brands-svg-icons'
-import { fas } from '@fortawesome/free-solid-svg-icons'
+import { ProjectListProvider } from './contexts/ProjectListContext'
+import { ProjectProvider } from './contexts/ProjectContext'
+import './index.css';
 
 import App from './App';
 
-library.add(fab, fas)
+import { faStar as farStar } from '@fortawesome/free-regular-svg-icons'
 
+import { faStar as fasStar } from '@fortawesome/free-solid-svg-icons'
+
+library.add(
+  farStar,
+  fasStar,
+)
 
 ReactDOM.render(
         <Router>
-            <App />
+            <ProjectListProvider>
+              <ProjectProvider>
+                  <App />
+                </ProjectProvider>
+            </ProjectListProvider>
         </Router>,
    document.getElementById('root'));
 

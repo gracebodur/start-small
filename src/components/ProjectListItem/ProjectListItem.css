@@ -1,0 +1,55 @@
+.ProjectListItem {
+    background: none;
+    display: flex;
+    /* flex-direction: column; */
+    border: 0;
+    font-size: smaller;
+    text-decoration: none;
+    box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5); 
+    margin-bottom: 40px;
+    margin-right: 20px;
+    border-radius: 10px;
+  }
+  
+  .ProjectListItem:hover {
+    cursor: pointer;
+  }
+  
+  .ProjectListItem,
+  .ProjectListItem:visited {
+    color: #555;
+  }
+  
+  .ProjectListItem__image {
+    height: 300px;
+    width: 275px;
+    border-radius: 10px 10px 0 0;
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+  
+  .ProjectListItem__details {
+    padding: 10px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 275px;
+  }
+  
+  .ProjectListItem__details h2 {
+    margin: 0;
+  }
+  
+  .ProjectListItem__details .ProjectStarRating {
+    padding: 5px 0;
+    text-align: center;
+    opacity: 0.85;
+  }
+  
+  .ProjectListItem__details span {
+    display: block;
+    text-align: center;
+    opacity: 0.5;
+  }
+  

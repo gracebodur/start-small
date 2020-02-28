@@ -11,7 +11,6 @@ function Intro() {
             <section>
                 <ul>
                     <li>Pick a classroom project for your friends to support.</li>
-                    <li>Add a personal message.</li>
                     <li>See your impact!</li>
                 </ul>
             </section>

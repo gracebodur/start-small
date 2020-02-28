@@ -31,7 +31,7 @@ class LoginPage extends Component {
        
         return (
           <section className='LoginPage'>
-            {this.state.loggedIn ? <Redirect to="/users" /> :  <LoginForm
+            {this.state.loggedIn ? <Redirect to="/" /> :  <LoginForm
               onLoginSuccess={this.setLoggedIn} />}
           </section>
         )

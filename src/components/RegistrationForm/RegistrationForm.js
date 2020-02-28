@@ -8,15 +8,17 @@ class RegistrationForm extends Component {
       onRegistrationSuccess: () => {}
   }
 
-  constructor(props) {
-      super(props)
-      this.state = {
-          full_name: '',
-          user_name: '',
-          password: '',
-          error: null 
-      }
-  }
+  state = { error: null }
+
+  // constructor(props) {
+  //     super(props)
+  //     this.state = {
+  //         full_name: '',
+  //         user_name: '',
+  //         password: '',
+  //         // error: null 
+  //     }
+  // }
 
   handleSubmit = ev => {
     ev.preventDefault()

@@ -8,7 +8,7 @@ import './Logo.css'
 function Logo() {
     return(
         <div className='Logo'>
-            <Tilt className="Tilt" options={{ max : 25 }} style={{ height: 150, width: 150 }}>
+            <Tilt className="Tilt" options={{ max : 25 }} style={{ height: 100, width: 100 }}>
                 <Link to='/' className="Tilt-inner">
                     <img style={{paddingTop: '5px'}} alt='logo' src={logo} />
                 </Link>
