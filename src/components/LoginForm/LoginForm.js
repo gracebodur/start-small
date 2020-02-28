@@ -63,7 +63,7 @@ class LoginForm extends Component {
                     <fieldset className='Login-fieldset'>
                         <legend 
                             className='Login-legend center'>
-                            User Log In
+                            Log In
                         </legend>
                         <div className="Login-user_name">
                         <label 

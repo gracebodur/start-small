@@ -5,18 +5,24 @@
   font-display: swap;
   src: local('Lora Regular'), local('Lora-Regular'), url(https://fonts.gstatic.com/s/lora/v14/0QIvMX1D_JOuMwf7I-NP.woff2) format('woff2');
   unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  max-width: 960px;
+  margin: 0 auto;
 }
 
-.Particles {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
+.App__header {
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
-/* @import url('https://fonts.googleapis.com/css?family=Lora:400,700|Roboto+Slab:400,700&display=swap') */
+.App__main {
+  margin-top: 20px;
+}
+
+
+
+
 
 
 

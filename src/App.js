@@ -21,31 +21,35 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        <header>
+      <div className='App'>
+        <header className='App__header'>
         <Header />
         </header>
-        <main>
+        <main className='App__main'>
+        {this.state.hasError && <p className='red'>Something went wrong! Oh no!</p>}
         <Switch>
-          <Route exact path='/'>
-            <LandingPage/>
-          </Route>
+          <Route 
+            exact path='/'
+            component={LandingPage}
+          />
 
-          <PublicOnlyRoute path='/login'> 
-            <LoginPage />
-          </PublicOnlyRoute>
+          <PublicOnlyRoute 
+            path='/login' 
+            component={LoginPage} 
+          />
 
-          <PublicOnlyRoute path='/register'>
-            <RegistrationPage />
-          </PublicOnlyRoute>
+          <PublicOnlyRoute 
+            path='/register' 
+            component={RegistrationPage} 
+          />
 
-          <PrivateRoute path='/projects/:projects_id'>
-            <ProjectPage/>
-          </PrivateRoute>
+          <PrivateRoute 
+            path='/projects/:project_id' 
+            component={ProjectPage}/>
 
-          <Route>
-            <NotFoundPage/>
-          </Route>
+          <Route
+            component={NotFoundPage}
+          />
         </Switch>
         </main>
       </div>

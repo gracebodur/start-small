@@ -8,8 +8,7 @@ export default class ProjectListItem extends Component {
     const { project } = this.props
 
     return (
-      <Link to='/login' className='ProjectListItem'>
-      {/* <Link to={`/projects/${project.project_id}`} className='ProjectListItem'> */}
+      <Link to={`/projects/${project.project_id}`} className='ProjectListItem'>
         <div className='ProjectListItem__image' style={{backgroundImage: `url(${project.imageurl})`}} />
 
         <div className='ProjectListItem__details'>
@@ -19,9 +18,9 @@ export default class ProjectListItem extends Component {
             <p>&#8212;{project.teachername}</p>
           </div>
       
-          <div className='ProjectListItem__stars'>
-            <ProjectStarRating rating={project.average_stars_rating} />
-            <span id='ProjectListItem__stars-count'>{readableStarsCount(project.number_of_stars)}</span>
+          <div className='ProjectListItem__reviews'>
+            <ProjectStarRating rating={project.average_review_rating} />
+            <span id='ProjectListItem__review-count'>{readableReviewCount(project.number_of_reviews)}</span>
           </div>
         </div>
       </Link>
@@ -29,10 +28,10 @@ export default class ProjectListItem extends Component {
   }
 }
 
-function readableStarsCount(number) {
+function readableReviewCount(number) {
   switch(number) {
     case 0:
-      return 'no stars yet'
+      return 'no reviews yet'
 
     case 1:
       return `based on likeliness to donate 1 star`
@@ -41,3 +40,4 @@ function readableStarsCount(number) {
       return `based on likeliness to donate ${number} stars`
   }
 }
+

@@ -26,8 +26,8 @@ const ProjectsApiService = {
           : res.json()
       )
   },
-  getProjectStars(project_id) {
-    return fetch(`${config.API_ENDPOINT}/projects/${project_id}/stars`, {
+  getProjectReviews(project_id) {
+    return fetch(`${config.API_ENDPOINT}/projects/${project_id}/reviews`, {
       headers: {
         'authorization': `bearer ${TokenService.getAuthToken()}`,
       },
@@ -38,8 +38,8 @@ const ProjectsApiService = {
           : res.json()
       )
   },
-  postStars(project_id, stars) {
-    return fetch(`${config.API_ENDPOINT}/stars`, {
+  postRating(project_id, text, rating) {
+    return fetch(`${config.API_ENDPOINT}/reviews`, {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
@@ -47,7 +47,8 @@ const ProjectsApiService = {
       },
       body: JSON.stringify({
         project_id: project_id,
-        stars,
+        rating,
+        text,
       }),
     })
       .then(res =>

@@ -4,7 +4,7 @@
     border-width: 1px;
     color:  var( --clr-purple);
     border-color: rgba(0, 0, 0, .1);
-    margin-top: 1rem;
+    margin-top: 4rem;
     margin-bottom: 2rem;
     max-width: 16rem;
     padding: 2rem;
@@ -93,7 +93,7 @@
 .Register-cancel-button-input {
     display: inline-block;
     font-weight: bold;
-    font-size: .875rem;
+    font-size: .900rem;
     padding-left: 1rem;
     padding-right: 1rem;
     padding-top: .5rem;
@@ -104,27 +104,13 @@
     border-width: 1px;
     border-color: #000;
     background-color: transparent;
-    /* -moz-osx-font-smoothing: grayscale;
-    backface-visibility: hidden; */
-    /* transform: translateZ(0); */
-    /* transition: transform .25s ease-out; */
-}
-
-.Register-button-input:hover,
-.Register-cancel-button-input:hover {
-    cursor: pointer;
-}
-
-.red {
-    color: red;
+    -moz-osx-font-smoothing: grayscale;
+    backface-visibility: hidden; 
+    transform: translateZ(0);
+    transition: transform .25s ease-out;
 }
 
 .center {
     margin-right: auto;
     margin-left: auto;
 }
-
-button {
-    cursor: pointer;
-  }
-  

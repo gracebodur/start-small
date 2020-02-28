@@ -1,20 +1,15 @@
 import React, { Component } from 'react'
 
-// export const nullThing = {
-//   author: {},
-//   tags: [],
-// }
-
 const ProjectContext = React.createContext({
   project: [],
-  stars: [],
+  reviews: [],
   error: null,
   setError: () => {},
   clearError: () => { },
   setProject: () => {},
   clearProject: () => {},
-  setStars: () => {},
-  addStar: () => {},
+  setReviews: () => {},
+  addReviews: () => {},
 })
 
 export default ProjectContext
@@ -38,33 +33,33 @@ export class ProjectProvider extends Component {
     this.setState({ project })
   }
 
-  setStars = stars => {
-    this.setState({ stars })
+  setReviews = reviews => {
+    this.setState({ reviews })
   }
 
   clearProject = () => {
     this.setProject([])
-    this.setStars([])
+    this.setReviews([])
   }
 
-  addStar = star => {
+  addReview = review => {
     this.setStars([
-      ...this.state.stars,
-      star
+      ...this.state.reviews,
+      review
     ])
   }
 
   render() {
     const value = {
       project: this.state.project,
-      stars: this.state.stars,
+      reviews: this.state.reviews,
       error: this.state.error,
       setError: this.setError,
       clearError: this.clearError,
       setProject: this.setProject,
-      setStars: this.setStars,
+      setReviews: this.setReviews,
       clearProject: this.clearProject,
-      addStar: this.addStar,
+      addReview: this.addReview,
     }
     return (
       <ProjectContext.Provider value={value}>

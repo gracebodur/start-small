@@ -1,3 +1,5 @@
+/* @import url('https://fonts.googleapis.com/css?family=Lora:400,700|Roboto+Slab:400,700&display=swap') */
+
 *,
 *::before,
 *::after {
@@ -57,18 +59,53 @@ body {
   font-family: var(--ff-primary);
   font-size: var(--fs-body);
   line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: rgba(123,108,127,1);
+  background: -moz-linear-gradient(left, rgba(123,108,127,1) 0%, rgba(117,95,119,1) 0%, rgba(110,96,113,0.5) 50%, rgba(74,56,76,0.49) 51%, rgba(74,56,76,0) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(123,108,127,1)), color-stop(0%, rgba(117,95,119,1)), color-stop(50%, rgba(110,96,113,0.5)), color-stop(51%, rgba(74,56,76,0.49)), color-stop(100%, rgba(74,56,76,0)));
+  background: -webkit-linear-gradient(left, rgba(123,108,127,1) 0%, rgba(117,95,119,1) 0%, rgba(110,96,113,0.5) 50%, rgba(74,56,76,0.49) 51%, rgba(74,56,76,0) 100%);
+  background: -o-linear-gradient(left, rgba(123,108,127,1) 0%, rgba(117,95,119,1) 0%, rgba(110,96,113,0.5) 50%, rgba(74,56,76,0.49) 51%, rgba(74,56,76,0) 100%);
+  background: -ms-linear-gradient(left, rgba(123,108,127,1) 0%, rgba(117,95,119,1) 0%, rgba(110,96,113,0.5) 50%, rgba(74,56,76,0.49) 51%, rgba(74,56,76,0) 100%);
+  background: linear-gradient(to right, rgba(123,108,127,1) 0%, rgba(117,95,119,1) 0%, rgba(110,96,113,0.5) 50%, rgba(74,56,76,0.49) 51%, rgba(74,56,76,0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7b6c7f', endColorstr='#4a384c', GradientType=1 );
 }
 
-h1,
-h2,
-h3 {
+h1, h2, h3, h4, h5, h6 {
     line-height: 1;
     margin: 0;
+    font-weight: 100;
+    color: #222;
 }
 
 h1 { font-size: var(--fs-h1) }
 h2 { font-size: var(--fs-h2) }
 h3 { font-size: var(--fs-h3) }
+
+p {
+  color: #555;
+}
+
+.blue {
+  color: #477ACC;
+}
+
+.yellow {
+  color: #EAC435;
+}
+
+.green {
+  color: #09a55e;
+}
+
+.red {
+  color: #CA1551;
+}
+
+.orange {
+  color: #FB4D3D;
+}
+
 
 button {
   cursor: pointer;
