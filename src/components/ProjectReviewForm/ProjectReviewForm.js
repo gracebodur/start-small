@@ -39,7 +39,7 @@ export default class ReviewForm extends Component {
         </div>
 
         <div className='select'>
-          <label htmlFor='rating'>Rate this project!</label>
+          <label htmlFor='rating'>How likely will you donate to this project?</label>
           <select
             required
             aria-label='Rate this project!'

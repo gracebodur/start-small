@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import TokenService from '../../services/token-service'
 import {Link } from 'react-router-dom'
-// import Logo from '../Logo/Logo'
+import Logo from '../Logo/Logo'
 import './Header.css'
 
 class Header extends Component {
@@ -14,10 +14,10 @@ class Header extends Component {
 
     renderLogoutLink() {
         return(
-            <div className='Header__logged-in dim underline-hover'>
+            <div className='Header__logged-in Nav dim underline-hover'>
                 <Link 
                     onClick={this.handleLogOutClick} 
-                    className='logout-link'
+                    className='nav-link'
                     to='/'>
                     <p>
                     Log out
@@ -31,10 +31,10 @@ class Header extends Component {
         return(
             <nav className='Nav dim underline-hover'>
                 <Link to='/login'>
-                    <p className='login-link' id='login'>Log in</p>
+                    <p className='nav-link' id='login'>Log in</p>
                 </Link>
                 <Link to='/register'>
-                    <p className='register-link' id='register'>Register</p>
+                    <p className='nav-link' id='register'>Register</p>
                 </Link> 
             </nav>
 
@@ -45,7 +45,7 @@ class Header extends Component {
         return (
             <nav className='Header'>
                 <div>
-                    {/* <Logo /> */}
+                    <Logo />
                     { TokenService.hasAuthToken()
                     ? this.renderLogoutLink()
                     : this.renderLoginLink() }

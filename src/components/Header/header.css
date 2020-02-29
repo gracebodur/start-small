@@ -7,13 +7,8 @@
     letter-spacing: 3px;
   }
 
-  h1 {
-    color: var(--clr-purple);
-  }
-  
-  h3 {
-    font-size: 30px;
-    color: var(--clr-purple);
+  .nav-link {
+    text-decoration: none;
   }
 
   .Nav {
@@ -44,15 +39,6 @@ p {
   opacity: .7; transition: opacity .15s ease-out;
 }
 
-@media screen and (min-width: 450px) {
-  .Header {
-    align-items: baseline;
-  }
-
-  .Header h1 {
-    font-size: 22pt;
-  }
-}
 
 
 

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import { ProjectStarRating } from '../ProjectStarRating/ProjectStarRating'
+// import { ProjectStarRating } from '../ProjectStarRating/ProjectStarRating'
 import './ProjectListItem.css'
 
 export default class ProjectListItem extends Component { 
@@ -19,26 +19,26 @@ export default class ProjectListItem extends Component {
             <p>&#8212;{project.teachername}</p>
           </div>
       
-          <div className='ProjectListItem__reviews'>
+          {/* <div className='ProjectListItem__reviews'>
             <ProjectStarRating rating={project.average_review_rating} />
             <span id='ProjectListItem__review-count'>{readableReviewCount(project.number_of_reviews)}</span>
-          </div>
+          </div> */}
         </div>
       </Link>
     )
   }
 }
 
-function readableReviewCount(number) {
-  switch(number) {
-    case 0:
-      return 'no reviews yet'
+// function readableReviewCount(number) {
+//   switch(number) {
+//     case 0:
+//       return 'how likely are you to donate?'
 
-    case 1:
-      return `based on likeliness to donate`
+//     case 1:
+//       return `how likely are you to donate?`
 
-    default:
-      return `based on likeliness to donate ${number}`
-  }
-}
+//     default:
+//       return `based on likeliness to donate ${number}`
+//   }
+// }
 

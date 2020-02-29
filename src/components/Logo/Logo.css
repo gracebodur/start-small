@@ -1,5 +1,5 @@
 .Logo {
-    display: inline-block;
+    /* display: inline-block;
     position: absolute;
     left: 0;
     top: 20px;
@@ -8,29 +8,19 @@
     margin-top: 0px;
     padding: 5px;
     padding-left: 20vw;
-    border-radius: 2px;
+    border-radius: 2px; */
+    max-width: 100%;
+    margin: 24px 0 25px;
 }
 
-  @media only screen and (min-width: 20em) {
-    .Logo {
-      padding-left: 20vw;
-    }
-  }
-   /* 328px */
-   
-  @media only screen and (min-width: 48em){
-    .Logo {
-      width: 200px;
-      height: 300px;
-    }
-  }
-  /* 768px */
-   
-  @media only screen and (min-width: 56.25em){
-    .Logo {
-      width: 300px;
-      height: 100px;
-    }
-   }
-   /* 900px */
-  
+@media (max-width: 767px) {
+
+	.Logo {
+		max-width: 75%;
+		margin: 14px auto 15px;
+		text-align: center;
+	}
+
+}
+
+

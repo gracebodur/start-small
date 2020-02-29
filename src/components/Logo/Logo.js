@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import Tilt from 'react-tilt'
-import logo from '../../img/logo.png'
+import logo from '../../img/logo_file.png'
 import './Logo.css'
 
 

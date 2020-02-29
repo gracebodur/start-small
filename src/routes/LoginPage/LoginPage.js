@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import {Redirect} from 'react-router-dom'
 import LoginForm from '../../components/LoginForm/LoginForm'
 import TokenService from '../../services/token-service'
+// import ProjectPage from '../ProjectPage/ProjectPage'
 
 class LoginPage extends Component {
     static defaultProps = {
@@ -31,7 +32,7 @@ class LoginPage extends Component {
        
         return (
           <section className='LoginPage'>
-            {this.state.loggedIn ? <Redirect to="/" /> :  <LoginForm
+            {this.state.loggedIn ? <Redirect to='/' /> :  <LoginForm
               onLoginSuccess={this.setLoggedIn} />}
           </section>
         )

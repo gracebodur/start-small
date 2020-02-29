@@ -4,7 +4,8 @@ import ProjectContext from '../../contexts/ProjectContext'
 import ProjectsApiService from '../../services/projects-api-service'
 import { Section } from '../../components/Utils/Utils'
 // import { ProjectStarRating } from '../../components/ProjectStarRating/ProjectStarRating'
-import ProjectReviewForm from '../../components/ProjectReviewForm/ProjectReviewForm'
+import ShareButton from '../../components/ShareButton/ShareButton'
+// import ProjectReviewForm from '../../components/ProjectReviewForm/ProjectReviewForm'
 import './ProjectPage.css'
 
 class ProjectPage extends Component {
@@ -33,10 +34,14 @@ class ProjectPage extends Component {
     const { project } = this.context
     return <>
       <div className='SearchProjectPage__image' style={{backgroundImage: `url(${project.imageurl})`}} />
-      <h3>{project.schoolname}</h3>
-      <ProjectContent project={project} />
-      {/* <ProjectReviews reviews={reviews} /> */}
-      <ProjectReviewForm />
+        <div>
+          <h1>{project.schoolname}, {project.city}, {project.state}</h1>
+        </div>
+        <p>"{project.fulfillmenttrailer}"</p>
+        <h3>-{project.teachername}</h3>
+        <h4>Accepting donations<a href={project.fundurl} target='_blank' rel="noopener noreferrer">here</a></h4>
+        <ShareButton />
+        {/* <ProjectReviewForm /> */}
     </>
   }
 
@@ -59,36 +64,5 @@ class ProjectPage extends Component {
     )
   }
 }
-
-function ProjectContent({ project }) {
-  return (
-    <p className='SearchProjectPage__content'>
-      {project.content}
-    </p>
-  )
-}
-
-// function ProjectReviews({ reviews = {} }) {
-//   return (
-//     <ul className='ProjectPage__review-list'>
-//       {reviews.map(review =>
-//         <li key={review.review_id} className='ProjectPage__review'>
-//           <p className='ProjectPage__review-text'>
-//             <FontAwesomeIcon
-//               size='lg'
-//               icon='quote-left'
-//               className='ProjectPage__review-icon blue'
-//             />
-//             {review.text}
-//           </p>
-//           <p className='ProjectPage__review-user'>
-//             <ProjectStarRating rating={review.rating} />
-//             {review.user.full_name}
-//           </p>
-//         </li>
-//       )}
-//     </ul>
-//   )
-// }
 
 export default ProjectPage
