@@ -6,6 +6,7 @@ import './ProjectListItem.css'
 export default class ProjectListItem extends Component { 
   render() {
     const { project } = this.props
+    // console.log(this.props)
 
     return (
       <Link to={`/projects/${project.project_id}`} className='ProjectListItem'>
@@ -34,10 +35,10 @@ function readableReviewCount(number) {
       return 'no reviews yet'
 
     case 1:
-      return `based on likeliness to donate 1 star`
+      return `based on likeliness to donate`
 
     default:
-      return `based on likeliness to donate ${number} stars`
+      return `based on likeliness to donate ${number}`
   }
 }
 

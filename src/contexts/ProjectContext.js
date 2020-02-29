@@ -43,7 +43,7 @@ export class ProjectProvider extends Component {
   }
 
   addReview = review => {
-    this.setStars([
+    this.setReviews([
       ...this.state.reviews,
       review
     ])
