@@ -7,7 +7,6 @@ function ContactButton() {
             <button className='Btn center'>
                 <a 
                 href='mailto:startsmall-contact@gmail.com'
-                subject='recommend classroom'
                 target='_blank'
                 rel='noopener noreferrer'
                 >

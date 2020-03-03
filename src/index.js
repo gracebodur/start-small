@@ -20,11 +20,11 @@ import {
   faStar as fasStar } from '@fortawesome/free-solid-svg-icons'
 
   library.add(
-    faListUl, // style: listicle
-    faListOl, // style: howto
-    faGlobeAmericas, // style: news
-    faPenAlt, // style: interview
-    faBookOpen, // style: story
+    faListUl, 
+    faListOl, 
+    faGlobeAmericas,
+    faPenAlt,
+    faBookOpen, 
     faComment,
     faQuoteLeft,
     farStar,
