@@ -42,7 +42,7 @@ export class ProjectProvider extends Component {
     this.setReviews([])
   }
 
-  addReview = review => {
+  addReviews = review => {
     this.setReviews([
       ...this.state.reviews,
       review
@@ -59,7 +59,7 @@ export class ProjectProvider extends Component {
       setProject: this.setProject,
       setReviews: this.setReviews,
       clearProject: this.clearProject,
-      addReview: this.addReview,
+      addReviews: this.addReviews,
     }
     return (
       <ProjectContext.Provider value={value}>

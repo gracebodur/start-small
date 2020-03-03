@@ -12,8 +12,8 @@ export default class ReviewForm extends Component {
     const { project } = this.context
     const { text, rating } = ev.target
 
-    ProjectsApiService.postRating(project.project_id, text.value, Number(rating.value))
-      .then(this.context.addReview)
+    ProjectsApiService.postReview(project.project_id, text.value, Number(rating.value))
+      .then(this.context.addReviews)
       .then(() => {
         text.value = ''
       })

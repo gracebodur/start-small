@@ -8,7 +8,7 @@
     margin-bottom: 3rem;
     max-width: 16rem;
     padding: 2rem;
-    color: rgba(0, 0, 0, .8);
+    /* color: rgba(0, 0, 0, .8); */
 }
 
 .Login-form {
@@ -100,12 +100,7 @@
     transition: transform .25s ease-out;
 }
 
-.Login-button-input:hover,
-.Login-cancel-button-input:hover {
-    cursor: pointer;
-}
-
-.center {
+/* .center {
     margin-right: auto;
     margin-left: auto;
-}
+} */

@@ -38,7 +38,7 @@ const ProjectsApiService = {
           : res.json()
       )
   },
-  postRating(project_id, text, rating) {
+  postReview(project_id, text, rating) {
     return fetch(`${config.API_ENDPOINT}/reviews`, {
       method: 'POST',
       headers: {

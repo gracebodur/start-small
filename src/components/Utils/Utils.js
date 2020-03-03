@@ -11,6 +11,11 @@ export function Textarea({ className, ...props }) {
   )
 }
 
+export function Hyph() {
+  return <span className='Hyph'>{' - '}</span>
+}
+
+
 export function Section({ className, list, ...props }) {
     const classes = [
       'Section',

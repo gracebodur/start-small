@@ -9,12 +9,27 @@ import './index.css';
 import App from './App';
 
 import { faStar as farStar } from '@fortawesome/free-regular-svg-icons'
-import { faStar as fasStar } from '@fortawesome/free-solid-svg-icons'
+import { 
+  faBookOpen,
+  faComment,
+  faGlobeAmericas,
+  faListOl,
+  faListUl,
+  faPenAlt,
+  faQuoteLeft,
+  faStar as fasStar } from '@fortawesome/free-solid-svg-icons'
 
-library.add(
-  farStar,
-  fasStar,
-)
+  library.add(
+    faListUl, // style: listicle
+    faListOl, // style: howto
+    faGlobeAmericas, // style: news
+    faPenAlt, // style: interview
+    faBookOpen, // style: story
+    faComment,
+    faQuoteLeft,
+    farStar,
+    fasStar,
+  )
 
 ReactDOM.render(
         <Router>
