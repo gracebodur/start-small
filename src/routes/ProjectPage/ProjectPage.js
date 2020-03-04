@@ -33,18 +33,17 @@ class ProjectPage extends Component {
   renderProject() {
     const { project, reviews } = this.context
     return <>
-      <div className='SearchProjectPage__image' style={{backgroundImage: `url(${project.imageurl})`}} />
+      <div className='ProjectPage__image' style={{backgroundImage: `url(${project.imageurl})`}} />
         <div>
-          <h1>{project.schoolname}, {project.city}, {project.state}</h1>
+          <h1>{project.schoolname}, {project.city}, {project.state}</h1> 
         </div>
-        <p className='ProjectPage__review-fulfillmenttrailer'>
+        <p className='ProjectPage__review-fulfillmenttrailer center'>
         <FontAwesomeIcon
               size='lg'
               icon='quote-left'
               className='ProjectPage__review-fulfillmenttrailericon blue'
-            />{project.fulfillmenttrailer}</p>
-        <h3>-{project.teachername}</h3>
-        <h4>Accepting donations<a href={project.fundurl} target='_blank' rel="noopener noreferrer">here</a></h4>
+            />{project.fulfillmenttrailer} -{project.teachername}</p>
+        <h4 className='Fundurl'>Accepting donations<a href={project.fundurl} target='_blank' rel="noopener noreferrer"> here</a></h4>
         <ShareButton />
         <ProjectContent project={project} />
         <ProjectReviews reviews={reviews} />

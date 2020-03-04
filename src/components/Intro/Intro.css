@@ -1,15 +1,14 @@
-.App-header {
-    margin-top: 50px;
-}
-
-section {
-    min-height: 200px;
-    font-family: var(--ff-secondary);
-    color: var(--clr-purple);
-}
-
-section > p {
+.Intro {
+    display: flex;
+    align-items: center;
     text-align: center;
+    color: #3D495A;
+    padding: 20px;
+    padding-top: 25%;
+}
+
+h1 {
+    font-size: 40pt;
 }
 
 ul {
@@ -17,6 +16,89 @@ ul {
     text-align: center;
 }
 
-* + ul {
-    margin-top: 2rem;
+p {
+    text-align: center;
+    padding-top: 10%;
 }
+
+/* iphone6/7/8 */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+      .Intro {
+       align-items: center;
+    }
+    h1 {
+        font-size: 25pt;
+    }
+    
+    ul {
+        font-size: 15pt;
+    }
+    
+    p {
+        font-size: 15pt;
+    }
+}
+
+/*iphonex */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) {
+    .Intro {
+        align-items: center;
+    }
+    h1 {
+        font-size: 30pt;
+    }
+    
+    ul {
+        font-size: 15pt;
+    }
+    
+    p {
+        font-size: 15pt;
+    }
+   
+}
+
+/* ipad */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+    h1 {
+        font-size: 40pt;
+    }
+    
+    ul {
+        font-size: 20pt;
+    }
+    
+    p {
+        font-size: 18pt;
+    }
+  
+}
+
+/* ipadpro */
+@media only screen 
+  and (min-device-width: 834px) 
+  and (max-device-width: 1112px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    h1 {
+        font-size: 50pt;
+    }
+    
+    ul {
+        font-size: 25pt;
+    }
+    
+    p {
+        font-size: 23pt;
+    }
+  
+}
+

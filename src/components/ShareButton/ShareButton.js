@@ -1,9 +1,11 @@
 import React from 'react'
+import './ShareButton.css'
 
 function ShareButton() {
     return(
         <section>
-            <iframe 
+            <iframe
+                className='Fbshare' 
                 title='facebook'
                 src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&layout=button&size=large&width=77&height=28&appId" 
                 width="77" 

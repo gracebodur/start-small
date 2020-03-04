@@ -12,7 +12,6 @@ Live app: [Start Small]()
 ## Services: 
 
 
-
 ## Links:
 
 - Github
@@ -38,5 +37,14 @@ Project List Page
 
 Project Page
 ![Project Page]()
+
+## Setting Up
+
+- Install dependencies: `npm install`
+
+## Scripts
+
+- Start the application for development: `npm start`
+
 
 Author: Marie Grace Bodur

@@ -14,14 +14,12 @@ class Header extends Component {
 
     renderLogoutLink() {
         return(
-            <div className='Header__logged-in Nav dim underline-hover'>
+            <div className='Header__logged-in'>
                 <Link 
                     onClick={this.handleLogOutClick} 
-                    className='nav-link'
-                    to='/'>
-                    <p>
+                    to='/'
+                    className='Nav__link'>
                     Log out
-                    </p>
                 </Link>
             </div>
         )
@@ -29,14 +27,15 @@ class Header extends Component {
 
     renderLoginLink() {
         return(
-            <nav className='Nav dim underline-hover'>
-                <Link to='/login'>
-                    <p className='nav-link' id='login'>Log in</p>
+            <div className='Header__not-logged-in'>
+                <Link to='/login' className='Nav__link'>
+                    Log in
                 </Link>
-                <Link to='/register'>
-                    <p className='nav-link' id='register'>Register</p>
+
+                <Link to='/register' className='Nav__link'>
+                    Register
                 </Link> 
-            </nav>
+            </div>
 
         )
     }
@@ -44,16 +43,15 @@ class Header extends Component {
     render() {
         return (
             <nav className='Header'>
-                <div>
-                    <Logo />
-                    { TokenService.hasAuthToken()
-                    ? this.renderLogoutLink()
-                    : this.renderLoginLink() }
-                </div>
-             </nav>
+                <Logo />
+                { TokenService.hasAuthToken()
+                ? this.renderLogoutLink()
+                : this.renderLoginLink() }
+            </nav>
         )
     }
 }
 
 
 export default Header
+

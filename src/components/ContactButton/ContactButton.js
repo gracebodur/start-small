@@ -3,14 +3,14 @@ import './ContactButton.css'
 
 function ContactButton() {
     return(
-        <div >
+        <div>
             <button className='Btn center'>
                 <a 
-                href='mailto:startsmall-contact@gmail.com'
-                target='_blank'
-                rel='noopener noreferrer'
-                >
-                Contact Us
+                    className='Btn__inner'
+                    href='mailto:startsmall-contact@gmail.com'
+                    target='_blank'
+                    rel='noopener noreferrer'>
+                    Contact Us
                 </a>
             </button>
         </div>

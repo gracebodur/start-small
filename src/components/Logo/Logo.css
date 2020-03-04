@@ -1,26 +1,57 @@
 .Logo {
-    /* display: inline-block;
-    position: absolute;
-    left: 0;
-    top: 20px;
-    background-position: center top;
-    margin: 10px;
-    margin-top: 0px;
-    padding: 5px;
-    padding-left: 20vw;
-    border-radius: 2px; */
-    max-width: 100%;
-    margin: 24px 0 25px;
+    position: relative;
+    padding-top: 20px;
 }
 
-@media (max-width: 767px) {
+img {
+    max-width: 120%;
+    max-height: 120%;
+}
 
-	.Logo {
-		max-width: 75%;
-		margin: 14px auto 15px;
-		text-align: center;
-	}
+/* iphone6/7/8 */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+    img {
+        max-width: 110%;
+        max-height: 110%;
+    }
+      
+}
 
+
+/* iphoneX */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+    img {
+        max-width: 120%;
+        max-height: 120%;
+    }
+}
+
+/* ipad */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+    img {
+        max-width: 200%;
+        max-height: 200%;
+    }
+}
+
+/* ipadpro */
+@media only screen 
+  and (min-device-width: 834px) 
+  and (max-device-width: 1112px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    img {
+        max-width: 320%;
+        max-height: 320%;
+    }
 }
 
 

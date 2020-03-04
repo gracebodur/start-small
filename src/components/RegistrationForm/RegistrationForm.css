@@ -4,11 +4,17 @@
     border-width: 1px;
     color:  var( --clr-purple);
     border-color: rgba(0, 0, 0, .1);
-    margin-top: 4rem;
     margin-bottom: 2rem;
     max-width: 16rem;
     padding: 2rem;
     color: rgba(0, 0, 0, .8);
+    border-radius: 10px;
+    -webkit-box-shadow: -11px 10px 6px -1px rgba(54,34,69,0.72);
+    -moz-box-shadow: -11px 10px 6px -1px rgba(54,34,69,0.72);
+    box-shadow: -11px 10px 6px -1px rgba(54,34,69,0.72);
+    background: #ECE9E6; 
+    background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  
+    background: linear-gradient(to right, #FFFFFF, #ECE9E6);
 }
 
 .Register-form {
@@ -113,4 +119,105 @@
 .center {
     margin-right: auto;
     margin-left: auto;
+}
+
+/* iphone6/7/8 */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+
+}
+
+/*iphonex */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+    .Register-main {
+        margin-top: 30%;
+    }
+}
+
+/* ipad */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .Register-main {
+        margin-top: 20%;
+        max-width: 20rem;
+    }
+    .Register-legend {
+        font-size: 2.0rem;
+        font-weight: 600;
+    }
+    .Username-label {
+        font-size: 1.25rem;
+    }
+    .Password-label {
+        font-size: 1.25rem;
+    }
+    .Username-input,
+    .Password-input {
+        font-size: 1rem;
+    }
+    .Register-button-input {
+        font-size: 1.5rem;
+    }
+    .Register-cancel-button-input {
+        font-size: 1.5rem;
+    }
+    .Fullname-label,
+    .Password-label,
+    .New-user_name-label {
+        font-size: 1.5rem;
+    }
+    .Fullname-input,
+    .Password-input,
+    .New-user_name-input {
+        font-size: 1.5rem;
+    }
+}
+
+/* ipadpro */
+@media only screen 
+  and (min-device-width: 834px) 
+  and (max-device-width: 1112px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .Register-main {
+        margin-top: 20%;
+        max-width: 25rem;
+    }
+    .Register-legend {
+        font-size: 2.5rem;
+    }
+    .Username-label {
+        font-size: 2.25rem;
+    }
+    .Password-label {
+        font-size: 2rem;
+    }
+    .Password-input {
+        font-size: 2rem;
+    }
+    .Username-input {
+        font-size: 2rem;
+    }
+    .Register-button-input {
+        font-size: 2rem;
+    }
+    .Register-cancel-button-input {
+        font-size: 2rem;
+    }
+    .Fullname-label,
+    .Password-label,
+    .New-user_name-label {
+        font-size: 2rem;
+    }
+    .Fullname-input,
+    .Password-input,
+    .New-user_name-input {
+        font-size: 2rem;
+    }
 }

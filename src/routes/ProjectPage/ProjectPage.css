@@ -1,4 +1,4 @@
-.SearchProjectPage__image {
+.ProjectPage__image {
     height: 20vw;
     min-height: 150px;
     background-size: cover;
@@ -6,21 +6,20 @@
     border-radius: 10px 10px 0 0;
   }
   
-  .SearchProjectPage__star-list {
-    /* padding-inline-start: 20px; */
+  .ProjectPage__star-list {
     list-style-type: none;
     padding: 0;
   }
   
-  .SearchProjectPage__content {
+  .ProjectPage__content {
     margin-bottom: 30px;
   }
   
-  .SearchProjectPage__star {
+  .ProjectPage__review {
     position: relative;
   }
   
-  .SearchProjectPage__star::before {
+  .ProjectPage__review::before {
     border-color: transparent #f5f5f5;
     border-style: solid;
     border-width: 0px 0px 10px 10px;
@@ -33,20 +32,20 @@
     right: 7px;
   }
   
-  .SearchProjectPage__star-icon {
+  .ProjectPage__review-icon {
     font-size: 12pt;
     margin-right: 10px;
     vertical-align: super !important;
   }
   
-  .SearchProjectPage__star-text {
+  .ProjectPage__review-text {
     background: #f5f5f5;
     padding: 8px;
     margin-bottom: 4px;
     border-radius: 4px;
   }
   
-  .SearchProjectPage__star-user {
+  .ProjectPage__review-user {
     color: #666;
     margin: 8px 0 0;
     font-size: 10pt;
@@ -54,7 +53,16 @@
     text-align: right;
   }
   
-  .SearchProjectPage__star-user .SearchProjectStarRating {
+  .ProjectPage__review-user .ProjectStarRating {
     display: inline;
   }
   
+  .Fundurl {
+    position: absolute;
+    right: 35vh;
+  }
+
+  .ProjectPage__review-list {
+    color: red;
+    margin-top: 25vh;
+  }

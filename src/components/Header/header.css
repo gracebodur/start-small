@@ -1,47 +1,85 @@
-.App-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: 50px;
-    letter-spacing: 3px;
-  }
-
-  .nav-link {
-    text-decoration: none;
-  }
-
-  .Nav {
-    display: flex;
-    justify-content: flex-end;
-    font-family: var(--ff-seconday);
-    color: var(--clr-purple);
-    padding: 1rem;
-    font-size: 1.25rem;
+.Header {
+  height: 40px;
+  display: flex;
+  align-items: normal;
+  justify-content: space-between;
+  margin-top: 5px;
+  margin-right: 35%;
 }
 
-p {
-    padding-right: 30px;
+.Header a {
+  color: #444;
+  text-decoration: none;
 }
 
-.dim {
-    opacity: 1;
-    transition: opacity .15s ease-in;
+.Header__not-logged-in {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: flex-end;
+  cursor: pointer;
 }
 
-.dim:hover,
-.dim:focus {
-    opacity: .5;
-    transition: opacity .15s ease-in;
+.Header__not-logged-in a:last-child {
+  background: #3D495A;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 15px;
+  margin-left: 10px;
 }
 
-.dim:active {
-  opacity: .7; transition: opacity .15s ease-out;
+.Header__logged-in a {
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  padding: 5px 15px;
+  border-radius: 15px;
+  cursor: pointer;
 }
 
+/* iphone6/7/8 */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+    .Header {
+      font-size: 1rem;
+      margin-right: 2%;
+    }
+}
 
+ 
+/*iphonex */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+    .Header {
+      font-size: 1rem;
+      margin-right: 2%;
+    }
+}
 
+/* ipad */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .Header {
+      font-size: 1.5rem;
+      margin-right: 2%;
+    }
+}
 
+/* ipadpro */
+@media only screen 
+  and (min-device-width: 834px) 
+  and (max-device-width: 1112px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .Header {
+      font-size: 1.75rem;
+      margin-top: 10%;
+      margin-right: 2%;
+    }
+}
 
 
 
