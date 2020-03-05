@@ -1,22 +1,18 @@
 import React from 'react'
+import fbShare from '../../img/fb-share-icon.jpg'
 import './ShareButton.css'
 
 function ShareButton() {
     return(
         <section>
-            <iframe
-                className='Fbshare' 
-                title='facebook'
-                src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&layout=button&size=large&width=77&height=28&appId" 
-                width="77" 
-                height="28" 
-                style={{border:'none'}} 
-                scrolling="no" 
-                frameBorder="0" 
-                allowtransparency="true" 
-                allow="encrypted-media"
-                data-href="https://startsmall.now.sh/" >
-            </iframe>
+            <div 
+                class="fb-share-button" 
+                data-href="https://startsmall.now.sh/" 
+                data-layout="button" data-size="large">
+                <a target="_blank" 
+                rel="noopener noreferrer"
+                href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fstartsmall.now.sh%2F&amp;src=sdkpreparse" 
+                class="fb-xfbml-parse-ignore"><img style={{paddingTop: '5px', width: '10%'}} alt='facebook share button' src={fbShare} /></a></div>
         </section>
     )
 }
