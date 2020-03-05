@@ -6,6 +6,7 @@ import { Hyph, Section } from '../../components/Utils/Utils'
 import { ProjectStarRating } from '../../components/ProjectStarRating/ProjectStarRating'
 import ShareButton from '../../components/ShareButton/ShareButton'
 import ProjectReviewForm from '../../components/ProjectReviewForm/ProjectReviewForm'
+import donorsLogo from '../../img/donors-logo.png'
 import './ProjectPage.css'
 
 class ProjectPage extends Component {
@@ -43,7 +44,12 @@ class ProjectPage extends Component {
               icon='quote-left'
               className='ProjectPage__review-fulfillmenttrailericon blue'
             />{project.fulfillmenttrailer} -{project.teachername}</p>
-        <h4 className='Fundurl'>Accepting donations<a href={project.fundurl} target='_blank' rel="noopener noreferrer"> here</a></h4>
+            <h4 className='Fundurl'>Donate here: 
+            <a 
+              href={project.fundurl} 
+              target='_blank' 
+              rel="noopener noreferrer">
+            <img style={{paddingTop: '5px', width: '20%'}} alt='donation website' src={donorsLogo} /></a></h4>
         <ShareButton />
         <ProjectContent project={project} />
         <ProjectReviews reviews={reviews} />

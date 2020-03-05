@@ -7,7 +7,7 @@ function ContactButton() {
             <button className='Btn center'>
                 <a 
                     className='Btn__inner'
-                    href='mailto:startsmall-contact@gmail.com'
+                    href='mailto:startsmall.contact@gmail.com'
                     target='_blank'
                     rel='noopener noreferrer'>
                     Contact Us

@@ -7,7 +7,7 @@ function ShareButton() {
         <section>
             <div 
                 class="fb-share-button" 
-                data-href="https://startsmall.now.sh/" 
+                data-href="https://start-small.now.sh/" 
                 data-layout="button" data-size="large">
                 <a target="_blank" 
                 rel="noopener noreferrer"
