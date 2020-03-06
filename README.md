@@ -2,7 +2,7 @@
 
 Author: Marie Grace Bodur
 
-Live app: [Start Small]()
+Live app: [Start Small](https://start-small.now.sh)
 
 ## About Start Small
 
