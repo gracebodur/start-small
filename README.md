@@ -12,9 +12,6 @@ Start small is an app that provides user different classroom projects that needs
 - Client side: Reactjs, Javascript, HTML and CSS
 - Server side: Express.js, Node.js, PostgreSQL
 
-## Services: 
-
-
 ## Links:
 
 - Github
@@ -26,22 +23,22 @@ Start small is an app that provides user different classroom projects that needs
 
 ## Screenshots
 
-Landing Page
+Landing Page - located in routes folder. Renders all Project List placed in components folder
  ![Landing Page](./screenshots/LandingPage.png)
 
-Login Page
+Login Page - located in routes folder. Renders Login Form placed in components folder
 ![Login Page](./screenshots/LoginPage.png)
  
-Registration Page
+Registration Page - located in routes folder. Renders Registration Form placed in components folder
 ![Registration Page](./screenshots/RegistrationPage.png)
 
-Project List Page
+Project List Page - located in routes folder. Renders Project List Items with details of each classroom projects.
 ![Project List Page](./screenshots/ProjectListPage.png)
 
-Project Page
+Project Page - located in routes folder. Renders individual Project, Reviews, external links, rating and review form.
 ![Project Page](./screenshots/ProjectPage.png)
 
-Review and Rating Form
+Review and Rating Form - Rendered by ProjectPage. Review form placed in components folder.
 ![Review and Rating Form](./screenshots/Review.png)
 
 ## Setting Up
