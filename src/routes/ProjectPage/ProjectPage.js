@@ -33,28 +33,29 @@ class ProjectPage extends Component {
 
   renderProject() {
     const { project, reviews } = this.context
-    return <>
+    return <div>
       <div className='ProjectPage__image' style={{backgroundImage: `url(${project.imageurl})`}} />
         <div>
-          <h1>{project.schoolname}, {project.city}, {project.state}</h1> 
+          <h2 className='ProjectPage__details'>{project.schoolname}, {project.city}, {project.state}</h2> 
         </div>
         <p className='ProjectPage__review-fulfillmenttrailer center'>
-        <FontAwesomeIcon
-              size='lg'
-              icon='quote-left'
-              className='ProjectPage__review-fulfillmenttrailericon blue'
-            />{project.fulfillmenttrailer} -{project.teachername}</p>
-            <h4 className='Fundurl'>Donate here: 
-            <a 
-              href={project.fundurl} 
-              target='_blank' 
-              rel="noopener noreferrer">
-            <img style={{paddingTop: '5px', width: '20%'}} alt='donation website' src={donorsLogo} /></a></h4>
+          <FontAwesomeIcon
+            size='lg'
+            icon='quote-left'
+            className='ProjectPage__review-fulfillmenttrailericon blue'
+          />
+            {project.fulfillmenttrailer} -{project.teachername}
+        </p>
+        <h4 className='Fundurl'>Donate here: 
+          <a href={project.fundurl} target='_blank' rel="noopener noreferrer">
+            <img className='donors__logo' style={{paddingTop: '5px', width: '20%'}} alt='donation website' src={donorsLogo} />
+          </a>
+        </h4>
         <ShareButton />
-        <ProjectContent project={project} />
+        {/* <ProjectContent project={project} /> */}
         <ProjectReviews reviews={reviews} />
         <ProjectReviewForm />
-    </>
+    </div>
   }
 
   render() {
@@ -77,13 +78,13 @@ class ProjectPage extends Component {
   }
 }
 
-function ProjectContent({ project }) {
-  return (
-    <p className='ProjectPage__content'>
-      {project.content}
-    </p>
-  )
-}
+// function ProjectContent({ project }) {
+//   return (
+//     <p className='ProjectPage__content'>
+//       {project.content}
+//     </p>
+//   )
+// }
 
 function ProjectReviews({ reviews = [] }) {
   return (

@@ -1,9 +1,12 @@
 # App name: Start Small
 
+Author: Marie Grace Bodur
+
 Live app: [Start Small]()
 
 ## About Start Small
 
+Start small is an app that provides user different classroom projects that needs funding. It enables users to review a classroom funding project based 1-5 stars 5 as very likely that they will donate to the specific project. It also provide external link to the classroom funding page and a facebook share button.
 
 ## Technologies used
 - Client side: Reactjs, Javascript, HTML and CSS
@@ -19,24 +22,27 @@ Live app: [Start Small]()
     [Server](https://github.com/gracebodur/startsmall-api.git)
 
 - Heroku
-    [Heroku]()
+    [Heroku](https://fierce-earth-14333.herokuapp.com/api)
 
 ## Screenshots
 
 Landing Page
- ![Landing Page]()
+ ![Landing Page](./screenshots/LandingPage.png)
 
 Login Page
-![Login Page]()
+![Login Page](./screenshots/LoginPage.png)
  
 Registration Page
-![Registration Page]()
+![Registration Page](./screenshots/RegistrationPage.png)
 
 Project List Page
-![Project List Page]()
+![Project List Page](./screenshots/ProjectListPage.png)
 
 Project Page
-![Project Page]()
+![Project Page](./screenshots/ProjectPage.png)
+
+Review and Rating Form
+![Review and Rating Form](./screenshots/Review.png)
 
 ## Setting Up
 
@@ -47,4 +53,3 @@ Project Page
 - Start the application for development: `npm start`
 
 
-Author: Marie Grace Bodur

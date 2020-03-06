@@ -28,6 +28,7 @@ export default class ReviewForm extends Component {
       >
         <div className='text'>
           <Textarea
+            className='Text__area'
             required
             aria-label='Type a review...'
             name='text'
@@ -41,6 +42,7 @@ export default class ReviewForm extends Component {
         <div className='select'>
           <label htmlFor='rating'>How likely will you donate to this project?</label>
           <select
+            className='Stars__option'
             required
             aria-label='Rate this project!'
             name='rating'
@@ -54,7 +56,7 @@ export default class ReviewForm extends Component {
           </select>
         </div>
 
-        <Button type='submit'>
+        <Button type='submit' className='Post__review__btn'>
           Post review
         </Button>
       </form>

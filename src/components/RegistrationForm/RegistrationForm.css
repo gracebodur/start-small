@@ -7,14 +7,15 @@
     margin-bottom: 2rem;
     max-width: 16rem;
     padding: 2rem;
-    color: rgba(0, 0, 0, .8);
+    border-radius: 10px;
+    letter-spacing: 2px;
     border-radius: 10px;
     -webkit-box-shadow: -11px 10px 6px -1px rgba(54,34,69,0.72);
     -moz-box-shadow: -11px 10px 6px -1px rgba(54,34,69,0.72);
     box-shadow: -11px 10px 6px -1px rgba(54,34,69,0.72);
-    background: #ECE9E6; 
-    background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  
-    background: linear-gradient(to right, #FFFFFF, #ECE9E6);
+    background: #DCE35B;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #45B649, #DCE35B);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #45B649, #DCE35B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .Register-form {
@@ -22,9 +23,11 @@
 }
 
 .Register-fieldset {
+    text-transform: uppercase;
     border-style: solid;
     border-width: 1px;
     border-color: transparent;
+    color:  var( --clr-purple);
     padding-left: 0;
     padding-right: 0;
     margin-left: 0;
@@ -63,6 +66,7 @@
     border-width: 1px;
     background-color: transparent;
     width: 100%;
+    border-radius: 10px;
 }
 
 .Fullname-input:hover {
@@ -109,7 +113,9 @@
     border-style: solid;
     border-width: 1px;
     border-color: #000;
+    border-radius: 10px;
     background-color: transparent;
+    color: var( --clr-purple);
     -moz-osx-font-smoothing: grayscale;
     backface-visibility: hidden; 
     transform: translateZ(0);
@@ -138,6 +144,47 @@
         margin-top: 30%;
     }
 }
+
+/* tablet */
+@media only screen 
+  and (min-device-width: 400px) 
+  and (max-device-width: 568px) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .Register-main {
+        margin-top: 30%;
+        max-width: 15rem;
+    }
+    .Register-legend {
+        font-size: 1rem;
+    }
+    .Username-label {
+        font-size: 1rem;
+    }
+    .Password-label {
+        font-size: 1rem;
+    }
+    .Username-input,
+    .Password-input {
+        font-size: 1rem;
+    }
+    .Register-button-input {
+        font-size: 1rem;
+    }
+    .Register-cancel-button-input {
+        font-size: 1rem;
+    }
+    .Fullname-label,
+    .Password-label,
+    .New-user_name-label {
+        font-size: 1rem;
+    }
+    .Fullname-input,
+    .Password-input,
+    .New-user_name-input {
+        font-size: 1rem;
+    }
+}
+    
 
 /* ipad */
 @media only screen 

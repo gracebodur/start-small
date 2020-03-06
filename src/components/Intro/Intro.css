@@ -21,6 +21,52 @@ p {
     padding-top: 10%;
 }
 
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .Intro {
+        margin-top: 10px;
+        margin-right: 5px;
+     }
+     h1 {
+         font-size: 25pt;
+     }
+     
+     ul {
+         font-size: 15pt;
+     }
+     
+     p {
+         font-size: 15pt;
+     }
+ }
+ 
+
+/* galaxy */
+@media only screen 
+  and (min-device-width: 360px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+    .Intro {
+        align-items: center;
+        margin-top: 2%;
+        margin-right: 2%;
+     }
+     h1 {
+         font-size: 23pt;
+     }
+     
+     ul {
+         font-size: 13pt;
+     }
+     
+     p {
+         font-size: 13pt;
+     }
+ }
+
+
 /* iphone6/7/8 */
 @media only screen 
   and (min-device-width: 375px) 
