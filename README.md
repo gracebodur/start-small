@@ -8,10 +8,6 @@ Live app: [Start Small](https://start-small.now.sh)
 
 Start small is an app that provides users with different classroom projects that need funding. It enables users to review a classroom funding project based 1-5 stars 5 as very likely that they will donate to the specific project. It also provides external links to the classroom funding page and a facebook share button.
 
-## Technologies used
-- Client side: Reactjs, Javascript, HTML and CSS
-- Server side: Express.js, Node.js, PostgreSQL
-
 ## Links:
 
 - Github
@@ -52,4 +48,9 @@ Start small is an app that provides users with different classroom projects that
 
 - Start the application for development: `npm start`
 
+##### Technologies used
+
+|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><img alt="JavaScript" src="https://seeklogo.net/wp-content/uploads/2015/07/javascript-logo-vector-download.jpg" width=100></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5"><img alt="HTML5" src="https://cdn4.iconfinder.com/data/icons/flat-brand-logo-2/512/html5-512.png" width=100></a>|<a href="https://www.postgresql.org/download/"><img alt="CSS3" src="https://www.iconninja.com/files/752/618/436/css-internet-technology-website-web-style-css3-icon.svg" width=100></a>|<a href="https://reactjs.org/"><img alt="React.js" src="https://upload-icon.s3.us-east-2.amazonaws.com/uploads/icons/png/20167174151551942641-512.png" width=100></a>|
+|---|---|---|---|
+|[JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)|[HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5)|[CSS3](https://developer.mozilla.org/en-US/docs/Archive/CSS3)|[React](https://reactjs.org/)|
 
