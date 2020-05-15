@@ -20,29 +20,29 @@ Start small is an app that provides users with different classroom projects that
 
 ## Screenshots
 
-####Landing Page 
+#### Landing Page 
 
- <img src="screenshots/../src/screenshots/LandingPage.png" width="500" height="500" title="Landing Page" alt='Landing page screenshot'>
+ <img src="screenshots/../src/screenshots/LandingPage.png" width="600" height="500" title="Landing Page" alt='Landing page screenshot'>
 
-####Login Page 
+#### Login Page 
 
-<img src="screenshots/../src/screenshots/LoginPage.png" width="500" height="500" title="Login Page" alt='Login Page screenshot'>
+<img src="screenshots/../src/screenshots/LoginPage.png" width="600" height="500" title="Login Page" alt='Login Page screenshot'>
  
-####Registration Page 
+#### Registration Page 
 
-<img src="screenshots/../src/screenshots/RegistrationPage.png" width="500" height="300" title="Registration Page" alt='Registration Page screenshot'>
+<img src="screenshots/../src/screenshots/RegistrationPage.png" width="600" height="500" title="Registration Page" alt='Registration Page screenshot'>
 
-####Project List Page 
+#### Project List Page 
 
-<img src="screenshots/../src/screenshots/ProjectListPage.png" width="500" height="500" title="Project List Page" alt='Project List Page screenshot'>
+<img src="screenshots/../src/screenshots/ProjectListPage.png" width="600" height="500" title="Project List Page" alt='Project List Page screenshot'>
 
-####Project Page 
+#### Project Page 
 
-<img src="screenshots/../src/screenshots/ProjectPage.png" width="500" height="500" title="Project Page" alt='Project Page screenshot'>
+<img src="screenshots/../src/screenshots/ProjectPage.png" width="600" height="500" title="Project Page" alt='Project Page screenshot'>
 
-####Review and Rating Form 
+#### Review and Rating Form 
 
-<img src="screenshots/../src/screenshots/Review.png" width="500" height="500" title="Review Form" alt='Review form screenshot'>
+<img src="screenshots/../src/screenshots/Review.png" width="600" height="500" title="Review Form" alt='Review form screenshot'>
 
 #### Setting Up
 
