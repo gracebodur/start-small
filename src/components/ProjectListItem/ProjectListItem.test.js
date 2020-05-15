@@ -1,21 +1,20 @@
-import React from 'react';
-import renderer from "react-test-renderer";
-import ReactDOM from 'react-dom';
-import { BrowserRouter as Router } from 'react-router-dom';
-import ProjectListItem from './ProjectListItem';
+import React from "react";
+import toJson from "enzyme-to-json";
+import ProjectListItem from "./ProjectListItem";
 
-describe('Project List Item Component', () => {
-  it('renders without crashing', () => {
-    const div = document.createElement("div");
-    ReactDOM.render(<Router>
-      <ProjectListItem project={[]} />
-      </Router>, div);
-    ReactDOM.unmountComponentAtNode(div);
+describe(`ProjectListItem component`, () => {
+  const props = {
+    id: "a",
+    name: "test-class-name"
+  };
+
+  it("renders a ProjectListItem by default", () => {
+    const wrapper = <ProjectListItem />;
+    expect(toJson(wrapper)).toMatchSnapshot();
   });
-  it('renders the UI as expected', () => {
-    const tree = renderer
-    .create(<Router><ProjectListItem project={[]} /></Router>)
-    .toJSON();
-    expect(tree).toMatchSnapshot();
+
+  it("renders the ProjectListItem given props", () => {
+    const wrapper = <ProjectListItem {...props} />;
+    expect(toJson(wrapper)).toMatchSnapshot();
   });
 });

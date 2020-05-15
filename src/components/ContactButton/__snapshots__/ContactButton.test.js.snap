@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ContactButton component renders a ContactButton by default 1`] = `undefined`;
+
+exports[`ContactButton component renders the ContactButton given props 1`] = `undefined`;

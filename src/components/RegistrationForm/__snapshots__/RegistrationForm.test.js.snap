@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RegistrationForm component renders a RegistrationForm by default 1`] = `undefined`;
+
+exports[`RegistrationForm component renders the RegistrationForm given props 1`] = `undefined`;

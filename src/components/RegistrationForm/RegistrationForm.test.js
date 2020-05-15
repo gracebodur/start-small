@@ -1,14 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import RegistrationForm from './RegistrationForm';
-import { BrowserRouter as Router } from 'react-router-dom';
+import React from "react";
+import toJson from "enzyme-to-json";
+import RegistrationForm from "./RegistrationForm";
 
-describe('Registration Form Component', () => {
-    it('renders without crashing', () => {
-      const div = document.createElement('div');
-      ReactDOM.render(<Router> 
-                        <RegistrationForm /> 
-                    </Router>, div);
-      ReactDOM.unmountComponentAtNode(div);
-    });
+describe(`RegistrationForm component`, () => {
+  const props = {
+    id: "a",
+    name: "test-class-name"
+  };
+
+  it("renders a RegistrationForm by default", () => {
+    const wrapper = <RegistrationForm />;
+    expect(toJson(wrapper)).toMatchSnapshot();
+  });
+
+  it("renders the RegistrationForm given props", () => {
+    const wrapper = <RegistrationForm {...props} />;
+    expect(toJson(wrapper)).toMatchSnapshot();
+  });
 });

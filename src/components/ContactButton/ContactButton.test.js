@@ -1,14 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import ContactButton from './ContactButton';
-import { BrowserRouter as Router } from 'react-router-dom';
+import React from "react";
+import toJson from "enzyme-to-json";
+import ContactButton from "./ContactButton";
 
-describe('Contact Button Component', () => {
-    it('renders without crashing', () => {
-      const div = document.createElement('div');
-      ReactDOM.render(<Router> 
-                        <ContactButton /> 
-                    </Router>, div);
-      ReactDOM.unmountComponentAtNode(div);
-    });
+describe(`ContactButton component`, () => {
+  const props = {
+    id: "a",
+    name: "test-class-name"
+  };
+
+  it("renders a ContactButton by default", () => {
+    const wrapper = <ContactButton />;
+    expect(toJson(wrapper)).toMatchSnapshot();
+  });
+
+  it("renders the ContactButton given props", () => {
+    const wrapper = <ContactButton {...props} />;
+    expect(toJson(wrapper)).toMatchSnapshot();
+  });
 });

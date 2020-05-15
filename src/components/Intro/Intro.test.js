@@ -1,9 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Intro from './Intro';
+import React from "react";
+import toJson from "enzyme-to-json";
+import Intro from "./Intro";
 
-it('renders without crashing', () => {
-    const div = document.createElement('div');
-    ReactDOM.render( < Intro / > , div);
-    ReactDOM.unmountComponentAtNode(div);
+describe(`Intro component`, () => {
+  const props = {
+    id: "a",
+    name: "test-class-name"
+  };
+
+  it("renders a Intro by default", () => {
+    const wrapper = <Intro />;
+    expect(toJson(wrapper)).toMatchSnapshot();
+  });
+
+  it("renders the Intro given props", () => {
+    const wrapper = <Intro {...props} />;
+    expect(toJson(wrapper)).toMatchSnapshot();
+  });
 });

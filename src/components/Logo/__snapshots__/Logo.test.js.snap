@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Logo component renders a Logo by default 1`] = `undefined`;
+
+exports[`Logo component renders the Logo given props 1`] = `undefined`;

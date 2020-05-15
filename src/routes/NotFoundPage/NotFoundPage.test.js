@@ -1,11 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import NotFoundPage from './NotFoundPage';
+import React from "react";
+import toJson from "enzyme-to-json";
+import NotFoundPage from "./NotFoundPage";
 
-describe('Not Found PageComponent', () => {
-    it('renders without crashing', () => {
-      const div = document.createElement('div');
-      ReactDOM.render( <NotFoundPage /> , div);
-      ReactDOM.unmountComponentAtNode(div);
-    });
+describe(`NotFoundPage component`, () => {
+  const props = {
+    id: "a",
+    name: "test-class-name"
+  };
+
+  it("renders a NotFoundPage by default", () => {
+    const wrapper = <NotFoundPage />;
+    expect(toJson(wrapper)).toMatchSnapshot();
+  });
+
+  it("renders the NotFoundPage given props", () => {
+    const wrapper = <NotFoundPage {...props} />;
+    expect(toJson(wrapper)).toMatchSnapshot();
+  });
 });

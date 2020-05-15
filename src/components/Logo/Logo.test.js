@@ -1,14 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Logo from './Logo';
-import { BrowserRouter as Router } from 'react-router-dom';
+import React from "react";
+import toJson from "enzyme-to-json";
+import Logo from "./Logo";
 
-describe('Logo Component', () => {
-    it('renders without crashing', () => {
-      const div = document.createElement('div');
-      ReactDOM.render(<Router> 
-                        <Logo /> 
-                    </Router>, div);
-      ReactDOM.unmountComponentAtNode(div);
-    });
+describe(`Logo component`, () => {
+  const props = {
+    id: "a",
+    name: "test-class-name"
+  };
+
+  it("renders a Logo by default", () => {
+    const wrapper = <Logo />;
+    expect(toJson(wrapper)).toMatchSnapshot();
+  });
+
+  it("renders the Logo given props", () => {
+    const wrapper = <Logo {...props} />;
+    expect(toJson(wrapper)).toMatchSnapshot();
+  });
 });

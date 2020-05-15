@@ -1,14 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import RegistrationPage from './RegistrationPage';
-import { BrowserRouter as Router } from 'react-router-dom';
+import React from "react";
+import toJson from "enzyme-to-json";
+import RegistrationPage from "./RegistrationPage";
 
-describe('Registration Page Component', () => {
-    it('renders without crashing', () => {
-      const div = document.createElement('div');
-      ReactDOM.render(<Router> 
-                        <RegistrationPage /> 
-                    </Router>, div);
-      ReactDOM.unmountComponentAtNode(div);
-    });
+describe(`RegistrationPage component`, () => {
+  const props = {
+    id: "a",
+    name: "test-class-name"
+  };
+
+  it("renders a RegistrationPage by default", () => {
+    const wrapper = <RegistrationPage />;
+    expect(toJson(wrapper)).toMatchSnapshot();
+  });
+
+  it("renders the RegistrationPage given props", () => {
+    const wrapper = <RegistrationPage {...props} />;
+    expect(toJson(wrapper)).toMatchSnapshot();
+  });
 });

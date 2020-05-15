@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProjectPage component renders a ProjectPage by default 1`] = `undefined`;
+
+exports[`ProjectPage component renders the ProjectPage given props 1`] = `undefined`;

@@ -1,14 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import LoginPage from './LoginPage';
-import { BrowserRouter as Router } from 'react-router-dom';
+import React from "react";
+import toJson from "enzyme-to-json";
+import LoginPage from "./LoginPage";
 
-describe('Log in Page Component', () => {
-    it('renders without crashing', () => {
-      const div = document.createElement('div');
-      ReactDOM.render(<Router> 
-                        <LoginPage /> 
-                    </Router>, div);
-      ReactDOM.unmountComponentAtNode(div);
-    });
+describe(`LoginPage component`, () => {
+  const props = {
+    id: "a",
+    name: "test-class-name"
+  };
+
+  it("renders a LoginPage by default", () => {
+    const wrapper = <LoginPage />;
+    expect(toJson(wrapper)).toMatchSnapshot();
+  });
+
+  it("renders the LoginPage given props", () => {
+    const wrapper = <LoginPage {...props} />;
+    expect(toJson(wrapper)).toMatchSnapshot();
+  });
 });

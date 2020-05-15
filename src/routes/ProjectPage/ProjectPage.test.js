@@ -1,14 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import ProjectPage from './ProjectPage';
-import { BrowserRouter as Router } from 'react-router-dom';
+import React from "react";
+import toJson from "enzyme-to-json";
+import ProjectPage from "./ProjectPage";
 
-describe('Project Page Component', () => {
-    it('renders without crashing', () => {
-      const div = document.createElement('div');
-      ReactDOM.render(<Router> 
-                        <ProjectPage /> 
-                    </Router>, div);
-      ReactDOM.unmountComponentAtNode(div);
-    });
+describe(`ProjectPage component`, () => {
+  const props = {
+    id: "a",
+    name: "test-class-name"
+  };
+
+  it("renders a ProjectPage by default", () => {
+    const wrapper = <ProjectPage />;
+    expect(toJson(wrapper)).toMatchSnapshot();
+  });
+
+  it("renders the ProjectPage given props", () => {
+    const wrapper = <ProjectPage {...props} />;
+    expect(toJson(wrapper)).toMatchSnapshot();
+  });
 });

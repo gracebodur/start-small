@@ -1,11 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import ProjectReviewForm from './ProjectReviewForm';
+import React from "react";
+import toJson from "enzyme-to-json";
+import ProjectReviewForm from "./ProjectReviewForm";
 
-describe('Project Review Form Component', () => {
-    it('renders without crashing', () => {
-      const div = document.createElement('div');
-      ReactDOM.render( <ProjectReviewForm /> , div);
-      ReactDOM.unmountComponentAtNode(div);
-    });
+describe(`ProjectReviewForm component`, () => {
+  const props = {
+    id: "a",
+    name: "test-class-name"
+  };
+
+  it("renders a ProjectReviewForm by default", () => {
+    const wrapper = <ProjectReviewForm />;
+    expect(toJson(wrapper)).toMatchSnapshot();
+  });
+
+  it("renders the ProjectReviewForm given props", () => {
+    const wrapper = <ProjectReviewForm {...props} />;
+    expect(toJson(wrapper)).toMatchSnapshot();
+  });
 });

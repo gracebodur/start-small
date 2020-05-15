@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NotFoundPage component renders a NotFoundPage by default 1`] = `undefined`;
+
+exports[`NotFoundPage component renders the NotFoundPage given props 1`] = `undefined`;

@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Intro component renders a Intro by default 1`] = `undefined`;
+
+exports[`Intro component renders the Intro given props 1`] = `undefined`;

@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProjectStarRating component renders a ProjectStarRating by default 1`] = `undefined`;
+
+exports[`ProjectStarRating component renders the ProjectStarRating given props 1`] = `undefined`;

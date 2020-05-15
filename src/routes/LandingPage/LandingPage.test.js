@@ -1,14 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import LandingPage from './LandingPage';
-import { BrowserRouter as Router } from 'react-router-dom';
+import React from "react";
+import toJson from "enzyme-to-json";
+import LandingPage from "./LandingPage";
 
-describe('Landing Page Component', () => {
-    it('renders without crashing', () => {
-      const div = document.createElement('div');
-      ReactDOM.render(<Router> 
-                        <LandingPage /> 
-                    </Router>, div);
-      ReactDOM.unmountComponentAtNode(div);
-    });
+describe(`LandingPage component`, () => {
+  const props = {
+    id: "a",
+    name: "test-class-name"
+  };
+
+  it("renders a LandingPage by default", () => {
+    const wrapper = <LandingPage />;
+    expect(toJson(wrapper)).toMatchSnapshot();
+  });
+
+  it("renders the LandingPage given props", () => {
+    const wrapper = <LandingPage {...props} />;
+    expect(toJson(wrapper)).toMatchSnapshot();
+  });
 });

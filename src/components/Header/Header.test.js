@@ -1,14 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Header from './Header';
-import { BrowserRouter as Router } from 'react-router-dom';
+import React from "react";
+import toJson from "enzyme-to-json";
+import Header from "./Header";
 
-describe('Header Component', () => {
-    it('renders without crashing', () => {
-      const div = document.createElement('div');
-      ReactDOM.render(<Router> 
-                        <Header /> 
-                    </Router>, div);
-      ReactDOM.unmountComponentAtNode(div);
-    });
+describe(`Header component`, () => {
+  const props = {
+    id: "a",
+    name: "test-class-name"
+  };
+
+  it("renders a Header by default", () => {
+    const wrapper = <Header />;
+    expect(toJson(wrapper)).toMatchSnapshot();
+  });
+
+  it("renders the Header given props", () => {
+    const wrapper = <Header {...props} />;
+    expect(toJson(wrapper)).toMatchSnapshot();
+  });
 });

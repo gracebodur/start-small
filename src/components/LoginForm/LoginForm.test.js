@@ -1,14 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import LoginForm from './LoginForm';
-import { BrowserRouter as Router } from 'react-router-dom';
+import React from "react";
+import toJson from "enzyme-to-json";
+import LoginForm from "./LoginForm";
 
-describe('Log in Form Component', () => {
-    it('renders without crashing', () => {
-      const div = document.createElement('div');
-      ReactDOM.render(<Router> 
-                        <LoginForm /> 
-                    </Router>, div);
-      ReactDOM.unmountComponentAtNode(div);
-    });
+describe(`LoginForm component`, () => {
+  const props = {
+    id: "a",
+    name: "test-class-name"
+  };
+
+  it("renders a LoginForm by default", () => {
+    const wrapper = <LoginForm />;
+    expect(toJson(wrapper)).toMatchSnapshot();
+  });
+
+  it("renders the LoginForm given props", () => {
+    const wrapper = <LoginForm {...props} />;
+    expect(toJson(wrapper)).toMatchSnapshot();
+  });
 });

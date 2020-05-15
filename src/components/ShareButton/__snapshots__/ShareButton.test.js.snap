@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ShareButton component renders a ShareButton by default 1`] = `undefined`;
+
+exports[`ShareButton component renders the ShareButton given props 1`] = `undefined`;

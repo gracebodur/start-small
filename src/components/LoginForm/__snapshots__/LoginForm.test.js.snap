@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoginForm component renders a LoginForm by default 1`] = `undefined`;
+
+exports[`LoginForm component renders the LoginForm given props 1`] = `undefined`;

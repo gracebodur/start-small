@@ -37,7 +37,6 @@ class LoginPage extends Component {
           </section>
         )
       }
-
 }
 
 export default LoginPage

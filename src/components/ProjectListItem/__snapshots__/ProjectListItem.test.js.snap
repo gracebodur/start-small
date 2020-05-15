@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProjectListItem component renders a ProjectListItem by default 1`] = `undefined`;
+
+exports[`ProjectListItem component renders the ProjectListItem given props 1`] = `undefined`;
