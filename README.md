@@ -6,7 +6,7 @@ Live app: [Start Small](https://start-small.now.sh)
 
 ## About Start Small
 
-Start small is an app that provides user different classroom projects that needs funding. It enables users to review a classroom funding project based 1-5 stars 5 as very likely that they will donate to the specific project. It also provide external link to the classroom funding page and a facebook share button.
+Start small is an app that provides users with different classroom projects that need funding. It enables users to review a classroom funding project based 1-5 stars 5 as very likely that they will donate to the specific project. It also provides external links to the classroom funding page and a facebook share button.
 
 ## Technologies used
 - Client side: Reactjs, Javascript, HTML and CSS
@@ -15,37 +15,34 @@ Start small is an app that provides user different classroom projects that needs
 ## Links:
 
 - Github
-    [Client](https://github.com/gracebodur/start-small.git) |
+    [Client](https://github.com/gracebodur/start-small.git)
     [Server](https://github.com/gracebodur/startsmall-api.git)
-
-- Heroku
-    [Heroku](https://fierce-earth-14333.herokuapp.com/api)
 
 ## Screenshots
 
-Landing Page - located in routes folder. Renders all Project List placed in components folder
- ![Landing Page](./screenshots/LandingPage.png)
+####Landing Page 
+ <img src="../start-small/screenshots/LandingPage.png" width="500" height="500" title="Landing Page" >
 
-Login Page - located in routes folder. Renders Login Form placed in components folder
-![Login Page](./screenshots/LoginPage.png)
+####Login Page 
+<img src="../start-small/screenshots/LoginPage.png" width="500" height="500" title="Login Page" >
  
-Registration Page - located in routes folder. Renders Registration Form placed in components folder
-![Registration Page](./screenshots/RegistrationPage.png)
+####Registration Page 
+<img src="../start-small/screenshots/RegistrationPage.png" width="500" height="300" title="Registration Page" >
 
-Project List Page - located in routes folder. Renders Project List Items with details of each classroom projects.
-![Project List Page](./screenshots/ProjectListPage.png)
+####Project List Page 
+<img src="../start-small/screenshots/ProjectListPage.png" width="500" height="500" title="Project List Page" >
 
-Project Page - located in routes folder. Renders individual Project, Reviews, external links, rating and review form.
-![Project Page](./screenshots/ProjectPage.png)
+####Project Page 
+<img src="../start-small/screenshots/ProjectPage.png" width="500" height="500" title="Project Page" >
 
-Review and Rating Form - Rendered by ProjectPage. Review form placed in components folder.
-![Review and Rating Form](./screenshots/Review.png)
+####Review and Rating Form 
+<img src="../start-small/screenshots/Review.png" width="500" height="500" title="Review Form" >
 
-## Setting Up
+#### Setting Up
 
 - Install dependencies: `npm install`
 
-## Scripts
+#### Scripts
 
 - Start the application for development: `npm start`
 

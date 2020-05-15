@@ -35,8 +35,8 @@ ReactDOM.render(
         <Router>
             <ProjectListProvider>
               <ProjectProvider>
-                  <App />
-                </ProjectProvider>
+                <App />
+              </ProjectProvider>
             </ProjectListProvider>
         </Router>,
    document.getElementById('root'));

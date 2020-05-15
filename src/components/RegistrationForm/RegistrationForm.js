@@ -10,22 +10,10 @@ class RegistrationForm extends Component {
 
   state = { error: null }
 
-  // constructor(props) {
-  //     super(props)
-  //     this.state = {
-  //         full_name: '',
-  //         user_name: '',
-  //         password: '',
-  //         // error: null 
-  //     }
-  // }
-
   handleSubmit = ev => {
     ev.preventDefault()
     const { full_name, user_name, password } = ev.target
 
-    // console.log('registration form submitted')
-    // console.log({ full_name, user_name, password })
     this.setState({ error: null })
     AuthApiService.postUser({
       user_name: user_name.value,
