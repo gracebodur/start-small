@@ -51,15 +51,15 @@ class LoginForm extends Component {
       }
 
     render() {
-        const { error }  = this.state
+        const { error }  = this.state       
         return (
             <main className='Login-main center'>
-                <form
-                    onSubmit={this.handleSubmitJwtAuth}
-                    className= 'Login-form center'>
                 <div role='alert'>
                     {error && <p className='red'>{error}</p>}
                 </div>
+                <form
+                    onSubmit={this.handleSubmitJwtAuth}
+                    className= 'Login-form center'>
                     <fieldset className='Login-fieldset'>
                         <legend 
                             className='Login-legend center'>
