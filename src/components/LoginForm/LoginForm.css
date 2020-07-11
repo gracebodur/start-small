@@ -12,9 +12,7 @@
     -webkit-box-shadow: -11px 10px 6px -1px rgba(54,34,69,0.72);
     -moz-box-shadow: -11px 10px 6px -1px rgba(54,34,69,0.72);
     box-shadow: -11px 10px 6px -1px rgba(54,34,69,0.72);
-    background: #DCE35B;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #45B649, #DCE35B);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #45B649, #DCE35B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-color: #12CAD6;
 }
 
 .Login-form {
@@ -66,20 +64,14 @@
 }
 
 .Username-input:hover {
-    background-color: var( --clr-purple);
+    background-color: #0FABBC;
 }
 
-.Username-input:focus {
-    color: var( --clr-fun);
-}
 
 .Password-input:hover {
-    background-color: var( --clr-purple);
+    background-color: #0FABBC;
 }
 
-.Password-input:focus {
-    color: var( --clr-fun);
-}
 
 .Login-button,
 .Cancel-button {
@@ -100,7 +92,7 @@
     -moz-appearance: none;
     border-style: solid;
     border-width: 1px;
-    border-color: #000;
+    border-color:#222831;
     border-radius: 10px;
     text-transform: uppercase;
     background-color: transparent;
