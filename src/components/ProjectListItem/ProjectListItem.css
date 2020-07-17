@@ -5,13 +5,12 @@
     text-decoration: none;
     margin-bottom: 40px;
     margin-right: 20px;
-
     font-family: 'Just Another Hand', cursive;
     border: 3px solid #333333;
     border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
     text-transform: uppercase;
     letter-spacing: 0.2ch;
-    background: #ffffff;
+    background: var(--clr-light);
     position: relative;
   }
 
@@ -30,7 +29,7 @@
   
   .ProjectListItem,
   .ProjectListItem:visited {
-    color: 222831;
+    color: #222831;
   }
   
   .ProjectListItem__image {
@@ -58,7 +57,7 @@
     text-transform: uppercase;
     text-align: justify;
     font-size: 1rem;
-    font-weight: 700;
+    font-weight:  var(--fw-bold);
     letter-spacing: 0.3ch;
   }
   
@@ -71,8 +70,8 @@
   .ProjectListItem__details span {
     display: block;
     text-align: center;
-    font-weight: 500;
-    color: #bb4622;
+    font-weight: var(--fw-bold);
+    color: var(--clr-red);
   }
 
   @media screen 
