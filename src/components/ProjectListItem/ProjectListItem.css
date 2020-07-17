@@ -5,7 +5,6 @@
     text-decoration: none;
     margin-bottom: 40px;
     margin-right: 20px;
-    font-family: 'Just Another Hand', cursive;
     border: 3px solid #333333;
     border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
     text-transform: uppercase;
@@ -56,9 +55,9 @@
   .ProjectListItem__description {
     text-transform: uppercase;
     text-align: justify;
-    font-size: 1rem;
+    font-size: var(--fs-body);
     font-weight:  var(--fw-bold);
-    letter-spacing: 0.3ch;
+    letter-spacing: 0.25ch;
   }
   
   .ProjectListItem__details .ProjectStarRating {
