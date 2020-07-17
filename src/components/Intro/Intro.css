@@ -7,16 +7,20 @@
     padding-top: 25%;
 }
 
-h1 {
-    font-size: 40pt;
+.proj-name {
+    font-size: 50pt;
+    text-transform: uppercase;
 }
 
 ul {
     list-style-type: none;
     text-align: center;
+    letter-spacing: 0.3ch;
+    text-transform: uppercase;
+    font-weight: 600;
 }
 
-p {
+.demo {
     text-align: center;
     padding-top: 10%;
 }
@@ -37,7 +41,7 @@ p {
          font-size: 15pt;
      }
      
-     p {
+     .demo {
          font-size: 15pt;
      }
  }
@@ -61,7 +65,7 @@ p {
          font-size: 13pt;
      }
      
-     p {
+     .demo {
          font-size: 13pt;
      }
  }

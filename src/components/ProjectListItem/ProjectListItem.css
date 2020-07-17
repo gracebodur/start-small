@@ -1,18 +1,32 @@
 .ProjectListItem {
-    background: none;
     display: flex;
     flex-direction: column;
-    border: 3;
     font-size: smaller;
     text-decoration: none;
     margin-bottom: 40px;
     margin-right: 20px;
-    border-radius: 5px;
-    -webkit-box-shadow: -11px 10px 6px -1px rgba(54,34,69,0.72);
-    -moz-box-shadow: -11px 10px 6px -1px rgba(54,34,69,0.72);
-    box-shadow: -11px 10px 6px -1px rgba(54,34,69,0.72);
-    background-color: #12CAD6;
+
+    font-family: 'Just Another Hand', cursive;
+    border: 3px solid #333333;
+    border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
+    text-transform: uppercase;
+    letter-spacing: 0.2ch;
+    background: #ffffff;
+    position: relative;
   }
+
+  .ProjectListItem::before {
+    content: '';
+    border: 2px solid #353535;
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0) scale(1.015) rotate(0.5deg);
+    border-radius: 1% 1% 2% 4% / 2% 6% 5% 4%;
+}
   
   .ProjectListItem,
   .ProjectListItem:visited {
@@ -39,6 +53,14 @@
   .ProjectListItem__details h2 {
     margin: 0;
   }
+
+  .ProjectListItem__description {
+    text-transform: uppercase;
+    text-align: justify;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.3ch;
+  }
   
   .ProjectListItem__details .ProjectStarRating {
     padding: 5px 0;
@@ -49,7 +71,8 @@
   .ProjectListItem__details span {
     display: block;
     text-align: center;
-    opacity: 0.5;
+    font-weight: 500;
+    color: #bb4622;
   }
 
   @media screen 

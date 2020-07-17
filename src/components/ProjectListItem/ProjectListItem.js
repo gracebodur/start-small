@@ -8,7 +8,7 @@ export default class ProjectListItem extends Component {
     const { project } = this.props
 
     return (
-      <Link to={`/projects/${project.project_id}`} className='ProjectListItem'>
+      <Link to={`/projects/${project.project_id}`} className='ProjectListItem Item'>
         <div className='ProjectListItem__image' style={{backgroundImage: `url(${project.imageurl})`}} />
 
         <div className='ProjectListItem__details'>

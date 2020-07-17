@@ -7,7 +7,7 @@ function Intro() {
         <div>
             <div className='Intro'>
                 <section>
-                    <h1>Start small</h1>
+                    <h1 className='proj-name'>Start small</h1>
                         <ul>
                             <li>Pick a classroom project for your friends to support.</li>
                             <li>Let us know of classroom projects that you think needs help</li>
@@ -17,7 +17,7 @@ function Intro() {
             </div>
             <div>
                 <ContactButton />
-                <p>Demo: Username: admin Password: admin</p>
+                <p className='demo'>Demo: Username: admin Password: admin</p>
             </div>
         </div>
     )

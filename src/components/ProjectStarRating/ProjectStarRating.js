@@ -21,5 +21,5 @@ export function ProjectStarRating({rating}) {
 
 function Star({filled}) {
   const library = filled ? 'fas' : 'far'
-  return <FontAwesomeIcon className='blue' icon={ [ library, 'star'  ]  } />
+  return <FontAwesomeIcon className='yellow' icon={ [ library, 'star'  ]  } />
 }
