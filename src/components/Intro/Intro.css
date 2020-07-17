@@ -1,4 +1,4 @@
-.Intro {
+.Proj-intro {
     display: flex;
     align-items: center;
     text-align: center;
@@ -7,7 +7,7 @@
     padding-top: 25%;
 }
 
-.proj-name {
+.Proj-name {
     font-size: 50pt;
     text-transform: uppercase;
 }
@@ -15,25 +15,33 @@
 ul {
     list-style-type: none;
     text-align: center;
-    letter-spacing: 0.3ch;
-    text-transform: uppercase;
+    letter-spacing: 0.4ch;
+    font-size: var(--fs-h3);
+    text-transform: capitalize;
     font-weight: 600;
 }
 
-.demo {
-    text-align: center;
+.Proj-demo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding-top: 10%;
+    font-size: 20pt;
+    font-weight: var(--fw-bold);
+    letter-spacing: var(--spacing-extra-small);
+    color: var(--clr-dark);
 }
 
 @media only screen 
   and (min-device-width: 320px) 
   and (max-device-width: 568px)
   and (-webkit-min-device-pixel-ratio: 2) {
-    .Intro {
+    .Proj-intro {
         margin-top: 10px;
         margin-right: 5px;
      }
-     h1 {
+
+    .Proj-name {
          font-size: 25pt;
      }
      
@@ -41,7 +49,7 @@ ul {
          font-size: 15pt;
      }
      
-     .demo {
+     .Proj-demo {
          font-size: 15pt;
      }
  }
@@ -52,12 +60,13 @@ ul {
   and (min-device-width: 360px) 
   and (max-device-width: 667px) 
   and (-webkit-min-device-pixel-ratio: 2) { 
-    .Intro {
+    .Proj-intro {
         align-items: center;
         margin-top: 2%;
         margin-right: 2%;
      }
-     h1 {
+
+     .Proj-name {
          font-size: 23pt;
      }
      
@@ -65,7 +74,7 @@ ul {
          font-size: 13pt;
      }
      
-     .demo {
+     .Proj-demo {
          font-size: 13pt;
      }
  }
@@ -76,10 +85,11 @@ ul {
   and (min-device-width: 375px) 
   and (max-device-width: 667px) 
   and (-webkit-min-device-pixel-ratio: 2) {
-      .Intro {
+      .Proj-intro {
        align-items: center;
     }
-    h1 {
+
+    .Proj-name {
         font-size: 25pt;
     }
     
@@ -87,7 +97,7 @@ ul {
         font-size: 15pt;
     }
     
-    p {
+    .Proj-demo {
         font-size: 15pt;
     }
 }
@@ -97,10 +107,11 @@ ul {
   and (min-device-width: 375px) 
   and (max-device-width: 812px) 
   and (-webkit-min-device-pixel-ratio: 3) {
-    .Intro {
+    .Proj-intro {
         align-items: center;
     }
-    h1 {
+
+    .Proj-name {
         font-size: 30pt;
     }
     
@@ -108,7 +119,7 @@ ul {
         font-size: 15pt;
     }
     
-    p {
+    .Proj-demo {
         font-size: 15pt;
     }
    
@@ -119,7 +130,7 @@ ul {
   and (min-device-width: 768px) 
   and (max-device-width: 1024px) 
   and (-webkit-min-device-pixel-ratio: 2) {
-    h1 {
+    .Proj-name {
         font-size: 40pt;
     }
     
@@ -127,7 +138,7 @@ ul {
         font-size: 20pt;
     }
     
-    p {
+    .Proj-demo {
         font-size: 18pt;
     }
   
@@ -138,7 +149,7 @@ ul {
   and (min-device-width: 834px) 
   and (max-device-width: 1112px)
   and (-webkit-min-device-pixel-ratio: 2) {
-    h1 {
+    .Proj-name {
         font-size: 50pt;
     }
     
@@ -146,7 +157,7 @@ ul {
         font-size: 25pt;
     }
     
-    p {
+    .Proj-demo {
         font-size: 23pt;
     }
   
