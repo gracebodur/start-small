@@ -1,116 +1,168 @@
-.Login-main {
-    border-radius: .25rem;
-    border-style: solid;
-    border-width: 1px;
-    color: var( --clr-purple);
-    border-color: rgba(0, 0, 0, .1);
-    margin-bottom: 3rem;
-    max-width: 16rem;
-    padding: 2rem;
-    border-radius: 10px;
-    letter-spacing: 2px;
-    -webkit-box-shadow: -11px 10px 6px -1px rgba(54,34,69,0.72);
-    -moz-box-shadow: -11px 10px 6px -1px rgba(54,34,69,0.72);
-    box-shadow: -11px 10px 6px -1px rgba(54,34,69,0.72);
-    background-color: #12CAD6;
+form {
+    width: 450px;
+    min-height: 500px;
+    height: auto;
+    border-radius: 5px;
+    margin: 2% auto;
+    box-shadow: 0 9px 50px hsla(20, 67%, 75%, 0.31);
+    padding: 2%;
+    background-color:var(--clr-dark);
 }
 
-.Login-form {
-    max-width: 30em;
+form .form-con {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 0 auto;
 }
 
-.Login-fieldset {
+header {
+    margin: 2% auto 10% auto;
+    text-align: center;
+}
+
+header h2 {
+    font-size: 250%;
+    letter-spacing:var( --spacing-extra-small);
+    color: var(--clr-light);
+    text-transform: capitalize;
+}
+
+header p {
+    letter-spacing:var( --spacing-extra-small);
+    font-size: 100%;
+    color: var(--clr-light);
     text-transform: uppercase;
-    border-style: solid;
-    border-width: 1px;
-    border-color: transparent;
-    padding-left: 0;
-    padding-right: 0;
-    margin-left: 0;
-    margin-right: 0;
 }
 
-.Login-legend {
-    font-size: 1.25rem;
-    font-weight: 600;
-    padding-left: 0;
-    padding-right: 0;
-    margin-left: 0;
-    margin-right: 0;
+.input-item {
+    background: var(--clr-light);
+    color: var(--clr-gray);
+    padding: 15px 0px 14px 9px;
+    border-radius: 5px 0px 0px 5px;
 }
 
-.Login-user_name {
-    margin-top: 1rem;
+input[class="form-input"]{
+    height: 52px;
+    margin-top: 2%;
+    padding: 15px;
+    font-size: 16px;
+    color: var(--clr-gray);
+    outline: none;
+    border: none;
+    border-radius: 0px 5px 5px 0px;
+    transition: 0.2s linear;
 }
 
-.Username-label,
-.Password-label {
-    display: block;
-    font-weight: 600;
-    line-height: 1.5;
-    font-size: .875rem;
+input[id="form-username"] {
+    width: 350px;
 }
 
-.Username-input,
-.Password-input {
-    padding: .5rem;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    border-style: solid;
-    border-width: 1px;
-    background-color: transparent;
-    width: 100%;
-    border-radius: 10px;
+input[id="form-password"] {
+    width: 350px;
 }
 
-.Username-input:hover {
-    background-color: #0FABBC;
+input:focus {
+    transform: translateX(-2px);
+    border-radius: 5px;
 }
 
-
-.Password-input:hover {
-    background-color: #0FABBC;
-}
-
-
-.Login-button,
-.Cancel-button {
-    line-height: 1.5;
-    margin-top: 1rem;
-}
-
-.Login-button-input,
-.Login-cancel-button-input {
+button {
     display: inline-block;
-    font-weight: bold;
-    font-size: .900rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top: .5rem;
-    padding-bottom: .5rem;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    border-style: solid;
-    border-width: 1px;
-    border-color:#222831;
-    border-radius: 10px;
+    color:var(--clr-light);
+    width: 48%;
+    height: 50px;
+    padding: 0 20px;
+    background: var(--clr-blue);
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.2s linear;
+    margin: 7% auto;
+    letter-spacing: 0.05em;
+    font-weight: var(--fw-bold);
+    font-family: var(--ff-secondary);
     text-transform: uppercase;
-    background-color: transparent;
-     color: var( --clr-purple);
-    -moz-osx-font-smoothing: grayscale;
-    backface-visibility: hidden;
-    transform: translateZ(0);
-    transition: transform .25s ease-out;
 }
 
+.cancel {
+    width: 48%;
+    display: inline-block;
+}
+
+.submit-cancel {
+    background: #BC0100;
+    color: var(--clr-light);
+}
+
+button:hover {
+    transform: translatey(3px);
+    box-shadow: none;
+}
+
+button:hover {
+    animation: ani9 0.4s ease-in-out infinite alternate;
+}
+@keyframes ani9 {
+    0% {
+        transform: translateY(3px);
+    }
+    100% {
+        transform: translateY(5px);
+    }
+}
 
 /* iphone6/7/8*/
 @media only screen 
   and (min-device-width: 375px) 
   and (max-device-width: 667px) 
   and (-webkit-min-device-pixel-ratio: 2) { 
-    .Login-main {
-        margin-top: 30%;
+    form {
+        width: 300px;
+        height: 500px;
+        margin: 40% auto;
+    }
+
+    header h2 {
+        font-size: 200%;
+    }
+
+    header p {
+        font-size: 70%;
+    }
+
+    .input-item {
+        padding: 14px 0px 11px 9px;
+    }
+
+    input[class="form-input"]{
+        height: 45px;
+        margin-top: 2%;
+        padding: 15px;
+        font-size: 15px;
+    }
+    
+    input[id="form-username"] {
+        width: 250px;
+    }
+    
+    input[id="form-password"] {
+        width: 250px;
+    }
+
+    button {
+        width: 50%;
+        height: 50px;
+        padding: 0 20px;
+    }
+    
+    .cancel {
+        width: 50%;
     }
 }
 
@@ -120,8 +172,47 @@
   and (min-device-width: 375px) 
   and (max-device-width: 812px) 
   and (-webkit-min-device-pixel-ratio: 3) { 
-    .Login-main {
-        margin-top: 30%;
+    form {
+        width: 300px;
+        height: 500px;
+        margin: 40% auto;
+    }
+
+    header h2 {
+        font-size: 200%;
+    }
+
+    header p {
+        font-size: 60%;
+    }
+
+    .input-item {
+        padding: 14px 0px 11px 9px;
+    }
+
+    input[class="form-input"]{
+        height: 45px;
+        margin-top: 2%;
+        padding: 15px;
+        font-size: 15px;
+    }
+    
+    input[id="form-username"] {
+        width: 250px;
+    }
+    
+    input[id="form-password"] {
+        width: 250px;
+    }
+
+    button {
+        width: 50%;
+        height: 50px;
+        padding: 0 20px;
+    }
+    
+    .cancel {
+        width: 50%;
     }
 }
 
@@ -130,28 +221,47 @@
   and (min-device-width: 400px) 
   and (max-device-width: 568px) 
   and (-webkit-min-device-pixel-ratio: 2) {
-    .Login-main {
-        margin-top: 30%;
-        max-width: 15rem;
+    form {
+        width: 300px;
+        height: 500px;
+        margin: 40% auto;
     }
-    .Login-legend {
-        font-size: 1rem;
+
+    header h2 {
+        font-size: 200%;
     }
-    .Username-label {
-        font-size: 1rem;
+
+    header p {
+        font-size: 60%;
     }
-    .Password-label {
-        font-size: 1rem;
+
+    .input-item {
+        padding: 14px 0px 11px 9px;
     }
-    .Username-input,
-    .Password-input {
-        font-size: 1rem;
+
+    input[class="form-input"]{
+        height: 45px;
+        margin-top: 2%;
+        padding: 15px;
+        font-size: 15px;
     }
-    .Login-button {
-        max-width: 20rem;
+    
+    input[id="form-username"] {
+        width: 250px;
     }
-    .Cancel-button {
-        max-width: 20rem;
+    
+    input[id="form-password"] {
+        width: 250px;
+    }
+
+    button {
+        width: 50%;
+        height: 50px;
+        padding: 0 20px;
+    }
+    
+    .cancel {
+        width: 50%;
     }
 }
     
@@ -161,29 +271,47 @@
   and (min-device-width: 768px) 
   and (max-device-width: 1024px) 
   and (-webkit-min-device-pixel-ratio: 2) {
-    .Login-main {
-        margin-top: 20%;
-        max-width: 20rem;
+    form {
+        width: 500px;
+        height: 500px;
+        margin: 40% auto;
     }
-    .Login-legend {
-        font-size: 2.0rem;
-        font-weight: 600;
+
+    header h2 {
+        font-size: 250%;
     }
-    .Username-label {
-        font-size: 1.25rem;
+
+    header p {
+        font-size: 100%;
     }
-    .Password-label {
-        font-size: 1.25rem;
+
+    .input-item {
+        padding: 14px 0px 11px 9px;
     }
-    .Username-input,
-    .Password-input {
-        font-size: 1rem;
+
+    input[class="form-input"]{
+        height: 45px;
+        margin-top: 2%;
+        padding: 15px;
+        font-size: 15px;
     }
-    .Login-button {
-        max-width: 30rem;
+    
+    input[id="form-username"] {
+        width: 250px;
     }
-    .Cancel-button {
-        max-width: 30rem;
+    
+    input[id="form-password"] {
+        width: 250px;
+    }
+
+    button {
+        width: 50%;
+        height: 50px;
+        padding: 0 20px;
+    }
+    
+    .cancel {
+        width: 50%;
     }
 }
 
@@ -192,10 +320,46 @@
   and (min-device-width: 834px) 
   and (max-device-width: 1112px)
   and (-webkit-min-device-pixel-ratio: 2) {
-    .Login-button-input {
-        font-size: 1.5rem;
+    form {
+        width: 700px;
+        height: 500px;
+        margin: 40% auto;
     }
-    .Login-cancel-button-input {
-        font-size: 1.5rem;
+
+    header h2 {
+        font-size: 300%;
+    }
+
+    header p {
+        font-size: 100%;
+    }
+
+    .input-item {
+        padding: 14.5px 0px 12.5px 9px;
+    }
+
+    input[class="form-input"]{
+        height: 50px;
+        margin-top: 2%;
+        padding: 15px;
+        font-size: 18px;
+    }
+    
+    input[id="form-username"] {
+        width: 400px;
+    }
+    
+    input[id="form-password"] {
+        width: 400px;
+    }
+
+    button {
+        width: 50%;
+        height: 50px;
+        padding: 0 20px;
+    }
+    
+    .cancel {
+        width: 50%;
     }
 }

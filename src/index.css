@@ -6,20 +6,26 @@
 
 :root {
   --ff-primary: 'Just Another Hand', cursive;
-	--ff-secondary: 'Roboto Slab', serif;
+	--ff-secondary: 'Open Sans', sans-serif;
 
 	--fw-reg: 500;
 	--fw-bold: 700;
 	
 	--clr-light: #fff;
   --clr-dark: #303030;
+  --clr-gray: #3D495A;
   --clr-yellow: #CEA20D;
   --clr-red: #D75A35;
+  --clr-blue: #0027CC;
+  --clr-gold: #ffd700;
+  --clr-attn: #ff0033;
+  --clr-orange: #FB4D3D;
     
 	--fs-h1: 3rem;
   --fs-h2: 2.25rem;
   --fs-h3: 1.25rem;
   --fs-body: 1rem;
+  --fs-small: .9rem;
 
   --spacing-none: 0;
   --spacing-extra-small: .25rem;
@@ -53,7 +59,7 @@ html::-webkit-scrollbar {
 html::-webkit-scrollbar-thumb {
   border-radius: 10px;
   box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-  background-color: #D75A35;
+  background-color: var(--clr-red);
 }
 
 body {
@@ -77,39 +83,31 @@ h3 {
   color: var(--clr-dark);
 }
 
-
 p {
-  color: #3D495A;
+  color: var(--clr-gray);
 }
 
 .blue {
-  color: #477ACC;
-}
-
-.yellow {
-  color: #EAC435;
+  color: var(--clr-blue);
 }
 
 .gold {
- color: #ffd700;
-}
-
-.green {
-  color: #09a55e;
+ color: var(--clr-gold);
 }
 
 .red {
-  color: #CA1551;
+  color: var(--clr-attn);
   position: absolute;
-  margin: 0 auto;
-  top: -10%;
-  left: 40%;
-  font-size: 20px;
-  font-weight: 800px;
+  top: 55%;
+  left: 38%;
+  font-size: var(--fs-body);
+  font-weight: var(--fs-bold);
+  text-transform: uppercase;
+  font-family: var(--ff-secondary);
 }
 
 .orange {
-  color: #FB4D3D;
+  color: var(--clr-orange);
 }
 
 
@@ -124,6 +122,61 @@ button {
       --fs-h3: 1.5rem;
       --fs-body: 1.125rem;
   }
+}
+
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+    .red {
+      top: 50%;
+      left: 15%;
+      font-size: var(--fs-small);
+    }
+  }
+
+  @media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+    .red {
+      top: 40%;
+      left: 15%;
+      font-size: var(--fs-small);
+    }
+}
+
+@media only screen 
+  and (min-device-width: 400px) 
+  and (max-device-width: 568px) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .red {
+      top: 70%;
+      left: 16%;
+      font-size: var(--fs-small);
+    }
+}
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .red {
+      top: 50%;
+      left: 32%;
+      font-size: var(--fs-body);
+    }
+}
+
+@media only screen 
+  and (min-device-width: 834px) 
+  and (max-device-width: 1112px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .red {
+      top: 50%;
+      left: 32%;
+      font-size: var(--fs-body);
+    }
 }
 
 

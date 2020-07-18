@@ -53,62 +53,49 @@ class LoginForm extends Component {
     render() {
         const { error }  = this.state       
         return (
-            <main className='Login-main center'>
+            <main>
                 <div role='alert'>
                     {error && <p className='red'>{error}</p>}
                 </div>
-                <form
-                    onSubmit={this.handleSubmitJwtAuth}
-                    className= 'Login-form center'>
-                    <fieldset className='Login-fieldset'>
-                        <legend 
-                            className='Login-legend center'>
-                            Log In
-                        </legend>
-                        <div className="Login-user_name">
-                        <label 
-                            className="Username-label" 
-                            htmlFor="login-username">
-                            Username
-                        </label>
-                        <input
-                            id="login-username" 
-                            className="Username-input" 
-                            type="text"
-                            name="user_name"
-                            placeholder="Enter Username" />
+                <form onSubmit={this.handleSubmitJwtAuth} className= 'Login-form center'>
+                    <div className='form-con'>
+                        <header className='head-form'>
+                            <h2>Log In</h2>
+                        <p>login here using your username and password</p>
+                        </header>
+                        <br />
+                        <div className='field-set'>
+                            <span className="input-item">
+                                <i className="fa fa-user-circle"></i>
+                            </span>
+                            <input
+                                id="form-username" 
+                                className="form-input" 
+                                type="text"
+                                name="user_name"
+                                placeholder="@UserName" 
+                                required
+                                />
+                            <br />
+                            <span className="input-item">
+                                <i className="fa fa-key"></i>
+                           </span>
+                           <input 
+                                className='form-input' 
+                                type="password" 
+                                name="password" 
+                                id="form-password" 
+                                placeholder="Password" 
+                                required
+                                />
+                            <br />
+                            <button className="log-in"> Log In </button>
+                            <Link to='/'>
+                                <button className="btn cancel submit-cancel">Cancel</button>
+                            </Link>
+                            </div>
                         </div>
-                        <div className="Login-password">
-                        <label 
-                            className='Password-label' 
-                            htmlFor="login-password">
-                            Password
-                        </label>
-                        <input 
-                            className='Password-input' 
-                            type="password" 
-                            name="password" 
-                            id="login-password" 
-                            placeholder="Enter Password" />
-                        </div> 
-                        <div className="Login-button center">
-                        <button
-                            className="Login-button-input" 
-                            type="submit">
-                            Log in
-                            </button>
-                        </div>
-                        <div className="Cancel-button center">
-                        <Link to='/'>
-                            <button 
-                            className="Login-cancel-button-input" 
-                            type="submit">
-                            Cancel
-                            </button>
-                        </Link>
-                        </div>
-                  </fieldset>
-                </form>
+                    </form>
             </main>
         )
     }
@@ -116,3 +103,5 @@ class LoginForm extends Component {
 }
 
 export default LoginForm
+
+
