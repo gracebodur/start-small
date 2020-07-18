@@ -9,8 +9,12 @@
 }
 
 .Header a {
-  color: #444;
+  color: var(--clr-dark);
   text-decoration: none;
+  font-size: var(--fs-body);
+  font-weight: var(--fw-bold);
+  letter-spacing: var(--spacing-extra-small);
+  text-transform: uppercase;
 }
 
 .Header__not-logged-in {
@@ -22,21 +26,12 @@
 }
 
 .Header__not-logged-in a:last-child {
-  background: #D75A35;
-  color: white;
+  background: var(--clr-red);
+  color: var(--clr-light);
   padding: 5px 15px;
   border-radius: 15px;
   margin-left: 10px;
 }
-
-.Header__logged-in a {
-  background: #3D495A;
-  color: white;
-  padding: 5px 15px;
-  border-radius: 15px;
-  cursor: pointer;
-}
-
 
 @media only screen 
   and (min-device-width: 320px) 
