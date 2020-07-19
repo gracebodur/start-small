@@ -6,7 +6,8 @@
 
 :root {
   --ff-primary: 'Just Another Hand', cursive;
-	--ff-secondary: 'Open Sans', sans-serif;
+  --ff-secondary: 'Open Sans', sans-serif;
+  --ff-tertiary: 'Montserrat', sans-serif;
 
 	--fw-reg: 500;
 	--fw-bold: 700;

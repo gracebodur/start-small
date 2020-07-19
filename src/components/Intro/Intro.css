@@ -1,35 +1,34 @@
 .Proj-intro {
     display: flex;
-    align-items: center;
     text-align: center;
     color: #222831;
-    padding: 20px;
-    padding-top: 25%;
+    margin-top: 8%;
+    letter-spacing: 0.4ch;
 }
 
 .Proj-name {
     font-size: 50pt;
     text-transform: uppercase;
+    font-weight: 800;
 }
 
 ul {
     list-style-type: none;
-    text-align: center;
-    letter-spacing: 0.4ch;
-    font-size: var(--fs-h3);
+    font-size: 1.75rem;
+    font-weight: var(--fw-reg);
+    text-align: start;
     text-transform: capitalize;
-    font-weight: 600;
 }
 
 .Proj-demo {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 10%;
-    font-size: 20pt;
-    font-weight: var(--fw-bold);
-    letter-spacing: var(--spacing-extra-small);
+    padding-top: 1%;
+    font-size: 2.25rem;
+    font-weight: var(--fw-reg);
     color: var(--clr-dark);
+    text-transform: lowercase;
 }
 
 @media only screen 
@@ -37,20 +36,21 @@ ul {
   and (max-device-width: 568px)
   and (-webkit-min-device-pixel-ratio: 2) {
     .Proj-intro {
-        margin-top: 10px;
-        margin-right: 5px;
+        margin-top: 30%;
      }
 
     .Proj-name {
          font-size: 25pt;
+         font-weight: 800;
      }
      
      ul {
          font-size: 15pt;
+         text-align: start;
      }
      
      .Proj-demo {
-         font-size: 15pt;
+         font-size: 18pt;
      }
  }
  
@@ -61,21 +61,20 @@ ul {
   and (max-device-width: 667px) 
   and (-webkit-min-device-pixel-ratio: 2) { 
     .Proj-intro {
-        align-items: center;
-        margin-top: 2%;
-        margin-right: 2%;
+        margin-top: 25%;
      }
 
      .Proj-name {
          font-size: 23pt;
+         font-weight: 800;
      }
      
      ul {
-         font-size: 13pt;
+         font-size: 17pt;
      }
      
      .Proj-demo {
-         font-size: 13pt;
+         font-size: 20pt;
      }
  }
 
@@ -85,20 +84,19 @@ ul {
   and (min-device-width: 375px) 
   and (max-device-width: 667px) 
   and (-webkit-min-device-pixel-ratio: 2) {
-      .Proj-intro {
-       align-items: center;
-    }
-
     .Proj-name {
         font-size: 25pt;
+        margin-left: 10%;
     }
     
     ul {
         font-size: 15pt;
+        font-weight: 800;
+        text-align: center;
     }
     
     .Proj-demo {
-        font-size: 15pt;
+        font-size: 20pt;
     }
 }
 
@@ -107,20 +105,16 @@ ul {
   and (min-device-width: 375px) 
   and (max-device-width: 812px) 
   and (-webkit-min-device-pixel-ratio: 3) {
-    .Proj-intro {
-        align-items: center;
-    }
-
     .Proj-name {
         font-size: 30pt;
     }
     
     ul {
-        font-size: 15pt;
+        font-size: 20pt;
     }
     
     .Proj-demo {
-        font-size: 15pt;
+        font-size: 25pt;
     }
    
 }
@@ -130,16 +124,19 @@ ul {
   and (min-device-width: 768px) 
   and (max-device-width: 1024px) 
   and (-webkit-min-device-pixel-ratio: 2) {
+    .Proj-intro {
+        margin-top: 15%;
+    }
     .Proj-name {
         font-size: 40pt;
     }
     
     ul {
-        font-size: 20pt;
+        font-size: 25pt;
     }
     
     .Proj-demo {
-        font-size: 18pt;
+        font-size: 30pt;
     }
   
 }
@@ -154,11 +151,11 @@ ul {
     }
     
     ul {
-        font-size: 25pt;
+        font-size: 30pt;
     }
     
     .Proj-demo {
-        font-size: 23pt;
+        font-size: 35pt;
     }
   
 }
