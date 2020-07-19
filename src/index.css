@@ -107,6 +107,18 @@ p {
   font-family: var(--ff-secondary);
 }
 
+.r-red {
+  color: var(--clr-attn);
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  font-size: var(--fs-small);
+  font-weight: var(--fs-bold);
+  text-transform: uppercase;
+  font-family: var(--ff-secondary);
+  text-align: justify;
+}
+
 .orange {
   color: var(--clr-orange);
 }

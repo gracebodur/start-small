@@ -1,119 +1,23 @@
-.Register-main {
-    border-radius: .25rem;
-    border-style: solid;
-    border-width: 1px;
-    color:  var( --clr-purple);
-    border-color: rgba(0, 0, 0, .1);
-    margin-bottom: 2rem;
-    max-width: 16rem;
-    padding: 2rem;
-    border-radius: 10px;
-    letter-spacing: 2px;
-    border-radius: 10px;
-    -webkit-box-shadow: -11px 10px 6px -1px rgba(54,34,69,0.72);
-    -moz-box-shadow: -11px 10px 6px -1px rgba(54,34,69,0.72);
-    box-shadow: -11px 10px 6px -1px rgba(54,34,69,0.72);
-   background-color: #12cad6;
-}
-
 .Register-form {
-    max-width: 30em;
+    width: 500px;
 }
 
-.Register-fieldset {
-    text-transform: uppercase;
-    border-style: solid;
-    border-width: 1px;
-    border-color: transparent;
-    /* color:  var( --clr-purple); */
-    padding-left: 0;
-    padding-right: 0;
-    margin-left: 0;
-    margin-right: 0;
+input[class="reg-input"]{
+    height: 52px;
+    margin-top: 2%;
+    padding: 15px;
+    font-size: 16px;
+    color: var(--clr-gray);
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    transition: 0.2s linear;
 }
 
-.Register-legend {
-    font-size: 1.25rem;
-    font-weight: 600;
-    padding-left: 0;
-    padding-right: 0;
-    margin-left: 0;
-    margin-right: 0;
-}
-
-.Register-full_name {
-    margin-top: 1rem;
-}
-
-.Fullname-label,
-.Password-label,
-.New-user_name-label {
-    display: block;
-    font-weight: 600;
-    line-height: 1.5;
-    font-size: .875rem;
-}
-
-.Fullname-input,
-.Password-input,
-.New-user_name-input {
-    padding: .5rem;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    border-style: solid;
-    border-width: 1px;
-    background-color: transparent;
-    width: 100%;
-    border-radius: 10px;
-}
-
-.Fullname-input:hover {
-    background-color: #0FABBC;
-}
-
-
-.Password-input:hover {
-    background-color: #0FABBC;
-}
-
-
-.New-user_name-input:hover {
-    background-color: #0FABBC;
-}
-
-
-.Register-button,
-.Cancel-button {
-    line-height: 1.5;
-    margin-top: 1rem;
-}
-
-.Register-button-input,
-.Register-cancel-button-input {
-    display: inline-block;
-    font-weight: bold;
-    font-size: .900rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top: .5rem;
-    padding-bottom: .5rem;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    border-style: solid;
-    border-width: 1px;
-    border-color: #000;
-    border-radius: 10px;
-    background-color: transparent;
-    color: var( --clr-purple);
-    -moz-osx-font-smoothing: grayscale;
-    backface-visibility: hidden; 
-    transform: translateZ(0);
-    transition: transform .25s ease-out;
-}
-
-.center {
-    margin-right: auto;
-    margin-left: auto;
+input[id="reg-fullname"],
+input[id="reg-username"],
+input[id="reg-password"] {
+    width: 350px;
 }
 
 /* iphone6/7/8 */
@@ -129,9 +33,7 @@
   and (min-device-width: 375px) 
   and (max-device-width: 812px) 
   and (-webkit-min-device-pixel-ratio: 3) { 
-    .Register-main {
-        margin-top: 30%;
-    }
+   
 }
 
 /* tablet */
@@ -139,39 +41,7 @@
   and (min-device-width: 400px) 
   and (max-device-width: 568px) 
   and (-webkit-min-device-pixel-ratio: 2) {
-    .Register-main {
-        margin-top: 30%;
-        max-width: 15rem;
-    }
-    .Register-legend {
-        font-size: 1rem;
-    }
-    .Username-label {
-        font-size: 1rem;
-    }
-    .Password-label {
-        font-size: 1rem;
-    }
-    .Username-input,
-    .Password-input {
-        font-size: 1rem;
-    }
-    .Register-button-input {
-        font-size: 1rem;
-    }
-    .Register-cancel-button-input {
-        font-size: 1rem;
-    }
-    .Fullname-label,
-    .Password-label,
-    .New-user_name-label {
-        font-size: 1rem;
-    }
-    .Fullname-input,
-    .Password-input,
-    .New-user_name-input {
-        font-size: 1rem;
-    }
+    
 }
     
 
@@ -180,40 +50,7 @@
   and (min-device-width: 768px) 
   and (max-device-width: 1024px) 
   and (-webkit-min-device-pixel-ratio: 2) {
-    .Register-main {
-        margin-top: 20%;
-        max-width: 20rem;
-    }
-    .Register-legend {
-        font-size: 2.0rem;
-        font-weight: 600;
-    }
-    .Username-label {
-        font-size: 1.25rem;
-    }
-    .Password-label {
-        font-size: 1.25rem;
-    }
-    .Username-input,
-    .Password-input {
-        font-size: 1rem;
-    }
-    .Register-button-input {
-        font-size: 1.5rem;
-    }
-    .Register-cancel-button-input {
-        font-size: 1.5rem;
-    }
-    .Fullname-label,
-    .Password-label,
-    .New-user_name-label {
-        font-size: 1.5rem;
-    }
-    .Fullname-input,
-    .Password-input,
-    .New-user_name-input {
-        font-size: 1.5rem;
-    }
+   
 }
 
 /* ipadpro */
@@ -221,39 +58,5 @@
   and (min-device-width: 834px) 
   and (max-device-width: 1112px)
   and (-webkit-min-device-pixel-ratio: 2) {
-    .Register-main {
-        margin-top: 20%;
-        max-width: 25rem;
-    }
-    .Register-legend {
-        font-size: 2.5rem;
-    }
-    .Username-label {
-        font-size: 2.25rem;
-    }
-    .Password-label {
-        font-size: 2rem;
-    }
-    .Password-input {
-        font-size: 2rem;
-    }
-    .Username-input {
-        font-size: 2rem;
-    }
-    .Register-button-input {
-        font-size: 2rem;
-    }
-    .Register-cancel-button-input {
-        font-size: 2rem;
-    }
-    .Fullname-label,
-    .Password-label,
-    .New-user_name-label {
-        font-size: 2rem;
-    }
-    .Fullname-input,
-    .Password-input,
-    .New-user_name-input {
-        font-size: 2rem;
-    }
+  
 }

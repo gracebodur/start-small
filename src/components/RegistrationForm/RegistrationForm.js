@@ -35,76 +35,51 @@ class RegistrationForm extends Component {
   render() {
     const { error }  = this.state
       return(
-        <main className='Register-main center'>
-        <form 
-          onSubmit={this.handleSubmit}
-          className= 'Register-form center'>
+        <main>
+        <form onSubmit={this.handleSubmit} className='Register-form'>
           <div role='alert'>
-              {error && <p className='red'>{error}</p>}
+              {error && <p className='r-red'>{error}</p>}
           </div>
-        <fieldset className='Register-fieldset'>
-            <legend className='Register-legend center'>
-              Register
-            </legend>
-            <div className="Register-full_name">
-              <label 
-                className="Fullname-label" 
-                htmlFor="register-fullname">
-                Full Name
-              </label>
-              <input
-                id="register-fullname" 
-                className="Fullname-input" 
-                type="text"
-                name="full_name"
-                placeholder="Enter full name" 
-                required/>
-              </div>
-              <div className="Register-new_user_name">
-              <label 
-                className="New-user_name-label" 
-                htmlFor="register-new_user_name">
-                User Name
-              </label>
-              <input
-                id="register-new_user_name" 
-                className="New-user_name-input" 
-                type="text" 
-                name="user_name"
-                placeholder="Enter user name" 
-                required
-              />
-              </div>
-              <div className="Register-password">
-              <label 
-                className='Password-label' 
-                htmlFor="Register-password">
-                Password
-              </label>
-              <input
-                id="register-password"
-                className='Password-input' 
-                type="password" 
-                name="password" 
-                placeholder="Enter password"
-                required
-              />
-              </div>
-              <div className="Register-button center">
-              <button
-                className="Register-button-input" 
-                type="submit">
-                Register
-              </button>
-              </div>
-              <div className="Cancel-button center">
-                <Link to='/'><button
-                  className="Register-cancel-button-input" 
-                  type="submit">
-                  Cancel
-                </button></Link>
-              </div>
-            </fieldset>
+          <div className='form-con'>
+          <header className='head-form'>
+            <h2>Register</h2>
+            <p>let's get you on board!</p>
+          </header>
+          <br />
+          <div className='field-set'>
+            <input
+              id="reg-fullname" 
+              className="reg-input" 
+              type="text"
+              name="full_name"
+              placeholder="Full name" 
+              required
+            />
+            <br />
+            <input
+              id="reg-username" 
+              className="reg-input" 
+              type="text" 
+              name="user_name"
+              placeholder="Username" 
+              required
+            />
+            <br />
+            <input
+              id="reg-password"
+              className='reg-input' 
+              type="password" 
+              name="password" 
+              placeholder="Password"
+              required
+            />
+            <br />
+            <button className="log-in">Register</button>
+              <Link to='/'>
+                <button className="btn cancel submit-cancel">Cancel</button>
+              </Link>
+            </div>
+            </div>
           </form>
         </main>
       )

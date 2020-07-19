@@ -57,10 +57,7 @@ input[class="form-input"]{
     transition: 0.2s linear;
 }
 
-input[id="form-username"] {
-    width: 350px;
-}
-
+input[id="form-username"],
 input[id="form-password"] {
     width: 350px;
 }
@@ -73,7 +70,7 @@ input:focus {
 button {
     display: inline-block;
     color:var(--clr-light);
-    width: 48%;
+    width: 50%;
     height: 50px;
     padding: 0 20px;
     background: var(--clr-blue);
@@ -91,7 +88,7 @@ button {
 }
 
 .cancel {
-    width: 48%;
+    width: 50%;
     display: inline-block;
 }
 
@@ -165,7 +162,6 @@ button:hover {
         width: 50%;
     }
 }
-
 
 /* iphoneX */
 @media only screen 

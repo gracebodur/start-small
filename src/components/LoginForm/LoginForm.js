@@ -57,45 +57,45 @@ class LoginForm extends Component {
                 <div role='alert'>
                     {error && <p className='red'>{error}</p>}
                 </div>
-                <form onSubmit={this.handleSubmitJwtAuth} className= 'Login-form center'>
-                    <div className='form-con'>
-                        <header className='head-form'>
-                            <h2>Log In</h2>
-                        <p>login here using your username and password</p>
-                        </header>
+            <form onSubmit={this.handleSubmitJwtAuth} className= 'Login-form center'>
+                <div className='form-con'>
+                    <header className='head-form'>
+                        <h2>Log In</h2>
+                        <p>Welcome back! please login to your account</p>
+                    </header>
+                    <br />
+                    <div className='field-set'>
+                        <span className="input-item">
+                            <i className="fa fa-user-circle"></i>
+                        </span>
+                        <input
+                            id="form-username" 
+                            className="form-input" 
+                            type="text"
+                            name="user_name"
+                            placeholder="@UserName" 
+                            required
+                        />
                         <br />
-                        <div className='field-set'>
-                            <span className="input-item">
-                                <i className="fa fa-user-circle"></i>
-                            </span>
-                            <input
-                                id="form-username" 
-                                className="form-input" 
-                                type="text"
-                                name="user_name"
-                                placeholder="@UserName" 
-                                required
-                                />
-                            <br />
-                            <span className="input-item">
-                                <i className="fa fa-key"></i>
-                           </span>
-                           <input 
-                                className='form-input' 
-                                type="password" 
-                                name="password" 
-                                id="form-password" 
-                                placeholder="Password" 
-                                required
-                                />
-                            <br />
-                            <button className="log-in"> Log In </button>
-                            <Link to='/'>
-                                <button className="btn cancel submit-cancel">Cancel</button>
-                            </Link>
-                            </div>
+                        <span className="input-item">
+                            <i className="fa fa-key"></i>
+                        </span>
+                        <input 
+                            className='form-input' 
+                            type="password" 
+                            name="password" 
+                            id="form-password" 
+                            placeholder="Password" 
+                            required
+                        />
+                        <br />
+                        <button className="log-in"> Log In </button>
+                        <Link to='/'>
+                            <button className="btn cancel submit-cancel">Cancel</button>
+                        </Link>
                         </div>
-                    </form>
+                    </div>
+                </form>
             </main>
         )
     }
