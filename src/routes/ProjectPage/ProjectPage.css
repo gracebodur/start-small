@@ -14,6 +14,14 @@
     border-radius: 10px 10px 0 0;
   }
 
+.Project__card {
+  background: #fff;
+  margin: 4em auto;
+  width: 90%;
+  max-width: 496px;
+  
+}
+
   .ProjectPage__review-fulfillmenttrailer {
     margin-top: -10vh;
   }

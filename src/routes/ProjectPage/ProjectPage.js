@@ -33,7 +33,7 @@ class ProjectPage extends Component {
 
   renderProject() {
     const { project, reviews } = this.context
-    return <div>
+    return <div className='Project__card'>
       <div className='ProjectPage__image' style={{backgroundImage: `url(${project.imageurl})`}} />
         <div>
           <h2 className='ProjectPage__details'>{project.schoolname}, {project.city}, {project.state}</h2> 
