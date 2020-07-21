@@ -52,7 +52,6 @@ class ProjectPage extends Component {
           </a>
         </h4>
         <ShareButton />
-        {/* <ProjectContent project={project} /> */}
         <ProjectReviews reviews={reviews} />
         <ProjectReviewForm />
     </div>
@@ -78,13 +77,6 @@ class ProjectPage extends Component {
   }
 }
 
-// function ProjectContent({ project }) {
-//   return (
-//     <p className='ProjectPage__content'>
-//       {project.content}
-//     </p>
-//   )
-// }
 
 function ProjectReviews({ reviews = [] }) {
   return (

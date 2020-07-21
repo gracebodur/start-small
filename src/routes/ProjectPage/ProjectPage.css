@@ -1,5 +1,11 @@
 .ProjectPage__image {
-    height: 20vw;
+  max-width: 100%;
+	height: auto;
+	vertical-align: bottom;
+
+
+
+    height: 20vh;
     min-height: 150px;
     margin-top: 15%;
     margin-bottom: 10px;
