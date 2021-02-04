@@ -1,164 +1,147 @@
 .ProjectPage__image {
-  max-width: 100%;
+	max-width: 100%;
 	height: auto;
 	vertical-align: bottom;
 
-
-
-    height: 20vh;
-    min-height: 150px;
-    margin-top: 15%;
-    margin-bottom: 10px;
-    background-size: cover;
-    background-position: 50% 50%;
-    border-radius: 10px 10px 0 0;
-  }
-
-.Project__card {
-  background: #fff;
-  margin: 4em auto;
-  width: 90%;
-  max-width: 496px;
-  
+	height: 20vh;
+	min-height: 150px;
+	margin-top: 15%;
+	margin-bottom: 10px;
+	background-size: cover;
+	background-position: 50% 50%;
+	border-radius: 10px 10px 0 0;
 }
 
-  .ProjectPage__review-fulfillmenttrailer {
-    margin-top: -10vh;
-  }
-  
-  .ProjectPage__review-list {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .ProjectPage__review {
-    position: relative;
-  }
-  
-  .ProjectPage__review::before {
-    border-color: transparent #f5f5f5;
-    border-width: 0px 0px 10px 10px;
-    content: '';
-    display: block;
-    height: 0px;
-    position: absolute;
-    width: 0;
-    bottom: 14px;
-    right: 7px;
-  }
-  
-  .ProjectPage__review-icon {
-    font-size: 12pt;
-    margin-right: 10px;
-    vertical-align: super !important;
-  }
-  
-  .ProjectPage__review-text {
-    background: #f5f5f5;
-    padding: 8px;
-    margin-bottom: 4px;
-    border-radius: 4px;
-  }
-  
-  .ProjectPage__review-user {
-    color: #666;
-    margin: 5px 0 0;
-    font-size: 15pt;
-    font-weight: bold;
-    text-align: right;
-  }
-  
-  .ProjectPage__review-user .ProjectStarRating {
-    display: inline;
-  }
-  
-  .Fundurl {
-    position: absolute;
-    left: 70%;
-  }
+.Project__card {
+	margin: 4em auto;
+	/* width: 90%;
+  max-width: 496px; */
+}
 
-  .ProjectPage__review-list {
-    color: red;
-    margin-top: 25vh;
-  }
+.ProjectPage__review-fulfillmenttrailer {
+	margin-top: -10vh;
+}
 
- /* iphone6/7/8*/
-@media only screen 
-and (min-device-width: 375px) 
-and (max-device-width: 667px) 
-and (-webkit-min-device-pixel-ratio: 2) { 
-  .ProjectPage__image {
-    margin-top: 35%;
-  }
-  .ProjectPage__details {
-    font-size: 20px;
-  }
-  .ProjectPage__review-fulfillmenttrailer {
-    margin-top: 1vh;
-  }
-  .Fundurl {
-    left: 50%;
-   width: 70%;
-  }
+.ProjectPage__review-list {
+	list-style-type: none;
+	padding: 0;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	grid-gap: 1rem;
+}
+
+.ProjectPage__review {
+	background: #3d495a;
+	padding: 1.5rem;
+	border-radius: 1rem;
+}
+
+.ProjectPage__review::before {
+	border-color: transparent #f5f5f5;
+	border-width: 0px 0px 10px 10px;
+	content: '';
+	display: block;
+	height: 0px;
+	position: absolute;
+	width: 0;
+	bottom: 14px;
+	right: 7px;
+}
+
+.ProjectPage__review-icon {
+	font-size: 12pt;
+	margin-right: 10px;
+	vertical-align: super !important;
+}
+
+.ProjectPage__review-text {
+  color: #fff;
+	padding: 8px;
+	margin-bottom: 4px;
+	border-radius: 4px;
+}
+
+.ProjectPage__review-user {
+	color: #000;
+	margin: 5px 0 0;
+	font-size: 15pt;
+	text-align: right;
+}
+
+.ProjectPage__review-user .ProjectStarRating {
+	display: inline;
+}
+
+.Fundurl {
+	position: absolute;
+	left: 70%;
+}
+
+/* iphone6/7/8*/
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+	.ProjectPage__image {
+		margin-top: 35%;
+	}
+	.ProjectPage__details {
+		font-size: 20px;
+	}
+	.ProjectPage__review-fulfillmenttrailer {
+		margin-top: 1vh;
+	}
+	.Fundurl {
+		left: 50%;
+		width: 70%;
+	}
 }
 
 /* iphoneX */
-@media only screen 
-and (min-device-width: 375px) 
-and (max-device-width: 812px) 
-and (-webkit-min-device-pixel-ratio: 3) { 
-  .ProjectPage__image {
-    margin-top: 35%;
-  }
-  .ProjectPage__details {
-    font-size: 20px;
-  }
-  .ProjectPage__review-fulfillmenttrailer {
-    margin-top: 1vh;
-  }
-  .Fundurl {
-    left: 50%;
-   width: 70%;
-  }
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+	.ProjectPage__image {
+		margin-top: 35%;
+	}
+	.ProjectPage__details {
+		font-size: 20px;
+	}
+	.ProjectPage__review-fulfillmenttrailer {
+		margin-top: 1vh;
+	}
+	.Fundurl {
+		left: 50%;
+		width: 70%;
+	}
 }
 
 /* ipad */
-@media only screen 
-and (min-device-width: 768px) 
-and (max-device-width: 1024px) 
-and (-webkit-min-device-pixel-ratio: 2) {
-  .ProjectPage__image {
-    margin-top: 25%;
-  }
-  .ProjectPage__details {
-    font-size: 20px;
-  }
-  .ProjectPage__review-fulfillmenttrailer {
-    font-size: 20px;
-    margin-top: -2vh;
-  }
-  .Fundurl {
-    left: 65%;
-   width: 70%;
-  }
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+	.ProjectPage__image {
+		margin-top: 25%;
+	}
+	.ProjectPage__details {
+		font-size: 20px;
+	}
+	.ProjectPage__review-fulfillmenttrailer {
+		font-size: 20px;
+		margin-top: -2vh;
+	}
+	.Fundurl {
+		left: 65%;
+		width: 70%;
+	}
 }
 
 /* ipadpro */
-@media only screen 
-and (min-device-width: 834px) 
-and (max-device-width: 1112px)
-and (-webkit-min-device-pixel-ratio: 2) {
-  .ProjectPage__image {
-    margin-top: 20%;
-  }
-  .ProjectPage__details {
-    font-size: 30px;
-  }
-  .ProjectPage__review-fulfillmenttrailer {
-    margin-top: 1vh;
-  }
-  .Fundurl {
-    left: 70%;
-   width: 70%;
-  }
+@media only screen and (min-device-width: 834px) and (max-device-width: 1112px) and (-webkit-min-device-pixel-ratio: 2) {
+	.ProjectPage__image {
+		margin-top: 20%;
+	}
+	.ProjectPage__details {
+		font-size: 30px;
+	}
+	.ProjectPage__review-fulfillmenttrailer {
+		margin-top: 1vh;
+	}
+	.Fundurl {
+		left: 70%;
+		width: 70%;
+	}
 }

@@ -38,10 +38,6 @@
     font-family: var(--ff-primary);
   }
 
-  .select {
-    color: var(--clr-purple);
-  }
-
   .Text__area {
     color: var(--clr-purple);
     font-family: var(--ff-primary);
