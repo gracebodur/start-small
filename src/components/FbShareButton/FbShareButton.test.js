@@ -1,19 +1,19 @@
 import React from "react";
 import toJson from "enzyme-to-json";
-import ShareButton from "./ShareButton";
+import FbShareButton from "./FbShareButton";
 
-describe(`ShareButton component`, () => {
+describe(`FbShareButton component`, () => {
   const props = {
     id: "a",
     name: "test-class-name"
   };
 
-  it("renders a ShareButton by default", () => {
-    const wrapper = <ShareButton />;
+  it("renders a FbShareButton by default", () => {
+    const wrapper = <FbShareButton />;
     expect(toJson(wrapper)).toMatchSnapshot();
   });
 
-  it("renders the ShareButton given props", () => {
+  it("renders the FbShareButton given props", () => {
     const wrapper = <ShareButton {...props} />;
     expect(toJson(wrapper)).toMatchSnapshot();
   });

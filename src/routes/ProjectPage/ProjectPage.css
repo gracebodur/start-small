@@ -1,25 +1,54 @@
-.ProjectPage__image {
-	max-width: 100%;
-	height: auto;
-	vertical-align: bottom;
-
-	height: 20vh;
-	min-height: 150px;
-	margin-top: 15%;
-	margin-bottom: 10px;
-	background-size: cover;
-	background-position: 50% 50%;
-	border-radius: 10px 10px 0 0;
+.card {
+	border: none !important;
+	background-color: transparent !important;
+	display: flex;
+	flex-flow: wrap;
+	flex: 100%;
+	margin-bottom: 40px;
 }
 
-.Project__card {
-	margin: 4em auto;
-	/* width: 90%;
-  max-width: 496px; */
+.card-img-body {
+	flex: 1;
+	overflow: hidden;
+	position: relative;
 }
 
-.ProjectPage__review-fulfillmenttrailer {
-	margin-top: -10vh;
+@media (max-width: 576px) {
+	.card-img-body {
+		width: 100%;
+		height: 200px;
+		margin-bottom: 20px;
+	}
+}
+
+.fadeIn {
+	animation-name: fadeIn;
+	-webkit-animation-name: fadeIn;
+	animation-duration: 1.5s;
+	-webkit-animation-duration: 1.5s;
+	animation-timing-function: ease-in-out;
+	-webkit-animation-timing-function: ease-in-out;
+	visibility: visible !important;
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0.0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes fadeIn {
+	0% {
+		opacity: 0.0;
+	}
+
+	100% {
+		opacity: 1;
+	}
 }
 
 .ProjectPage__review-list {
@@ -55,7 +84,7 @@
 }
 
 .ProjectPage__review-text {
-  color: #fff;
+	color: #fff;
 	padding: 8px;
 	margin-bottom: 4px;
 	border-radius: 4px;
@@ -72,26 +101,21 @@
 	display: inline;
 }
 
-.Fundurl {
-	position: absolute;
-	left: 70%;
-}
 
 /* iphone6/7/8*/
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
 	.ProjectPage__image {
 		margin-top: 35%;
 	}
+
 	.ProjectPage__details {
 		font-size: 20px;
 	}
+
 	.ProjectPage__review-fulfillmenttrailer {
 		margin-top: 1vh;
 	}
-	.Fundurl {
-		left: 50%;
-		width: 70%;
-	}
+
 }
 
 /* iphoneX */
@@ -99,16 +123,15 @@
 	.ProjectPage__image {
 		margin-top: 35%;
 	}
+
 	.ProjectPage__details {
 		font-size: 20px;
 	}
+
 	.ProjectPage__review-fulfillmenttrailer {
 		margin-top: 1vh;
 	}
-	.Fundurl {
-		left: 50%;
-		width: 70%;
-	}
+
 }
 
 /* ipad */
@@ -116,17 +139,16 @@
 	.ProjectPage__image {
 		margin-top: 25%;
 	}
+
 	.ProjectPage__details {
 		font-size: 20px;
 	}
+
 	.ProjectPage__review-fulfillmenttrailer {
 		font-size: 20px;
 		margin-top: -2vh;
 	}
-	.Fundurl {
-		left: 65%;
-		width: 70%;
-	}
+
 }
 
 /* ipadpro */
@@ -134,14 +156,13 @@
 	.ProjectPage__image {
 		margin-top: 20%;
 	}
+
 	.ProjectPage__details {
 		font-size: 30px;
 	}
+
 	.ProjectPage__review-fulfillmenttrailer {
 		margin-top: 1vh;
 	}
-	.Fundurl {
-		left: 70%;
-		width: 70%;
-	}
+
 }
