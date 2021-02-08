@@ -1,45 +1,39 @@
-.ReviewForm select, .ReviewForm label {
-    font-size: 1.1em;
-  }
-  
-  .ReviewForm label {
-    display: inline-block;
-    margin: 10px 10px 20px;
-    margin-left: 0;
-  }
-  
-  .Button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #3D495A;
-    margin-top: 5px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    cursor: pointer;
-  }
+.ReviewForm label {
+	display: inline-block;
+	margin: 10px 10px 20px;
+	margin-left: 0;
+}
 
-  .Post__review__btn {
-    color: var(--clr-light);
-    text-decoration: none;
-    text-align: center;
-    cursor: pointer;
-    font-size: 16px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-family: var(--ff-primary);
-  }
+.Button {
+	align-items: center;
+	justify-content: center;
+	background: #3d495a;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border-radius: 5px;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	cursor: pointer;
+}
 
-  .Stars__option {
-    color: var(--clr-purple);
-    font-family: var(--ff-primary);
-  }
+.Post__review__btn {
+	color: var(--clr-light);
+	text-decoration: none;
+	text-align: center;
+	cursor: pointer;
+	font-size: 16px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-family: var(--ff-primary);
+}
 
-  .Text__area {
-    color: var(--clr-purple);
-    font-family: var(--ff-primary);
-    font-size: 20px;
-  }
+.Stars__option {
+	color: var(--clr-purple);
+	font-family: var(--ff-primary);
+}
+
+.Text__area {
+	color: var(--clr-purple);
+	font-family: var(--ff-primary);
+}

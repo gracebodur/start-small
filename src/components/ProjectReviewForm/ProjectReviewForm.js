@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import ProjectContext from '../../contexts/ProjectContext'
 import ProjectsApiService from '../../services/projects-api-service'
-import { Button, Textarea } from '../Utils/Utils'
+import { Section, Button, Textarea } from '../Utils/Utils'
 import './ProjectReviewForm.css'
 
 export default class ReviewForm extends Component {
@@ -12,35 +12,36 @@ export default class ReviewForm extends Component {
     const { project } = this.context
     const { text, rating } = ev.target
 
-    ProjectsApiService.postReview(project.project_id, text.value, Number(rating.value))
-      .then(this.context.addReviews)
-      .then(() => {
+    ProjectsApiService.postReview( project.project_id, text.value, Number( rating.value ) )
+      .then( this.context.addReviews )
+      .then( () => {
         text.value = ''
-      })
-      .catch(this.context.setError)
+      } )
+      .catch( this.context.setError )
   }
 
-  render() {
+  render () {
     return (
+      <Section>
       <form
-        className='ReviewForm'
+        className='ReviewForm form-group'
         onSubmit={this.handleSubmit}
       >
-        <div className='text'>
+      <label className='h1' htmlFor='rating'>How likely will you donate to this project?</label>
+        <div className='text h4'>
           <Textarea
             className='Text__area'
             required
             aria-label='Type a review...'
             name='text'
             id='text'
-            cols='30'
-            rows='3'
+            cols='75'
+            rows='8'
             placeholder='Type a review..'>
           </Textarea>
         </div>
 
-        <div className='select'>
-          <label htmlFor='rating'>How likely will you donate to this project?</label>
+        <div className='select h3'>
           <select
             className='Stars__option'
             required
@@ -60,6 +61,7 @@ export default class ReviewForm extends Component {
           Post review
         </Button>
       </form>
+      </Section>
     )
   }
 }
