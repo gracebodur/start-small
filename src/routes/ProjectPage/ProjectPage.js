@@ -3,7 +3,7 @@ import ProjectContext from '../../contexts/ProjectContext'
 import ProjectsApiService from '../../services/projects-api-service'
 import { Section } from '../../components/Utils/Utils'
 import { ProjectStarRating } from '../../components/ProjectStarRating/ProjectStarRating'
-import FbShareButton from '../../components/FbShareButton/FbShareButton'
+import ShareButton from '../../components/ShareButton/ShareButton'
 import ProjectReviewForm from '../../components/ProjectReviewForm/ProjectReviewForm'
 import donorsLogo from '../../img/donors-logo.png'
 import { Scrollbars } from 'rc-scrollbars'
@@ -53,7 +53,7 @@ class ProjectPage extends Component {
 											style={{ width: '15%' }}
 										/>
 									</a>
-									<FbShareButton />
+									<ShareButton />
 								</div>
 							</div>
 						</div>

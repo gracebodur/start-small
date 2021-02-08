@@ -1,8 +1,8 @@
 import React from 'react'
 import fbShare from '../../img/fb-share.png'
-import './FbShareButton.css'
+import './ShareButton.css'
 
-function FbShareButton() {
+function ShareButton() {
     return(
         <div 
                 className="fb-share-button" 
@@ -16,4 +16,4 @@ function FbShareButton() {
     )
 }
 
-export default FbShareButton
+export default ShareButton
