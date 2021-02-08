@@ -14,7 +14,7 @@ describe(`FbShareButton component`, () => {
   });
 
   it("renders the FbShareButton given props", () => {
-    const wrapper = <ShareButton {...props} />;
+    const wrapper = <FbShareButton {...props} />;
     expect(toJson(wrapper)).toMatchSnapshot();
   });
 });
