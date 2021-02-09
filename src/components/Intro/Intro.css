@@ -13,18 +13,14 @@
 
 .Proj-details {
     list-style-type: none;
-    font-size: 1.75rem;
-    font-weight: var(--fw-reg);
     text-transform: capitalize;
+    margin: 20px 10px 20px 10px;
 }
 
 .Proj-demo {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 1%;
-    font-size: 2.25rem;
-    font-weight: var(--fw-reg);
     color: var(--clr-dark);
     text-transform: lowercase;
 }

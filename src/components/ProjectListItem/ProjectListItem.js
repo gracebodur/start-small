@@ -12,7 +12,7 @@ export default class ProjectListItem extends Component {
 
         <div className='ProjectListItem__details'>
           <div className='ProjectListItem__text'>
-            <h3 className='ProjectListItem__heading'>{project.schoolname}</h3>
+            <h3 className='ProjectListItem__heading h4'>{project.schoolname}</h3>
             <p className='ProjectListItem__description'>{project.fulfillmenttrailer}</p>
             <p>&#8212;{project.teachername}</p>
           </div>
