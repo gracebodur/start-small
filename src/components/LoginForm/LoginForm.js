@@ -55,13 +55,13 @@ class LoginForm extends Component {
         return (
             <Section className='container'>
                 <div className="login-form center_div row">
-                    <form onSubmit={this.handleSubmitJwtAuth} className='col-md-12'>
+                    <form onSubmit={this.handleSubmitJwtAuth} className='col-md-12 form-wrapper'>
                         <h2 className='login-header h2'>Log in</h2>
                         <div role='alert'>
                             {error && <p className='red'>{error}</p>}
                         </div>
                         <div className="form-group">
-                            <label>Username</label>
+                            <label className='h4'>Username</label>
                             <input
                                 type="text"
                                 className="form-control form-input"
@@ -71,7 +71,7 @@ class LoginForm extends Component {
                                 required />
                         </div>
                         <div className="form-group">
-                            <label>Password</label>
+                            <label className='h4'>Password</label>
                             <input
                                 type="password"
                                 className="form-control form-input"
@@ -83,6 +83,7 @@ class LoginForm extends Component {
                         <div className="form-group clearfix">
                             <button type="submit" className="btn float-left">Sign in</button>
                         </div>
+                        
                     </form>
                 </div>
             </Section>
