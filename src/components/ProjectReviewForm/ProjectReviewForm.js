@@ -35,8 +35,8 @@ export default class ReviewForm extends Component {
             aria-label='Type a review...'
             name='text'
             id='text'
-            cols='75'
-            rows='8'
+            cols='25'
+            rows='5'
             placeholder='Type a review..'>
           </Textarea>
         </div>
