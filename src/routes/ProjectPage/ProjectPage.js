@@ -100,8 +100,8 @@ function ProjectReviews({ reviews = [] }) {
 			</div>
 					<Scrollbars style={{ height: 400 }}>
 						<ul className='list-group'>
-							{reviews.map((review) => (
-								<li className='list-group-item text-center' key={review.review_id}>
+							{reviews.map((review, review_id) => (
+								<li className='list-group-item text-center' key={review_id}>
 									<h3>"{review.text}"</h3>
 									<h5>- {review.user.full_name}</h5>
 									<ProjectStarRating rating={review.rating} />
