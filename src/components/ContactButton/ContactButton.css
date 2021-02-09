@@ -1,19 +1,24 @@
-.Btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.cta-btn {
+    margin-top: 25px;
+    margin-bottom: 0 !important;
     background: var(--clr-blue);
-    margin-top: 5px;
-    margin-bottom: 20px;
     border-radius: 5px;
     border: none;
     color: var(--clr-light);
     padding: 15px 32px;
     cursor: pointer;
-    
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-.Btn__inner {
+.cta-btn:hover {
+    background-color: green;
+    border: green;
+}
+
+.btn-inner {
     color: var(--clr-light);
     text-decoration: none;
     text-align: center;
@@ -22,4 +27,9 @@
     text-transform: uppercase;
     font-family: var(--ff-primary);
     letter-spacing: var(--spacing-extra-small);
+}
+
+.btn-inner:hover {
+    color: white !important;
+    text-decoration: none;
 }

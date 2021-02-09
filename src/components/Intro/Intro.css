@@ -3,7 +3,6 @@
     text-align: center;
     color: #222831;
     margin-top: 8%;
-    letter-spacing: 0.4ch;
 }
 
 .Proj-name {
@@ -12,11 +11,10 @@
     font-weight: 800;
 }
 
-ul {
+.Proj-details {
     list-style-type: none;
     font-size: 1.75rem;
     font-weight: var(--fw-reg);
-    text-align: start;
     text-transform: capitalize;
 }
 

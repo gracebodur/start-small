@@ -2,19 +2,17 @@ import React from 'react'
 import './ContactButton.css'
 
 function ContactButton() {
-    return(
-        <div>
-            <button className='Btn center'>
-                <a 
-                    className='Btn__inner'
-                    href='mailto:startsmall.contact@gmail.com'
-                    target='_blank'
-                    rel='noopener noreferrer'>
-                    Contact Us
-                </a>
-            </button>
-        </div>
-    )
+	return (
+		<button className='cta-btn'>
+			<a
+				className='btn-inner'
+				href='mailto:startsmall.contact@gmail.com'
+				target='_blank'
+				rel='noopener noreferrer'>
+				Contact Us
+			</a>
+		</button>
+	)
 }
 
 export default ContactButton
