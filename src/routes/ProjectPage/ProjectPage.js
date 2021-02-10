@@ -41,9 +41,9 @@ class ProjectPage extends Component {
 							</div>
 							<div className='col-md-8 px-3'>
 								<div className='card-block px-3'>
-									<h1 className='card-title'>{project.schoolname}</h1>
-									<h3 className='card-text'>"{project.fulfillmenttrailer}"</h3>
-									<h3 className='card-text'>-{project.teachername}</h3>
+									<h2 className='card-title schoolname'>{project.schoolname}</h2>
+									<h5 className='card-text'>"{project.fulfillmenttrailer}"</h5>
+									<h6 className='card-text'>-{project.teachername}</h6>
 									<div className='m-3'></div>
 									<a href={project.fundurl} target='_blank' rel='noopener noreferrer'>
 										<img
@@ -96,14 +96,14 @@ function ProjectReviews({ reviews = [] }) {
 	return (
 		<Section>
 			<div className='text-center'>
-				<h1 className='h1 review-title'>Reviews:</h1>
+				<h3 className='review-title'>Reviews:</h3>
 			</div>
 					<Scrollbars style={{ height: 400 }}>
 						<ul className='list-group'>
 							{reviews.map((review, review_id) => (
 								<li className='list-group-item text-center' key={review_id}>
-									<h3>"{review.text}"</h3>
-									<h5>- {review.user.full_name}</h5>
+									<h5>"{review.text}"</h5>
+									<h6>- {review.user.full_name}</h6>
 									<ProjectStarRating rating={review.rating} />
 								</li>
 							))}

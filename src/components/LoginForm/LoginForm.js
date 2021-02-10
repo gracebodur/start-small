@@ -83,7 +83,6 @@ class LoginForm extends Component {
                         <div className="form-group clearfix">
                             <button type="submit" className="btn float-left">Sign in</button>
                         </div>
-                        
                     </form>
                 </div>
             </Section>

@@ -5,7 +5,7 @@
 }
 
 .Header a {
-	 color: var(--txt-clr);
+	color: var(--txt-clr);
 	text-decoration: none;
 	font-weight: var(--fw-bold);
 	text-transform: capitalize;

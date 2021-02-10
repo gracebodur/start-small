@@ -13,7 +13,7 @@ class Header extends Component {
 
 	renderLogoutLink() {
 		return (
-			<Link onClick={this.handleLogOutClick} to='/'>
+			<Link onClick={this.handleLogOutClick} to='/' >
 				Log out
 			</Link>
 		)
@@ -26,12 +26,12 @@ class Header extends Component {
 					Login
 				</Link>
 
-				<Link to='/register' className='nav-link'>
+				<Link to='/register' className='nav-link '>
 					Register
 				</Link>
 
 				<a
-					className='nav-link'
+					className = 'nav-link'
 					href='mailto:startsmall.contact@gmail.com'
 					target='_blank'
 					rel='noopener noreferrer'>

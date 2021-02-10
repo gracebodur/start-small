@@ -27,7 +27,7 @@ export default class ReviewForm extends Component {
         className='ReviewForm form-group'
         onSubmit={this.handleSubmit}
       >
-      <label className='h1' htmlFor='rating'>How likely will you donate to this project?</label>
+      <label className='h3 review-label' htmlFor='rating'>How likely will you donate to this project?</label>
         <div className='text h4'>
           <Textarea
             className='Text__area'

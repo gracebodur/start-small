@@ -4,6 +4,10 @@
 	margin-left: 0;
 }
 
+.review-label {
+	font-weight: bold;
+}
+
 .Button {
 	align-items: center;
 	justify-content: center;
@@ -23,8 +27,6 @@
 	text-align: center;
 	cursor: pointer;
 	font-size: 16px;
-	text-transform: uppercase;
-	letter-spacing: 2px;
 	font-family: var(--ff-primary);
 }
 

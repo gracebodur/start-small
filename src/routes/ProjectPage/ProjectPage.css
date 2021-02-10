@@ -40,6 +40,12 @@
 	position: relative;
 }
 
+.schoolname {
+	white-space: nowrap;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
 @media (max-width: 576px) {
 	.card-img-body {
 		width: 100%;
@@ -80,6 +86,7 @@
 
 .review-title {
 	text-transform: uppercase;
+	font-weight: bold;
 }
 
 .list-group-item {
