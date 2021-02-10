@@ -7,14 +7,14 @@ export default class ProjectListItem extends Component {
   render() {
     const { project } = this.props
     return (
-      <Link to={`/projects/${project.project_id}`} className='ProjectListItem Item'>
+      <Link to={`/projects/${project.project_id}`} className='ProjectListItem'>
         <div className='ProjectListItem__image' style={{backgroundImage: `url(${project.imageurl})`}} />
 
         <div className='ProjectListItem__details'>
           <div className='ProjectListItem__text'>
-            <h3 className='ProjectListItem__heading h4'>{project.schoolname}</h3>
+            <h3 className='ProjectListItem__heading'>{project.schoolname}</h3>
             <p className='ProjectListItem__description'>{project.fulfillmenttrailer}</p>
-            <p>&#8212;{project.teachername}</p>
+            <p className='ProjectTeacher__name'>&#8212;{project.teachername}</p>
           </div>
       
           <div className='ProjectListItem__reviews'>
