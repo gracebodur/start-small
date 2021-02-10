@@ -6,14 +6,12 @@
 }
 
 .login-header {
-    /* font-size: 18px;
-    font-weight: 800; */
+    font-weight: 800;
     margin: 0 0 15px;
 }
 
 .login-form {
     width: 350px;
-    margin: 30px auto;
     border: 3px solid #333333;
     border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
     text-transform: capitalize;
@@ -44,7 +42,7 @@
 }
 
 .btn {
-    font-size: 1.5rem;
+    font-size: 1rem;
     background-color: #0027CC;
     border-color: #0027CC;
     color: white;
