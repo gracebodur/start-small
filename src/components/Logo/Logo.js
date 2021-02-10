@@ -1,20 +1,16 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
-import Tilt from 'react-tilt'
-import logo from '../../img/logo_file.png'
+import { Link } from 'react-router-dom'
+import logo from '../../img/brand_logo.png'
 import './Logo.css'
 
-
 function Logo() {
-    return(
-        <div className='Logo'>
-            <Tilt className="Tilt" options={{ max : 25 }} style={{ height: 100, width: 100 }}>
-                <Link to='/' className="Tilt-inner">
-                    <img style={{paddingTop: '5px'}} alt='logo' src={logo} />
-                </Link>
-            </Tilt>
-        </div>
-    )
+	return (
+		<div className='Logo'>
+			<Link to='/'>
+				<img className='brand_logo' style={{ maxWidth: '100px', maxHeight: '100px' }} alt='logo' src={logo} />
+			</Link>
+		</div>
+	)
 }
 
 export default Logo

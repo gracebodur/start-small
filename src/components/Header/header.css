@@ -1,30 +1,19 @@
 .Header {
 	height: 40px;
 	display: flex;
-	align-items: normal;
 	justify-content: space-between;
-	margin-top: 5px;
-	margin-right: 8%;
-	margin-bottom: 5%;
 }
 
 .Header a {
-	color: var(--clr-dark);
+	 color: var(--txt-clr);
 	text-decoration: none;
-	font-size: var(--fs-body);
 	font-weight: var(--fw-bold);
-	letter-spacing: var(--spacing-extra-small);
-	text-transform: uppercase;
+	text-transform: capitalize;
 }
 
 .Header__not-logged-in {
 	display: flex;
-	flex: 1;
-	align-items: center;
-	justify-content: space-evenly;
 	cursor: pointer;
-	padding: 5px 15px;
-	margin-left: 10px;
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {

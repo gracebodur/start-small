@@ -13,23 +13,25 @@ class Header extends Component {
 
 	renderLogoutLink() {
 		return (
-			<div className='Header__logged-in'>
-				<Link onClick={this.handleLogOutClick} to='/'>
-					Log out
-				</Link>
-			</div>
+			<Link onClick={this.handleLogOutClick} to='/'>
+				Log out
+			</Link>
 		)
 	}
 
 	renderLoginLink() {
 		return (
-			<div className='Header__not-logged-in'>
-				<Link to='/login'>Login</Link>
+			<div className='Header__not-logged-in nav-item'>
+				<Link to='/login' className='nav-link'>
+					Login
+				</Link>
 
-				<Link to='/register'>Register</Link>
+				<Link to='/register' className='nav-link'>
+					Register
+				</Link>
 
 				<a
-					className='btn-inner'
+					className='nav-link'
 					href='mailto:startsmall.contact@gmail.com'
 					target='_blank'
 					rel='noopener noreferrer'>
