@@ -1,6 +1,5 @@
 import React from 'react'
 import { Section } from '../../components/Utils/Utils'
-import ContactButton from '../ContactButton/ContactButton'
 import './Intro.css'
 
 function Intro() {
@@ -17,7 +16,6 @@ function Intro() {
                 </Section>
             </div>
             <div>
-                <ContactButton />
                 <p className='Proj-demo lead'>Demo: Username: admin Password: admin</p>
             </div>
         </div>

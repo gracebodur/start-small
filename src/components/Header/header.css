@@ -1,145 +1,84 @@
 .Header {
-  height: 40px;
-  display: flex;
-  align-items: normal;
-  justify-content: space-between;
-  margin-top: 5px;
-  margin-right: 8%;
-  margin-bottom: 5%;
+	height: 40px;
+	display: flex;
+	align-items: normal;
+	justify-content: space-between;
+	margin-top: 5px;
+	margin-right: 8%;
+	margin-bottom: 5%;
 }
 
 .Header a {
-  color: var(--clr-dark);
-  text-decoration: none;
-  font-size: var(--fs-body);
-  font-weight: var(--fw-bold);
-  letter-spacing: var(--spacing-extra-small);
-  text-transform: uppercase;
+	color: var(--clr-dark);
+	text-decoration: none;
+	font-size: var(--fs-body);
+	font-weight: var(--fw-bold);
+	letter-spacing: var(--spacing-extra-small);
+	text-transform: uppercase;
 }
 
 .Header__not-logged-in {
-  display: flex;
-  flex: 1;
-  align-items: center;
-  justify-content: flex-end;
-  cursor: pointer;
+	display: flex;
+	flex: 1;
+	align-items: center;
+	justify-content: space-evenly;
+	cursor: pointer;
+	padding: 5px 15px;
+	margin-left: 10px;
 }
 
-.Header__not-logged-in a:last-child {
-  background: var(--clr-blue);
-  color: var(--clr-light);
-  padding: 5px 15px;
-  border-radius: 15px;
-  margin-left: 10px;
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+	.Header {
+		font-size: 0.8rem;
+		margin-right: 1%;
+	}
 }
-
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 568px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-    .Header {
-      font-size: .800rem;
-      margin-right: 1%;
-    }
-}
-
 
 /* galaxy */
-@media only screen 
-  and (min-device-width: 360px) 
-  and (max-device-width: 667px) 
-  and (-webkit-min-device-pixel-ratio: 2) { 
-    .Header {
-      font-size: .800rem;
-      margin-right: 1%;
-    }
+@media only screen and (min-device-width: 360px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+	.Header {
+		font-size: 0.8rem;
+		margin-right: 1%;
+	}
 }
 
 /* iphone6/7/8 */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 667px) 
-  and (-webkit-min-device-pixel-ratio: 2) { 
-    .Header {
-      font-size: 1rem;
-      margin-right: 2%;
-    }
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+	.Header {
+		font-size: 1rem;
+		margin-right: 2%;
+	}
 }
 
- 
 /*iphonex */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 812px) 
-  and (-webkit-min-device-pixel-ratio: 3) { 
-    .Header {
-      font-size: 1rem;
-      margin-right: 2%;
-    }
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+	.Header {
+		font-size: 1rem;
+		margin-right: 2%;
+	}
 }
 
 /* ipad */
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (-webkit-min-device-pixel-ratio: 2) {
-    .Header {
-      font-size: 1.5rem;
-      margin-right: 2%;
-    }
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+	.Header {
+		font-size: 1.5rem;
+		margin-right: 2%;
+	}
 }
 
 /* ipadpro */
-@media only screen 
-  and (min-device-width: 834px) 
-  and (max-device-width: 1112px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-    .Header {
-      font-size: 1.75rem;
-      margin-top: 10%;
-      margin-right: 2%;
-    }
+@media only screen and (min-device-width: 834px) and (max-device-width: 1112px) and (-webkit-min-device-pixel-ratio: 2) {
+	.Header {
+		font-size: 1.75rem;
+		margin-top: 10%;
+		margin-right: 2%;
+	}
 }
 
-@media screen 
-  and (min-device-width: 1200px) 
-  and (max-device-width: 1600px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
-    .Header {
-      font-size: 1.75rem;
-      margin-top: 5%;
-      margin-right: 5%;
-  }
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+	.Header {
+		font-size: 1.75rem;
+		margin-top: 5%;
+		margin-right: 5%;
+	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
