@@ -1,11 +1,10 @@
 .ReviewForm label {
 	display: inline-block;
-	margin: 10px 10px 20px;
-	margin-left: 0;
 }
 
 .review-label {
 	font-weight: bold;
+	white-space: nowrap;
 }
 
 .Button {

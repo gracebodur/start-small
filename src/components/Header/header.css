@@ -16,6 +16,13 @@
 	cursor: pointer;
 }
 
+.link1:hover,
+.link2:hover,
+.link3:hover,
+.link4:hover {
+	text-decoration: underline;
+}
+
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
 	.Header {
 		font-size: 0.8rem;

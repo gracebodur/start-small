@@ -96,7 +96,7 @@ function ProjectReviews({ reviews = [] }) {
 	return (
 		<Section>
 			<div className='text-center'>
-				<h3 className='review-title'>Reviews:</h3>
+				<h5 className='review-title'>Reviews:</h5>
 			</div>
 					<Scrollbars style={{ height: 400 }}>
 						<ul className='list-group'>

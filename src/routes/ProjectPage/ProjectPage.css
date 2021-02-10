@@ -85,7 +85,6 @@
 }
 
 .review-title {
-	text-transform: uppercase;
 	font-weight: bold;
 }
 
@@ -94,7 +93,7 @@
 	flex-direction: column;
 	font-size: smaller;
 	text-decoration: none;
-	margin-bottom: 40px;
+	margin-bottom: 15px;
 	margin-right: 20px;
 	text-transform: uppercase;
 	background: var(--clr-light);
