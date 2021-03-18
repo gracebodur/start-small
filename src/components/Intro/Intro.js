@@ -5,7 +5,7 @@ import './Intro.css'
 function Intro() {
     return (
         <div>
-            <div className='Proj-intro'>
+            <div className='Proj-intro text-center'>
                 <Section>
                     <h1 className='Proj-name'>Start small</h1>
                         <ul className='Proj-details h4'>

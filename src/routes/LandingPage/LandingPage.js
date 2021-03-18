@@ -32,7 +32,7 @@ class LandingPage extends Component {
           <Section list className='LandingPage'>
             <Intro />
             {error
-              ? <p className='red'>There was an error, try again</p>
+              ? <p className='red text-center'>There was an error, try again</p>
               : this.renderProjects()}
           </Section>
         )

@@ -55,7 +55,10 @@ class LoginForm extends Component {
 				<div className='login-form center_div row'>
 					<form onSubmit={this.handleSubmitJwtAuth} className='col-md-12 form-wrapper'>
 						<h2 className='login-header h2'>Login</h2>
-						<div role='alert'>{error && <p className='red'>{error}</p>}</div>
+						<div role='alert'>
+						{error && <p className='red'>{error}
+						</p>}
+						</div>
 						<div className='form-group'>
 							<label className='h6'>Username</label>
 							<input

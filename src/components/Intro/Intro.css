@@ -44,9 +44,6 @@
          text-align: start;
      }
      
-     .Proj-demo {
-         font-size: 18pt;
-     }
  }
  
 
@@ -68,9 +65,6 @@
          font-size: 17pt;
      }
      
-     .Proj-demo {
-         font-size: 20pt;
-     }
  }
 
 
@@ -90,9 +84,6 @@
         text-align: center;
     }
     
-    .Proj-demo {
-        font-size: 20pt;
-    }
 }
 
 /*iphonex */
@@ -108,10 +99,6 @@
         font-size: 20pt;
     }
     
-    .Proj-demo {
-        font-size: 25pt;
-    }
-   
 }
 
 /* ipad */
@@ -130,10 +117,6 @@
         font-size: 25pt;
     }
     
-    .Proj-demo {
-        font-size: 30pt;
-    }
-  
 }
 
 /* ipadpro */
@@ -147,10 +130,6 @@
     
     ul {
         font-size: 30pt;
-    }
-    
-    .Proj-demo {
-        font-size: 35pt;
     }
   
 }
